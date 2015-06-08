@@ -9,7 +9,7 @@ title:               Ráfagas
 tagline:             Geospatial links everyday
 url:                 http://cartodb.github.io/rafagas
 paginate:            3
-baseurl:             ""
+baseurl:             "http://cartodb.github.io/rafagas"
 
 # Assets
 #
