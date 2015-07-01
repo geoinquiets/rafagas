@@ -7,9 +7,9 @@ relative_permalinks: true
 # Setup
 title:               Ráfagas
 tagline:             Geospatial links everyday
-url:                 http://cartodb.github.io/rafagas
+url:                 http://jsanz.github.io/rafagas
 paginate:            3
-baseurl:             "http://cartodb.github.io/rafagas"
+baseurl:             "http://jsanz.github.io/rafagas"
 
 # Assets
 #
@@ -21,10 +21,10 @@ sass:
 # About/contact
 author:
   name:              CartoDB <3 you
-  url:               https://twitter.com/cartodb
+  url:               https://twitter.com/jsanz
   email:             jsanz@cartodb.com
 
 # Custom vars
 version:             1.0.0
 github:
-  repo:              https://github.com/cartodb/rafagas
+  repo:              https://github.com/jsanz/rafagas
