@@ -7,9 +7,9 @@ relative_permalinks: true
 # Setup
 title:               Ráfagas
 tagline:             Geospatial links everyday
-url:                 http://jsanz.github.io/rafagas
+url:                 http://geoinquiets.github.io/rafagas
 paginate:            3
-baseurl:             "http://jsanz.github.io/rafagas"
+baseurl:             "http://geoinquiets.github.io/rafagas"
 
 # Assets
 #
@@ -20,11 +20,11 @@ sass:
 
 # About/contact
 author:
-  name:              Jorge Sanz
-  url:               https://twitter.com/jsanz
+  name:              Geoinquiets
+  url:               https://twitter.com/geoinquiets
   email:             jsanz@cartodb.com
 
 # Custom vars
 version:             1.0.0
 github:
-  repo:              https://github.com/jsanz/rafagas
+  repo:              https://github.com/geoinquiets/rafagas
