@@ -8,7 +8,7 @@ relative_permalinks: true
 title:               Ráfagas
 tagline:             Geospatial links everyday
 url:                 http://geoinquiets.github.io/rafagas
-paginate:            3
+paginate:            7
 baseurl:             "http://geoinquiets.github.io/rafagas"
 
 # Assets
