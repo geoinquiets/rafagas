@@ -58,6 +58,7 @@ https://public.tableau.com/s/gallery/eurovision-song-contest-voting-patterns
 Raf
 
 *************************
+
 Nº126: hiroshima, nypl, statistics, transcription
 
 he Hiroshima archive, an interactive memorial made with CesiumJS
@@ -78,5 +79,136 @@ Raf
 
 *************************
 
+Nº164: gender, walking, classification, buildings, Pitiuses
+
+US maps showing gender majority by county and age group.
+http://dadaviz.com/s/gender-majority/
+
+Most dangerous intersections for pedestrians in Los Angeles.
+http://graphics.latimes.com/la-pedestrians/
+
+Thematic maps with the same data - how to choose the best classification
+method.
+https://www.linkedin.com/pulse/truthful-mapping-john-nelson?trk=hp-feed-art
+icle-title-share
+
+All buildings in the Netherlands, classified by building year in a unique
+interactive map.
+http://code.waag.org/buildings/
+
+"Ibiza and Formentera: paths and rocks" - a geologic guide accepting
+pledges at Verkami (in Catalan).
+http://www.verkami.com/projects/12293-eivissa-i-formentera-camins-i-pedres
 
 
+Raf
+
+*************************
+
+Nº165: CO2, internet, products, cartocss, copernicus
+
+Non-local produce in the shopping cart and CO2 emissions [catalan].
+http://solucionsgeografiques.blogspot.com.es/2015/05/lobjecte-daquest-post-
+es-presentar-un.html
+
+What's the Internet, history and services, explained in 40 maps.
+http://www.vox.com/a/internet-maps
+
+Advice and recommendations on how to make good software products.
+https://medium.com/art-of-product-design/how-to-not-suck-at-making-products
+-1ca875fe98a0
+
+Open Source project that converts CartoCSS to MapServer mapfile or Mapnik
+XML.
+https://github.com/omniscale/magnacarto
+
+The European EMS Copernicus' GeoRSS and Rapid Mapping Activations.
+http://feeds.feedburner.com/CopernicusEMSMappingRushModeActivations
+
+Raf
+
+*************************
+
+Nº166: fish, prices, Ireland, geology, immersion
+
+Antique map showing the distribution of saltwater fish in the US.
+http://www.slate.com/content/slate/blogs/the_vault/2015/07/22/history_of_fi
+shing_in_the_united_states_map_of_saltwater_fish_in_the_1930s.html
+
+Map showing the cost of living, created with voluntary contributed data.
+http://www.numbeo.com/cost-of-living/
+
+Irland's 844 officially registered start-up companies on a map.
+https://www.siliconrepublic.com/start-ups/2015/07/22/start-up-map-of-irelan
+d-goes-online
+
+The Geological and Mining Institute of Spain (IGME) publishes their
+geologic maps in ArcGIS online.
+https://esriblog.wordpress.com/2015/07/23/el-igme-comparte-abiertamente-su-
+cartografia-cientifica-en-arcgis-online/
+
+Panoramic tours of spectacular and unique outdoor trails in Virginia, US.
+http://www.terrain360.com
+
+Raf
+
+*************************
+
+Nº167: bathymetry, lidar, drones, heroes, tiles
+
+Satellite bathymetry to identify rocks and improve nautical charting.
+http://blog.geogarage.com/2015/07/avoiding-rock-bottom-how-landsat-aids.htm
+l
+
+Lidar2dems, open source code for LIDAR data processing to generate DTM,
+DSM and CHM.
+http://applied-geosolutions.github.io/lidar2dems/
+
+Portuguese company dedicated to cartography and aerial photography using
+drones.
+http://www.geodrone.pt/
+
+US map showing the locations of different DC Superhero cities.
+http://batmanbrony.deviantart.com/art/DC-Superhero-Cities-447475741
+
+How to generate and host your own raster tiles.
+http://acuriousanimal.com/blog/2015/07/26/generate-and-host-your-own-raster
+-tiles-customized-with-mapbox-studio/
+
+Raf
+
+*************************
+
+Nº168: nautical, heat, sound, oceanography, geology, stacking
+
+Online collection of antique nautical charts from Harvard.
+http://sea-atlases.org/
+
+Heat-Sensitive map shows different stuff depending on current weather.
+http://www.citylab.com/navigator/2015/07/a-map-that-adapts-to-the-weather/399755/
+
+Sound maps of all kinds.
+http://citiesandmemory.com/2015/07/top-sound-maps/
+
+Oce, an R package to ease oceanography-related tasks.
+http://dankelley.github.io/oce/
+
+Interactive map with Spanish geologic sites of interest.
+http://info.igme.es/ielig/
+
+Paper kits to build precise models of mountains in 3D.
+http://en.rocketnews24.com/2015/07/31/why-just-climb-mt-fuji-when-you-can-build-it-with-this-awesome-paper-stacking-kit/
+
+
+Raf
+
+*************************
+
+Nº169: OSM past and present
+
+Comparing OpenStreetMap cartography in 2007 and today.
+http://mvexel.github.io/thenandnow/#10/41.6432/2.1169
+
+Raf
+
+*************************
