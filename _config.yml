@@ -1,6 +1,5 @@
 # Permalinks
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
 
 # Setup
@@ -8,7 +7,7 @@ title:               Ráfagas
 tagline:             Geospatial links everyday
 url:                 http://geoinquiets.github.io/rafagas
 paginate:            7
-baseurl:             "http://geoinquiets.github.io/rafagas"
+baseurl:             /rafagas/
 
 # Assets
 #
