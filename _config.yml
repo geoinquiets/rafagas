@@ -7,7 +7,7 @@ title:               Ráfagas
 tagline:             Geospatial links everyday
 url:                 http://geoinquiets.github.io/rafagas
 paginate:            7
-baseurl:             /rafagas/
+baseurl:             /rafagas
 
 # Assets
 #
@@ -26,3 +26,6 @@ author:
 version:             1.0.0
 github:
   repo:              https://github.com/geoinquiets/rafagas
+
+
+gems:                [jekyll-paginate]
