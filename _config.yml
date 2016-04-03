@@ -29,3 +29,11 @@ github:
 
 
 gems:                [jekyll-paginate]
+
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author: Raf
