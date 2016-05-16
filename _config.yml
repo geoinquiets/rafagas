@@ -19,17 +19,19 @@ sass:
 # About/contact
 author:
   name:              Geoinquiets
+  twitter:           geoinquiets
   url:               https://twitter.com/geoinquiets
   email:             jsanz@cartodb.com
+
 
 # Custom vars
 version:             1.0.0
 github:
   repo:              https://github.com/geoinquiets/rafagas
 
-
-gems:                [jekyll-paginate]
-
+gems:
+  - jekyll-paginate
+  - jekyll-seo-tag
 
 defaults:
   - scope:
@@ -37,3 +39,4 @@ defaults:
       type: posts
     values:
       author: Raf
+      twitter: geoinquiets
