@@ -8,7 +8,14 @@ title: Home
   <article class="post">
     <h1 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
+        {% if post.rafagas %}
+          Nº{{ post.id}}:
+          {% for rafaga in post.rafagas %}
+          {{rafaga.keyw}}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        {% else %}
+          {{ post.title }}
+        {% endif %}
       </a>
     </h1>
 
@@ -16,8 +23,17 @@ title: Home
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
       by {{post.author}}
     </p>
-
-    {{ post.content }}
+    {% if post.rafagas %}
+    <ul>
+      {% for rafaga in post.rafagas %}
+        <li>{{rafaga.desc}} <br>
+          <a href="{{rafaga.link}}">{{rafaga.link}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      {{ post.content }}
+    {% endif %}
   </article>
   {% endfor %}
 </div>

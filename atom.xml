@@ -17,11 +17,16 @@ layout: null
 
  {% for post in site.posts limit:25 %}
  <entry>
-   <title>{{ post.title }}</title>
+   <title> {% if post.rafagas %}Nº{{ post.id}}:{% for rafaga in post.rafagas %} {{rafaga.keyw}}{% unless forloop.last %}, {% endunless %} {% endfor %} {% else %}{{ post.title }}{% endif %} </title>
    <link href="{{ site.url }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <content type="html">{% if post.rafagas %}
+&lt;ul>{% for rafaga in post.rafagas %}
+&lt;li>{{rafaga.desc | xml_escape }} &lt;br>
+&lt;a href="{{rafaga.link| xml_escape }}">{{rafaga.link| xml_escape }}&lt;/a>
+&lt;/li>{% endfor %}
+&lt;/ul>{% else %}{{ post.content | xml_escape }}{% endif %}</content>
  </entry>
  {% endfor %}
 
