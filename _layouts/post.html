@@ -18,7 +18,7 @@ layout: default
         <h3>
           <a href="{{ site.baseurl }}/{{ post.url }}">
 {% if post.rafagas %}
-  Nº{{ post.id}}:
+  Nº{{ post.rid}}:
   {% for rafaga in post.rafagas %}
   {{rafaga.keyw}}{% unless forloop.last %}, {% endunless %}
   {% endfor %}
