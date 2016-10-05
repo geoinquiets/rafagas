@@ -9,6 +9,8 @@ layout: default
     {{rafaga.keyw}}{% unless forloop.last %}, {% endunless %}
     {% endfor %}
     </h1>
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+
   <ul>
     {% for rafaga in page.rafagas %}
 
@@ -18,7 +20,6 @@ layout: default
   </ul>
 
   <p>{{page.author}}</p>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
 
 </article>
 
