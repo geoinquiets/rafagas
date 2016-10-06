@@ -26,7 +26,9 @@ layout: null
 &lt;li>{{rafaga.desc | xml_escape }} &lt;br>
 &lt;a href="{{rafaga.link| xml_escape }}">{{rafaga.link| xml_escape }}&lt;/a>
 &lt;/li>{% endfor %}
-&lt;/ul>{% else %}{{ post.content | xml_escape }}{% endif %}</content>
+&lt;/ul>{% else %}{{ post.content | xml_escape }}{% endif %}
+&lt;p>{{post.author}} &lt;/p>
+</content>
  </entry>
  {% endfor %}
 
