@@ -296,3 +296,225 @@ Raf
 
 
 *******************
+
+
+
+Nº463: geopopularity, accidents, uninhabited, Pluto, Peutinger
+
+A startup generates the classification of places per name and acceptance
+http://www.avuxi.com/
+
+USA's car crashes with data from 2015 shown over graph
+https://team.carto.com/u/mamataakella/builder/de3be544-ab71-4855-8bee-e38f8f948c39/embed
+
+France's largest uninhabited spaces.
+http://www.datamix.fr/2016/08/les-plus-gros-trous-perdus-de-france/
+
+First edition of Pluto's globe, with temporary names and white areas
+https://myscienceshop.com/product/globe/81075
+
+Interactive view with overlaid layers of Map A of Peutinger map, Rome's roads atlas
+http://peutinger.atlantides.org/map-a/
+
+*******************
+
+Nº464: Madaba, Banichan, Harlem, interiors, future
+
+Virtual tour of Madaba's holy places as a mosaic map
+http://www.christusrex.org/www1/ofm/mad/index.html
+
+Hand embroided map of Banichan in Bulgaria
+http://www.pacha-cartographie.com/carte-brodee-banichan/
+
+Manuscript map of Harlems night life in 1932 via @realivansanchez
+http://www.slate.com/blogs/the_vault/2016/04/15/e_simms_campbell_s_1932_illustrated_map_of_harlem_nightlife.html
+
+LIDAR and robots, a SLAM solution to create automatic indoor maps
+http://geoslam.com/geoslam-blackdog-robotics-sign-partnership-agreement-supply-unmanned-mobile-indoor-mapping-solutions/
+
+Can't stop the change, @pwramsey gave a brilliant keynote a Canada's geomatic conference
+http://blog.cleverelephant.ca/2016/10/geomatique-quebec.html
+
+*******************
+Nº465: wages, extensions, pubs, gps, chaos
+
+Inequality and wages in the big cities, an artistic project via @realivansanchez
+http://www.designboom.com/design/herwig-scherabon-income-inequality-10-20-2016/
+
+Cities size calculated collaboratively, with open source code
+http://gisforthought.com/crowdsourced-city-extents/
+
+The most optimal route to visit all British pubs, a research work
+http://www.math.uwaterloo.ca/tsp/pubs/
+
+GPS stops working in Moscow's city centre intentionally, via @realivansanchez
+https://themoscowtimes.com/articles/the-kremlin-eats-gps-for-breakfast-55823
+
+Four maps to explain the chaos in the Middle East, by The Washington Post
+https://www.washingtonpost.com/news/worldviews/wp/2016/10/17/4-maps-that-explain-the-chaos-of-the-middle-east/
+
+*******************
+Nº466: fiction, control, vmap, population
+
+Design fiction to explorar the life and death of data products
+https://medium.com/design-fictions/the-life-and-death-of-data-products-8a63d5970484#.9w3xnaptj
+
+Monitoring tool in real time of various social networks for population control
+https://geofeedia.com/
+
+Vmap, the platform for creating custom maps that uses WMS
+http://www.veremes.com/produits/vmap
+
+Interactive 3D visualization of the population density in the biggest cities of USA
+https://www.mapbox.com/bites/00273/
+
+*******************
+
+Nº467: NFL, population, modelling, snowbreak, dataviz, pokemon
+
+The best-selling t-shirt in every state of the NFL players in 2016
+http://minnesotasnewcountry.com/top-selling-nfl-jersey-in-minnesota-might-surprise-you/
+
+New dataset of the world population to create spectacular views
+http://www.statsmapsnpix.com/2016/10/the-global-human-settlement-layer.html
+
+GeoDa, tool for spatial data analysis and modeling in open source code
+http://geodacenter.github.io/index.html
+
+OMG, the NASA project to measure Antarctica's snow break and forecast rising seas
+https://omg.jpl.nasa.gov/portal/
+
+Compilation of tools and books about data visualisation, updated
+http://keshif.me/demo/VisTools
+
+The effect of Pokémon Go on urban mobility in the cities (real study, PDF)
+https://arxiv.org/abs/1610.08098
+
+*******************
+
+Nº468: Vallvidrera, elevation, 4D, farms, demography
+
+Buildings in Vallvidrera (Barcelona) in 3D, arranged by year of construction
+http://www.mapgang.tk/indexVallvi.html
+
+Global elevation model in RGB to generate 3D spaces con Unity
+https://www.mapbox.com/blog/terrain-rgb/
+
+Thesis about 4D+ geodata modelling in GIS
+https://3d.bk.tudelft.nl/ken/en/thesis/
+
+FarmOs to administrate and plan farms with geodata, open source
+http://farmos.org/
+
+Visualisation of demography data in Catalunya
+https://gedemced.shinyapps.io/CED_CATALUNYA/
+
+*******************
+Nº469: hidrògen, empenta, dones, Copernicus, grafits, bcn
+
+Mapa detallat de la Via Làctia fet per dos radiotelescopis a base d'observar hidrògen
+http://www.icrar.org/hi4pi/
+
+Les àrees del món amb més empenta econòmica, dades de 2010
+http://sashat.me/2016/10/09/most-valuable-squares-revisited/
+
+El mapa de metro imaginat de Nova York que ret homenatge a les dones
+http://www.newyorker.com/books/page-turner/city-of-women
+
+El valor de les dades satèl·lit de Copernicus
+http://newsletter.copernicus.eu/issue-15-october-2016/article/unleashing-value-copernicus-satellite-data
+
+Dissabte 12 de novembre mapejat de graffitis a Can Felipa amb @mapillary i @OSMcatala
+http://www.cccanfelipa.cat/arts-visuals/748-marat%C3%A3%C2%B3-de-mapeig-de-graffitis/
+
+Evolució urbanística de Barcelona entre 1900 i 2016
+https://www.idealista.com/news/especiales/evolucion-urbanistica/barcelona?etapa=1900-2016
+
+*******************
+Nº470: Sydney, urbanisme, concerts, xarxes, disseny
+
+Mapes reals i imaginats de la xarxa de rodalies de Sydney
+https://transportsydney.wordpress.com/2014/02/12/sydney-maps-real-and-fictional/
+
+Analitzar les evolucions urbanes: 50 indicadors per desxifrar la dinàmica de les grans aglomeracions (PDF)
+http://www.fnau.org/wp-content/uploads/2016/09/observagglo-new-vmd.pdf
+
+Globus interactiu per mostrar els concerts dels darrers 10 anys arreu del planeta
+http://gala.muimota.net/
+
+Eina de codi obert per visualitzar i analitzar xarxes
+http://topogram.io/
+
+Mapa del món amb una projecció diferent guanya el premi de disseny 2016
+http://www.spoon-tamago.com/2016/10/28/hajime-narukawa-authagraph/
+
+
+*******************
+Nº471: obesitat, cartògrafs, Geocamp, Londres
+
+Extensió territorial i població, una comparació entre Barcelona i Sant Cugat
+https://mapgang.wordpress.com/
+
+Els cartògrafs que dibuixen internet en mapamundis gegants via @realivansanchez
+http://www.eldiario.es/hojaderouter/internet/mapas-internet-TeleGeography-cables_submarinos_0_573943889.html
+
+El resum de la Geocamp que ha escrit @bolosig necessita els vostres comentaris
+https://geoinquiets.cat/2016/10/24/resumen-geocamp-es-2016/
+
+Mapa de Londres d'esdeveniments pertorbadors, esgarrifosos i paranormals
+http://www.grimlondon.com/
+
+*******************
+Nº472: eleccions, aire, geocamp, CV, edificis, bolets
+
+Moltes maneres diferents de mostrar els resultats de les eleccions segons el NYT via @realivansanchez
+http://www.nytimes.com/interactive/2016/11/01/upshot/many-ways-to-map-election-results.html?_r=0
+
+Informe de la UNICEF sobre la toxicitat de l'aire arreu del món i com afecta sobretot criatures pobres (PDF)
+http://www.unicef.org/publications/files/UNICEF_Clear_the_Air_for_Children_30_Oct_2016.pdf
+
+El resum, en dues parts, de la Geocamp fet per @MoiArcSan de @geoinquietossvq
+http://geoinquietos.blogspot.com.es/2016/10/geocamp-es-comunidad-experiencia-y.html
+
+Instruccions per presentar el CV com un mapa amb eines de codi obert
+http://www.digital-geography.com/map-cv/
+
+Espais interiors dels edificis vistos en 3D i classificats segons el seu ús
+http://www-personal.umich.edu/~yonghah/rooms3d/
+
+Una aplicació experimental permet reconèixer automàticament els bolets fent-los una foto #bolets
+http://mushreco.ml/en/
+
+*******************
+Nº473: sobre, rural, fantàstic, Jersey
+
+A Islàndia una carta sense adreça, però amb mapa, arriba a destí
+http://imgur.com/topic/Staff_Picks/1GVjLKF
+
+Servidor interactiu de mapes del districte rural de Runnymede a Anglaterra
+http://maps.runnymede.gov.uk/website/maps/index.html
+
+Mapes d'aspecte fantàstic de tot el món a la venda en format pòster
+https://www.etsy.com/shop/parnasium
+
+Els edificis de la ciutat de Jersey en un mapa interactiu en 3D
+http://sml2198.github.io/JC-buildings/10-19-16.html#14.27/40.7194/-74.0429/-25.7/60
+
+*******************
+Nº474: honor, tractors, NYC, internet
+
+Un storymap de l'única dona americana que ha rebut la medalla d'honor del congrés
+http://storymaps.esri.com/stories/2016/mary-edwards-walker/index.html
+
+Mapa dels USA amb la concentraciò de tractors agrícoles, dades 2012
+https://metricmaps.org/2016/11/02/us-county-tractor-density/
+
+Un llilbre de Nova York amb més de 200 mapes de tots els racons de la ciutat
+http://www.papress.com/html/book.details.page.tpl?isbn=9781616895266
+
+Com no s'ha de fer el mapa d'internet via @realivansanchez
+http://bigthink.com/strange-maps/how-not-to-map-the-internet
+
+*******************
+
+*******************
