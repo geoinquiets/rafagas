@@ -14,7 +14,7 @@ layout: default
   <ul>
     {% for rafaga in page.rafagas %}
 
-    <li>{{rafaga.desc}} <br>
+    <li>{{rafaga.desc}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}<br>
     <a href="{{rafaga.link}}">{{rafaga.link}}</a> </li>
     {% endfor %}
   </ul>
@@ -22,28 +22,5 @@ layout: default
   <p>{{page.author}}</p>
 
 </article>
-
-<aside class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}/{{ post.url }}">
-{% if post.rafagas %}
-  Nº{{ post.rid}}:
-  {% for rafaga in post.rafagas %}
-  {{rafaga.keyw}}{% unless forloop.last %}, {% endunless %}
-  {% endfor %}
-{% else %}
-  {{ post.title }}
-{% endif %}
-            <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</aside>
 
 

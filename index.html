@@ -26,7 +26,7 @@ title: Home
     {% if post.rafagas %}
     <ul>
       {% for rafaga in post.rafagas %}
-        <li>{{rafaga.desc}} <br>
+        <li>{{rafaga.desc}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}<br>
           <a href="{{rafaga.link}}">{{rafaga.link}}</a>
         </li>
       {% endfor %}
