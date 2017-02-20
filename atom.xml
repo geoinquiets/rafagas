@@ -17,7 +17,7 @@ layout: null
 
  {% for post in site.posts limit:25 %}
  <entry>
-   <title> {% if post.rafagas %}Nº{{ post.rid}}:{% for rafaga in post.rafagas %} {{rafaga.keyw}}{% unless forloop.last %}, {% endunless %} {% endfor %} {% else %}{{ post.title }}{% endif %} </title>
+   <title> {% if post.rafagas %}Nº{{ post.rid}}:{% for rafaga in post.rafagas %} {{rafaga.keyw | downcase}}{% unless forloop.last %}, {% endunless %} {% endfor %} {% else %}{{ post.title }}{% endif %} </title>
    <link href="{{ site.url }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.url }}{{ post.id }}</id>
