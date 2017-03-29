@@ -6,21 +6,35 @@
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-}
 
-.masthead-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #505050;
-
-  a {
-    color: #505050;
-  }
-
-  small {
+  small, .links a {
     font-size: 75%;
     font-weight: 400;
     color: #c0c0c0;
     letter-spacing: 0;
+  }
+
+  .links{
+    float: right;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      li {
+        float: left; margin: 0 20px 0 0;
+      }
+    }
+  }
+
+  .masthead-title {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #505050;
+    a {
+      color: #505050;
+    }
   }
 }
