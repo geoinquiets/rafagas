@@ -1,12 +1,11 @@
 # Permalinks
 #
-permalink:           pretty
+permalink:           /:year/:month-:day.html
 
 # Setup
 title:               Ráfagas
 tagline:             Geospatial links everyday
 url:                 http://geoinquiets.github.io/rafagas
-paginate:            7
 baseurl:             /rafagas
 
 # Assets
@@ -32,6 +31,9 @@ github:
 gems:
   - jekyll-paginate
   - jekyll-seo-tag
+
+include:
+  - "_pages"
 
 defaults:
   - scope:
