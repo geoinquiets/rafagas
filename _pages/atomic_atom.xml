@@ -22,7 +22,7 @@ permalink: /atomic_atom.xml
     {% for rafaga in post.rafagas reversed %}
       <entry>
         <title>Nº{{ post.rid}} ({{ raf_counter }}): {{rafaga.desc | xml_escape }}</title>
-        <link href="{{ site.url }}{{ post.url }}"/>
+        <link href="{{ rafaga.link }}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>{{ site.url }}{{ post.id }}#{{ raf_counter }}</id>
         <content></content>
