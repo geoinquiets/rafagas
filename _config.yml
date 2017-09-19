@@ -41,6 +41,7 @@ exclude:
   - "LICENSE.md"
   - "Gemfile"
   - "Gemfile.lock"
+  - "Rakefile"
 
 defaults:
   - scope:
