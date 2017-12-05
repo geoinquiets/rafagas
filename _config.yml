@@ -28,9 +28,13 @@ version:             1.0.0
 github:
   repo:              https://github.com/geoinquiets/rafagas
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-mentions
+
+jekyll-mentions:
+      base_url: https://twitter.com
 
 include:
   - "_pages"
