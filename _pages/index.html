@@ -36,6 +36,11 @@ regenerate: true
     {% endif %}
 
     <div class="rafaga-content">{{ post.content }}</div>
+
+    <p>{{post.author}}
+        {% if post.rid > 900 %} 
+          ({{ 1000 | minus: post.rid }})
+        {% endif %}</p>
   </article>
   {% endfor %}
 </div>
