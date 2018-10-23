@@ -35,7 +35,7 @@ regenerate: true
     </ul>
     {% endif %}
 
-    <div class="rafaga-content">{{ post.content }}</div>
+    <div class="{% if post.rafagas %}rafaga-content{% endif %}">{{ post.content }}</div>
 
     <p>{{post.author}}
         {% if post.rid > 900 %} 
