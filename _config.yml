@@ -46,6 +46,8 @@ exclude:
   - "Gemfile"
   - "Gemfile.lock"
   - "Rakefile"
+  - "vendor"
+  - "script"
 
 defaults:
   - scope:
