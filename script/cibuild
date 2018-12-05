@@ -4,4 +4,4 @@ set -e # halt script on error
 bundle exec jekyll build
 
 # Removed until local environment is set up
-#bundle exec htmlproofer ./_site
+bundle exec htmlproofer  --assume-extension --external_only --allow-hash-href ./_site/index.html
