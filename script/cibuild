@@ -3,5 +3,5 @@ set -e # halt script on error
 
 bundle exec jekyll build
 
-# Removed until local environment is set up
-bundle exec htmlproofer  --assume-extension --external_only --allow-hash-href ./_site/index.html
+# Removed we need a ruby script instead to allow SSL ignore
+# bundle exec htmlproofer  --assume-extension --external_only --allow-hash-href ./_site/index.html
