@@ -23,9 +23,7 @@ addons:
     packages:
     - libcurl4-openssl-dev
 
-sudo: required
-before_install:
-  - sudo update-ca-certificates
+sudo: false
 
 cache: bundler # caching bundler gem packages will speed up build
 
