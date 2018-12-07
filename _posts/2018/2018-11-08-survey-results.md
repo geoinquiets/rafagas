@@ -1,5 +1,5 @@
 ---
-layout: rafaga
+layout: post
 date: '2018-11-07'
 title: Rafagas handover survey results
 author: Jorge Sanz
