@@ -15,7 +15,7 @@ layout: default
     {% for rafaga in page.rafagas %}
 
     <li>{{rafaga.desc}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}<br>
-    <a href="{{rafaga.link}}">{{rafaga.link}}</a> </li>
+    <a href="{{rafaga.link}}" {%if rafaga.nocheck %}data-proofer-ignore{% endif %}>{{rafaga.link}}</a> </li>
     {% endfor %}
   </ul>
 

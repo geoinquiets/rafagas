@@ -29,7 +29,7 @@ regenerate: true
     <ul>
       {% for rafaga in post.rafagas %}
         <li>{{rafaga.desc}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}<br>
-          <a href="{{rafaga.link}}">{{rafaga.link}}</a>
+          <a href="{{rafaga.link}}" {%if rafaga.nocheck %}data-proofer-ignore{% endif %}>{{rafaga.link}}</a>
         </li>
       {% endfor %}
     </ul>
