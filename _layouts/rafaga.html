@@ -14,15 +14,19 @@ layout: default
   <ul>
     {% for rafaga in page.rafagas %}
 
-    <li>{{rafaga.desc}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}<br>
-    <a href="{{rafaga.link}}" {%if rafaga.nocheck %}data-proofer-ignore{% endif %}>{{rafaga.link}}</a> </li>
+    <li {%if rafaga.invalid %}style="text-decoration:line-through"{% endif %}>
+      {{rafaga.desc}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}<br>
+      {% unless rafaga.invalid %}<a href="{{rafaga.link}}" {%if rafaga.nocheck %}data-proofer-ignore{% endif %}>{% endunless %}
+      {{rafaga.link}}
+      {% unless rafaga.invalid %}</a>{% endunless %}
+    </li>
     {% endfor %}
   </ul>
 
   <div class="rafaga-content">{{ content }}</div>
 
   <p>{{page.author}}
-  {% if page.rid > 900 %} 
+  {% if page.rid > 900 %}
     ({{ 1000 | minus: page.rid }})
   {% endif %}</p>
 </article>

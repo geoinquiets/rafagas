@@ -28,8 +28,11 @@ regenerate: true
     {% if post.rafagas %}
     <ul>
       {% for rafaga in post.rafagas %}
-        <li>{{rafaga.desc}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}<br>
-          <a href="{{rafaga.link}}" {%if rafaga.nocheck %}data-proofer-ignore{% endif %}>{{rafaga.link}}</a>
+      <li {%if rafaga.invalid %}style="text-decoration:line-through"{% endif %}>
+          {{rafaga.desc}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}<br>
+          {% unless rafaga.invalid %}<a href="{{rafaga.link}}" {%if rafaga.nocheck %}data-proofer-ignore{% endif %}>{% endunless %}
+          {{rafaga.link}}
+          {% unless rafaga.invalid %}</a>{% endunless %}
         </li>
       {% endfor %}
     </ul>
