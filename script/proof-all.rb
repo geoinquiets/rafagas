@@ -17,6 +17,5 @@ options = {
         :ssl_verifypeer => false,
         :ssl_verifyhost => 0
     }
-
 }
-HTMLProofer.check_file(File.join(File.dirname(__FILE__), '../_site/index.html'), options).run
+HTMLProofer.check_directory(File.join(File.dirname(__FILE__), '../_site'), options).run

@@ -5,6 +5,7 @@ permalink:           /:year/:month-:day.html
 # Setup
 title:               Ráfagas
 tagline:             Geospatial links everyday
+site.github.url:     http://geoinquiets.github.io
 url:                 http://geoinquiets.github.io
 baseurl:             /rafagas
 
