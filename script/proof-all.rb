@@ -2,7 +2,7 @@ require 'html-proofer'
 
 options = { 
     :url_ignore => [/localhost:4000/],
-    :log_level => :warn,
+    :log_level => :info,
     :assume_extension => true ,
     :external_only => true,
     :check_sri => true,
@@ -11,7 +11,7 @@ options = {
     :check_opengraph => true,
     :enforce_https => true,
     :cache => {
-      :timeframe => '6w'
+      :timeframe => '1w'
     },
     :typhoeus => { 
         :ssl_verifypeer => false,
