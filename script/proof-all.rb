@@ -16,7 +16,7 @@ options = {
     :typhoeus => { 
         :ssl_verifypeer => false,
         :ssl_verifyhost => 0,
-        :connecttimeout => 20,
+        :connecttimeout => 30,
         :timeout => 30
     }
 }

@@ -5,3 +5,4 @@ Gemfile.lock
 .jekyll-metadata
 .vscode/*
 tmp/
+errors.log
