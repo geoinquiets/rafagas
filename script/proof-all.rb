@@ -15,7 +15,9 @@ options = {
     },
     :typhoeus => { 
         :ssl_verifypeer => false,
-        :ssl_verifyhost => 0
+        :ssl_verifyhost => 0,
+        :connecttimeout => 20,
+        :timeout => 30
     }
 }
 HTMLProofer.check_directory(File.join(File.dirname(__FILE__), '../_site'), options).run
