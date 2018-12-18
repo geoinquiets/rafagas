@@ -33,6 +33,8 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-mentions
+  - jekyll-sitemap
+  - jemoji
 
 jekyll-mentions:
       base_url: https://twitter.com

@@ -6,3 +6,4 @@ Gemfile.lock
 .vscode/*
 tmp/
 errors.log
+00_to_process.md
