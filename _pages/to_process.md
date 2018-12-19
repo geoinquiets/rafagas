@@ -101,7 +101,7 @@ United Nations recognizes the value of geodetic data and encourages their sharin
 <https://spatialreserves.wordpress.com/2015/05/31/a-united-nations-resolution-on-geospatial-data/>
 
 e-Residency, a digital identity for all the citizens of the world from Estonia
-<https://e-estonia.com/e-residents/about/>
+<https://e-resident.gov.ee/>
 
 Pattern explorer for the votings of the Eurovision song contest
 <https://public.tableau.com/s/gallery/eurovision-song-contest-voting-patterns>
@@ -122,25 +122,6 @@ Recogito is an interactive tool to transcribe place names from legacy
 geospatial documents
 <http://pelagios.org/recogito/>
 
-## Nº164: gender, walking, classification, buildings, Pitiuses
-
-US maps showing gender majority by county and age group.
-<http://dadaviz.com/s/gender-majority/>
-
-Most dangerous intersections for pedestrians in Los Angeles.
-<http://graphics.latimes.com/la-pedestrians/>
-
-Thematic maps with the same data - how to choose the best classification
-method.
-<https://www.linkedin.com/pulse/truthful-mapping-john-nelson?trk=hp-feed-article-title-share>
-
-All buildings in the Netherlands, classified by building year in a unique
-interactive map.
-<http://code.waag.org/buildings/>
-
-"Ibiza and Formentera: paths and rocks" - a geologic guide accepting
-pledges at Verkami (in Catalan).
-<http://www.verkami.com/projects/12293-eivissa-i-formentera-camins-i-pedres>
 
 ## Nº165: CO2, internet, products, cartocss, copernicus
 
@@ -152,8 +133,7 @@ What's the Internet, history and services, explained in 40 maps.
 <http://www.vox.com/a/internet-maps>
 
 Advice and recommendations on how to make good software products.
-<https://medium.com/art-of-product-design/how-to-not-suck-at-making-products>
--1ca875fe98a0
+<https://medium.com/art-of-product-design/how-to-not-suck-at-making-products-1ca875fe98a0>
 
 Open Source project that converts CartoCSS to MapServer mapfile or Mapnik
 XML.
@@ -165,20 +145,17 @@ The European EMS Copernicus' GeoRSS and Rapid Mapping Activations.
 ## Nº166: fish, prices, Ireland, geology, immersion
 
 Antique map showing the distribution of saltwater fish in the US.
-<http://www.slate.com/content/slate/blogs/the_vault/2015/07/22/history_of_fi>
-shing_in_the_united_states_map_of_saltwater_fish_in_the_1930s.html
+<http://www.slate.com/content/slate/blogs/the_vault/2015/07/22/history_of_fishing_in_the_united_states_map_of_saltwater_fish_in_the_1930s.html>
 
 Map showing the cost of living, created with voluntary contributed data.
 <http://www.numbeo.com/cost-of-living/>
 
 Irland's 844 officially registered start-up companies on a map.
-<https://www.siliconrepublic.com/start-ups/2015/07/22/start-up-map-of-irelan>
-d-goes-online
+<https://www.siliconrepublic.com/start-ups/2015/07/22/start-up-map-of-ireland-goes-online>
 
 The Geological and Mining Institute of Spain (IGME) publishes their
 geologic maps in ArcGIS online.
-<https://esriblog.wordpress.com/2015/07/23/el-igme-comparte-abiertamente-su->
-cartografia-cientifica-en-arcgis-online/
+<https://esriblog.wordpress.com/2015/07/23/el-igme-comparte-abiertamente-su-cartografia-cientifica-en-arcgis-online/>
 
 Panoramic tours of spectacular and unique outdoor trails in Virginia, US.
 <http://www.terrain360.com>
@@ -186,8 +163,7 @@ Panoramic tours of spectacular and unique outdoor trails in Virginia, US.
 ## Nº167: bathymetry, lidar, drones, heroes, tiles
 
 Satellite bathymetry to identify rocks and improve nautical charting.
-<http://blog.geogarage.com/2015/07/avoiding-rock-bottom-how-landsat-aids.htm>
-l
+<http://blog.geogarage.com/2015/07/avoiding-rock-bottom-how-landsat-aids.html>
 
 Lidar2dems, open source code for LIDAR data processing to generate DTM,
 DSM and CHM.
@@ -201,8 +177,7 @@ US map showing the locations of different DC Superhero cities.
 <http://batmanbrony.deviantart.com/art/DC-Superhero-Cities-447475741>
 
 How to generate and host your own raster tiles.
-<http://acuriousanimal.com/blog/2015/07/26/generate-and-host-your-own-raster>
--tiles-customized-with-mapbox-studio/
+<http://www.acuriousanimal.com/2015/07/26/generate-and-host-your-own-raster-tiles-customized-with-mapbox-studio.html>
 
 ## Nº168: nautical, heat, sound, oceanography, geology, stacking
 
@@ -245,13 +220,11 @@ On emigrar: correlació entre temperatura mitjana anual vs índex de desenvolupa
 Tendències de la geoinformació per al 2016
 <http://www.decideo.fr/Les-10-tendances-de-l-information-geographique-en-2016_a8295.html>
 
-## Nº262: prediccions, urgències, fronteres, malalties, cad
+## Nº262: prediccions, fronteres, malalties, cad
 
 Prediccions dels experts en dades per al 2016
 <http://blog.import.io/post/22-data-experts-share-their-predictions-for-2016>
 
-Els serveis d'urgències dels USA valorats i en un mapa
-<http://finded.io/results?latitude=40.754991&longitude=-73.98451290000003>
 Codi i API per obtenir mapes polítics antics amb les fronteres pretèrites
 <http://www.thenmap.net/>
 
@@ -278,7 +251,7 @@ Els nivells actuals d'aigua dels rius anglesos amb dades obtingudes de sensors
 El mapa definitivo de los estereotipos madrileños
 <https://t.co/YIwAnn1GOD>
 
-via @realivansanbchez (Raf només ha transcrit)
+via @realivansanchez (Raf només ha transcrit)
 
 ## Nº264: govern, risc, isocrones, toponímia, taula
 
@@ -313,19 +286,13 @@ First edition of Pluto's globe, with temporary names and white areas
 Interactive view with overlaid layers of Map A of Peutinger map, Rome's roads atlas
 <http://peutinger.atlantides.org/map-a/>
 
-## Nº464: Madaba, Banichan, Harlem, interiors, future
-
-Virtual tour of Madaba's holy places as a mosaic map
-<http://www.christusrex.org/www1/ofm/mad/index.html>
+## Nº464: Banichan, Harlem, future
 
 Hand embroided map of Banichan in Bulgaria
 <http://www.pacha-cartographie.com/carte-brodee-banichan/>
 
 Manuscript map of Harlems night life in 1932 via @realivansanchez
 <http://www.slate.com/blogs/the_vault/2016/04/15/e_simms_campbell_s_1932_illustrated_map_of_harlem_nightlife.html>
-
-LIDAR and robots, a SLAM solution to create automatic indoor maps
-<http://geoslam.com/geoslam-blackdog-robotics-sign-partnership-agreement-supply-unmanned-mobile-indoor-mapping-solutions/>
 
 Can't stop the change, @pwramsey gave a brilliant keynote a Canada's geomatic conference
 <http://blog.cleverelephant.ca/2016/10/geomatique-quebec.html>
@@ -381,7 +348,7 @@ Compilation of tools and books about data visualisation, updated
 The effect of Pokémon Go on urban mobility in the cities (real study, PDF)
 <https://arxiv.org/abs/1610.08098>
 
-## Nº468: Vallvidrera, elevation, 4D, farms, demography
+## Nº468: Vallvidrera, elevation, 4D, farms
 
 Buildings in Vallvidrera (Barcelona) in 3D, arranged by year of construction
 <http://www.mapgang.tk/indexVallvi.html>
@@ -394,9 +361,6 @@ Thesis about 4D+ geodata modelling in GIS
 
 FarmOs to administrate and plan farms with geodata, open source
 <http://farmos.org/>
-
-Visualisation of demography data in Catalunya
-<https://gedemced.shinyapps.io/CED_CATALUNYA/>
 
 ## Nº469: hidrògen, empenta, dones, Copernicus, grafits, bcn
 
@@ -418,13 +382,10 @@ Dissabte 12 de novembre mapejat de graffitis a Can Felipa amb @mapillary i @OSMc
 Evolució urbanística de Barcelona entre 1900 i 2016
 <https://www.idealista.com/news/especiales/evolucion-urbanistica/barcelona?etapa=1900-2016>
 
-## Nº470: Sydney, urbanisme, concerts, xarxes, disseny
+## Nº470: Sydney, concerts, xarxes, disseny
 
 Mapes reals i imaginats de la xarxa de rodalies de Sydney
 <https://transportsydney.wordpress.com/2014/02/12/sydney-maps-real-and-fictional/>
-
-Analitzar les evolucions urbanes: 50 indicadors per desxifrar la dinàmica de les grans aglomeracions (PDF)
-<http://www.fnau.org/wp-content/uploads/2016/09/observagglo-new-vmd.pdf>
 
 Globus interactiu per mostrar els concerts dels darrers 10 anys arreu del planeta
 <http://gala.muimota.net/>
@@ -483,13 +444,10 @@ Mapes d'aspecte fantàstic de tot el món a la venda en format pòster
 Els edificis de la ciutat de Jersey en un mapa interactiu en 3D
 <http://sml2198.github.io/JC-buildings/10-19-16.html#14.27/40.7194/-74.0429/-25.7/60>
 
-## Nº474: honor, tractors, NYC, internet
+## Nº474: honor, NYC, internet
 
 Un storymap de l'única dona americana que ha rebut la medalla d'honor del congrés
 <http://storymaps.esri.com/stories/2016/mary-edwards-walker/index.html>
-
-Mapa dels USA amb la concentraciò de tractors agrícoles, dades 2012
-<https://metricmaps.org/2016/11/02/us-county-tractor-density/>
 
 Un llilbre de Nova York amb més de 200 mapes de tots els racons de la ciutat
 <http://www.papress.com/html/book.details.page.tpl?isbn=9781616895266>
@@ -542,7 +500,7 @@ Captura d'imatges 360° graus des d'un cotxe amb un equip assequible per destila
 Aprendre planificació urbanística jugant a jocs de simulació de ciutats
 <https://www.theatlantic.com/business/archive/2016/02/urban-planning-computer-games/470895/>
 
-## Nº494: capitoli, dolços. huracans, Malenki, impressions
+## Nº494: capitoli, dolços. huracans, Malenki
 
 El mapa dels túnels que corren sota el capitoli de Washington per connectar els edifics del govern
 <https://www.etsy.com/listing/484522125/capitol-tunnel-system-postcards-from>
@@ -555,9 +513,6 @@ Les dades de més de 100 anys d'observacions d'huracans en una visualització
 
 La recerca d'un veritable cartògraf perdut a Espanya explicada en un storymap
 <https://uploads.knightlab.com/storymapjs/0541ecf40df651364dc28a3cd11c544e/colaboracion-internacional-para-la-busqueda-de-thomas-bellmann/index.html>
-
-Botiga online de mapes fets al gust de cadascú i preparats per imprimir
-<https://manymaps.co/>
 
 ## Nº495: plàstic, ferrocarrils, lletres, smart, assentaments
 
