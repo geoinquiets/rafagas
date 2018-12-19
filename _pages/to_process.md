@@ -1,5 +1,6 @@
 ---
 layout: post
+date: '2018-12-19'
 title: "To process "
 permalink: /to_process/
 ---
