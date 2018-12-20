@@ -14,6 +14,14 @@ $1<$2>
 
 ## 2018w51
 
+Simulador de despeses de tramesa que permet calcular el cost ambiental i en diners de transportar mercaderies entre dos punts tenint en compte diversos condicionants <https://www.logicout.fr/couts/evaluation/resultats/>
+
+El geoetiquetat de les fotografies està fent malbé paratges espectaculars per la massificació de visitants degut a la popularitat de les imatges <http://phototrend.fr/2018/12/video-geolocalisation-photo-environnement/>
+
+Els preus del lloguer a tot Espanya s'han apujat, i la vivenda als pols de treball no serà assequible per als assalariats i molt menys per als joves <https://magnet.xataka.com/preguntas-no-tan-frecuentes/dos-mapas-para-entender-indignacion-espanoles-precio-alquiler>
+
+Mapa amb els rècords de temperatura més baixa dels països europeus, amb ampliació específica de la zona dels Balcans <https://viborc.com/lowest-temperatures-records-for-every-european-country/>
+
 Els serveis basats en la posició són crítics i molt vulnerables, i la guerra del GPS ja ha començat, via @ibesora <https://foreignpolicy.com/2018/12/17/the-gps-wars-are-here/>
 
 Mapes de països inventats generats a base de combinar geometries i continguts de països molt similars de manera creativa <https://sashat.me/2018/12/18/mashup-maps-reflections/>
@@ -39,21 +47,6 @@ All The Land In Our Solar System
 <https://brilliantmaps.com/solar-system-surface/>
 
 ## 2018W50
-
-Mapa web interactiu facilita l'accés a les dades dels fluxos migratoris i els moviments de persones de 2016 cap aquí de l'organisme internacional de migracions (IOM)
-<http://migration.iom.int/europe?type=arrivals>
-
-No és cert que les dades de posicionament que comparteixen els nostres dipositius siguin anònimes: se't pot identificar molt fàcilment i saber exactament què fas a cada moment
-<https://www.nytimes.com/interactive/2018/12/10/business/location-data-privacy-apps.html>
-
-Amb el canvi climàtic s'ha començat a perdre el permafrost, i en conseqüència totes les instal·lacions humanes de l'Àrtic (des de cases a oleoductes) corren el perill d'enfonsar-se en el terreny
-<https://www.nature.com/articles/s41467-018-07557-4>
-
-Tots els guanyadors dels premis "Information is Beautiful" de 2018, amb un apartat especial dedicat als mapes
-<https://www.informationisbeautifulawards.com/news/323-information-is-beautiful-awards-2018-the-winners>
-
-Un pas entre muntanyes als USA té quatre denominacions diferents tal i com es veu en aquesta anàlisi toponímica: Gap, Pass, Notch i Saddle
-<https://adventuresinmapping.com/2018/11/27/what-would-you-name-a-way-through-mountains/>
 
 The SatPy package is a python library for reading and manipulating meteorological remote sensing data and writing it to various image and data file formats, codi obert
 <https://github.com/pytroll/satpy>
