@@ -312,7 +312,7 @@ Four maps to explain the chaos in the Middle East, by The Washington Post
 ## Nº466: fiction, control, vmap, population
 
 Design fiction to explorar the life and death of data products
-<https://medium.com/design-fictions/the-life-and-death-of-data-products-8a63d59704841.9w3xnaptj>
+<https://medium.com/design-fictions/the-life-and-death-of-data-products-8a63d5970484>
 
 Monitoring tool in real time of various social networks for population control
 <https://geofeedia.com/>
