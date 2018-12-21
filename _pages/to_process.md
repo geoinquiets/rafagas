@@ -14,48 +14,50 @@ $1<$2>
 
 ## 2018w51
 
-Simulador de despeses de tramesa que permet calcular el cost ambiental i en diners de transportar mercaderies entre dos punts tenint en compte diversos condicionants <https://www.logicout.fr/couts/evaluation/resultats/>
 
-El geoetiquetat de les fotografies està fent malbé paratges espectaculars per la massificació de visitants degut a la popularitat de les imatges <http://phototrend.fr/2018/12/video-geolocalisation-photo-environnement/>
+1. "We built a nearly complete solar installation database for the contiguous US utilizing a novel deep learning model applied to satellite imagery" <https://www.cell.com/joule/fulltext/S2542-4351(18)30570-1>
 
-Els preus del lloguer a tot Espanya s'han apujat, i la vivenda als pols de treball no serà assequible per als assalariats i molt menys per als joves <https://magnet.xataka.com/preguntas-no-tan-frecuentes/dos-mapas-para-entender-indignacion-espanoles-precio-alquiler>
+1. Plataforma per a la manipulació i visualització de dades de manera senzilla, que fà gràfics i mapes amb tessel·les vector a partir d'arxius excel i text <https://flourish.studio/>
 
-Mapa amb els rècords de temperatura més baixa dels països europeus, amb ampliació específica de la zona dels Balcans <https://viborc.com/lowest-temperatures-records-for-every-european-country/>
+1. Un mapa modern de la ciutat de Nova York per penjar a la paret, primer d'una sèrie de mapes de ciutats amb d'altres en curs <https://futuremaps.com/city-wall-maps/new-york/new-york-street-map-with-cycle-routes-1>
 
-Els serveis basats en la posició són crítics i molt vulnerables, i la guerra del GPS ja ha començat, via @ibesora <https://foreignpolicy.com/2018/12/17/the-gps-wars-are-here/>
+1. Lloc web interactiu on autoaprendre i millorar les habilitat SQL necessàries per treballar amb bases de dades, requisit imprescindible en l'entorn STEM <http://sqlzoo.net>
 
-Mapes de països inventats generats a base de combinar geometries i continguts de països molt similars de manera creativa <https://sashat.me/2018/12/18/mashup-maps-reflections/>
+1. Cartogramas, ¿cómo crearlos?🤔En este post @lluisvicens nos da algunas ideas para crear este tipo de mapas con #QGIS3 o #GeoDa <https://www.unigis.es/crear-cartogramas-qgis/>
 
-Figuregrounder, una eina senzilla per fer pòster rodons de qualsevol lloc del mapa <http://hanshack.com/figuregrounder/>
+1. Simulador de despeses de tramesa que permet calcular el cost ambiental i en diners de transportar mercaderies entre dos punts tenint en compte diversos condicionants <https://www.logicout.fr/couts/evaluation/resultats/>
 
-El mapa de les àrees periurbanes de França, aquelles corones que encerclen els grans pols urbans, o la revenja de l'espai segons el geògraf marxista David Harvey
-<https://www.causecommune-larevue.fr/david_harvey_la_revanche_de_l_espace>
+1. El geoetiquetat de les fotografies està fent malbé paratges espectaculars per la massificació de visitants degut a la popularitat de les imatges <http://phototrend.fr/2018/12/video-geolocalisation-photo-environnement/>
 
-La censura de les imatges en el servei de mapes Yandex ha permès identificar instal·lacions militars secretes a Israel i Turquia
-<https://qz.com/1491883/military-bases-in-israel-and-turkey-exposed-by-yandex-the-russian-mapping-service/>
+1. Els preus del lloguer a tot Espanya s'han apujat, i la vivenda als pols de treball no serà assequible per als assalariats i molt menys per als joves <https://magnet.xataka.com/preguntas-no-tan-frecuentes/dos-mapas-para-entender-indignacion-espanoles-precio-alquiler>
 
-Els 11 milions de topònims que apareixen a GeoNames analitzats amb Postgis i representats amb Qgis
-<https://medium.com/@tjukanov/places-and-their-names-observations-from-11-million-place-names-8ea34cf61da4>
+1. Mapa amb els rècords de temperatura més baixa dels països europeus, amb ampliació específica de la zona dels Balcans <https://viborc.com/lowest-temperatures-records-for-every-european-country/>
 
-L'anatomia del cos humà representada en forma de mapa de metro, amb una llegenda explicativa, i que es pot comprar com un poster a Etsy
-<https://i.redd.it/pvic1vxwmly11.png>
+1. Els serveis basats en la posició són crítics i molt vulnerables, i la guerra del GPS ja ha començat, via @ibesora <https://foreignpolicy.com/2018/12/17/the-gps-wars-are-here/>
 
-Explicació detallada de com es va fet el projecte dels Vols a Roma per part d'un dels dissenyadors que hi van intervenir
-<https://lab.moovel.com/blog/making-of-flights-to-rome>
+1. Mapes de països inventats generats a base de combinar geometries i continguts de països molt similars de manera creativa <https://sashat.me/2018/12/18/mashup-maps-reflections/>
 
-All The Land In Our Solar System
-<https://brilliantmaps.com/solar-system-surface/>
+1. Figuregrounder, una eina senzilla per fer pòster rodons de qualsevol lloc del mapa <http://hanshack.com/figuregrounder/>
+
+1. El mapa de les àrees periurbanes de França, aquelles corones que encerclen els grans pols urbans, o la revenja de l'espai segons el geògraf marxista David Harvey <https://www.causecommune-larevue.fr/david_harvey_la_revanche_de_l_espace>
+
+1. La censura de les imatges en el servei de mapes Yandex ha permès identificar instal·lacions militars secretes a Israel i Turquia <https://qz.com/1491883/military-bases-in-israel-and-turkey-exposed-by-yandex-the-russian-mapping-service/>
+
+1. Els 11 milions de topònims que apareixen a GeoNames analitzats amb Postgis i representats amb Qgis <https://medium.com/@tjukanov/places-and-their-names-observations-from-11-million-place-names-8ea34cf61da4>
+
+1. L'anatomia del cos humà representada en forma de mapa de metro, amb una llegenda explicativa, i que es pot comprar com un poster a Etsy <https://i.redd.it/pvic1vxwmly11.png>
+
+1. Explicació detallada de com es va fet el projecte dels Vols a Roma per part d'un dels dissenyadors que hi van intervenir <https://lab.moovel.com/blog/making-of-flights-to-rome>
+
+1. All The Land In Our Solar System <https://brilliantmaps.com/solar-system-surface/>
 
 ## 2018W50
 
-The SatPy package is a python library for reading and manipulating meteorological remote sensing data and writing it to various image and data file formats, codi obert
-<https://github.com/pytroll/satpy>
+1.  The SatPy package is a python library for reading and manipulating meteorological remote sensing data and writing it to various image and data file formats, codi obert <https://github.com/pytroll/satpy>
 
-Ara podeu jugar a cotxes amb els vostres nanos en una alfombra específicament feta amb els carrers del vostre barri dibuixats per l'artista Laura Bednarski i comprada online
-<https://kinderkiez.net/en/>
+1. Ara podeu jugar a cotxes amb els vostres nanos en una alfombra específicament feta amb els carrers del vostre barri dibuixats per l'artista Laura Bednarski i comprada online <https://kinderkiez.net/en/>
 
-Noves eines per l'arqueologia: impressió en 3D per a la reconstrucció a escala del temple precolombí de Pumapunku al jaciment de Tiwanaku (500–950 ac) a Colòmbia
-<https://heritagesciencejournal.springeropen.com/articles/10.1186/s40494-018-0231-0>
+1. Noves eines per l'arqueologia: impressió en 3D per a la reconstrucció a escala del temple precolombí de Pumapunku al jaciment de Tiwanaku (500–950 ac) a Colòmbia <https://heritagesciencejournal.springeropen.com/articles/10.1186/s40494-018-0231-0>
 
 ## Nº123: health, wines, postgres, bpg
 
@@ -310,7 +312,7 @@ Four maps to explain the chaos in the Middle East, by The Washington Post
 ## Nº466: fiction, control, vmap, population
 
 Design fiction to explorar the life and death of data products
-<https://medium.com/design-fictions/the-life-and-death-of-data-products-8a63d5970484#.9w3xnaptj>
+<https://medium.com/design-fictions/the-life-and-death-of-data-products-8a63d59704841.9w3xnaptj>
 
 Monitoring tool in real time of various social networks for population control
 <https://geofeedia.com/>
