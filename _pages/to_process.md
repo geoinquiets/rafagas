@@ -18,7 +18,7 @@ $1<$2>
 
 1. Descartes Labs built a machine learning model to identify tree canopy using a combination of lidar, aerial imagery and satellite imagery <https://medium.com/@tim.wallace_98924/descartes-labs-urban-trees-tree-canopy-mapping-3b6c85c5c9cc>
 
-1. This is a dot density map showing where classic christmas dinner items are grown in England, using an open dataset from <http://gov.uk https://locationinsights.co.uk/b/c3>
+1. This is a dot density map showing where classic christmas dinner items are grown in England, using an open dataset from <http://gov.uk> <https://locationinsights.co.uk/b/c3>
 
 1. The Global Ecosystem Dynamics Investigation, or GEDI aboard the ISS, using advanced laser technology will reveal the three-dimensional structure of forest ecosystems around the globe <https://www.nasa.gov/feature/goddard/2018/gedi-to-measure-earths-forests>
 
@@ -47,14 +47,6 @@ $1<$2>
 1. Figuregrounder, una eina senzilla per fer pòster rodons de qualsevol lloc del mapa <http://hanshack.com/figuregrounder/>
 
 1. El mapa de les àrees periurbanes de França, aquelles corones que encerclen els grans pols urbans, o la revenja de l'espai segons el geògraf marxista David Harvey <https://www.causecommune-larevue.fr/david_harvey_la_revanche_de_l_espace>
-
-1. La censura de les imatges en el servei de mapes Yandex ha permès identificar instal·lacions militars secretes a Israel i Turquia <https://qz.com/1491883/military-bases-in-israel-and-turkey-exposed-by-yandex-the-russian-mapping-service/>
-
-1. Els 11 milions de topònims que apareixen a GeoNames analitzats amb Postgis i representats amb Qgis <https://medium.com/@tjukanov/places-and-their-names-observations-from-11-million-place-names-8ea34cf61da4>
-
-1. L'anatomia del cos humà representada en forma de mapa de metro, amb una llegenda explicativa, i que es pot comprar com un poster a Etsy <https://i.redd.it/pvic1vxwmly11.png>
-
-1. Explicació detallada de com es va fet el projecte dels Vols a Roma per part d'un dels dissenyadors que hi van intervenir <https://lab.moovel.com/blog/making-of-flights-to-rome>
 
 
 ## Nº123: health, wines, postgres, bpg
