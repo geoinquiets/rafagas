@@ -56,13 +56,6 @@ $1<$2>
 
 1. Explicació detallada de com es va fet el projecte dels Vols a Roma per part d'un dels dissenyadors que hi van intervenir <https://lab.moovel.com/blog/making-of-flights-to-rome>
 
-1. All The Land In Our Solar System <https://brilliantmaps.com/solar-system-surface/>
-
-1.  The SatPy package is a python library for reading and manipulating meteorological remote sensing data and writing it to various image and data file formats, codi obert <https://github.com/pytroll/satpy>
-
-1. Ara podeu jugar a cotxes amb els vostres nanos en una alfombra específicament feta amb els carrers del vostre barri dibuixats per l'artista Laura Bednarski i comprada online <https://kinderkiez.net/en/>
-
-1. Noves eines per l'arqueologia: impressió en 3D per a la reconstrucció a escala del temple precolombí de Pumapunku al jaciment de Tiwanaku (500–950 ac) a Colòmbia <https://heritagesciencejournal.springeropen.com/articles/10.1186/s40494-018-0231-0>
 
 ## Nº123: health, wines, postgres, bpg
 
