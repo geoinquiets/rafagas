@@ -14,6 +14,16 @@ $1<$2>
 
 ## To send
 
+1. Mapamundi dels idiomes del món fet amb text segons la branca a la que pertanyen <https://rozinavavetsi.crevado.com/gallery/4955-for-fun/35868>
+
+1. OSM com servei de base: magOSM propose d’accéder à des jeux de données thématiques issus d’OpenStreetMap aux formats WFS/WMS <https://magosm.magellium.com>
+
+1. PeakFinder AR és una app que mostra els noms de totes les muntanyes i cims en una panoràmica 360, offline i a tot el món <https://www.peakfinder.org/mobile/>
+
+1. Avaluació global dels canvis en el paisatge europeu entre 1992 i 2015 a partir dels mapes d'usos del sól fets per l'ESA <https://www.sciencedirect.com/science/article/pii/S0303243418305841>
+
+1. Com mostrar les dades del temps per a qualsevol població fent crides a la API d'OpenWeather amb React sobre un mapa de Mapbox <https://github.com/AdriSolid/Redux-Weather-App>
+
 1. Tecnologia i innovació ciutadana en la construcció de xarxes socials històriques per a la comprensió del llegat demogràfic a partir de les dades dels padrons històrics <http://dag.cvc.uab.es/xarxes/>
 
 1. Descartes Labs built a machine learning model to identify tree canopy using a combination of lidar, aerial imagery and satellite imagery <https://medium.com/@tim.wallace_98924/descartes-labs-urban-trees-tree-canopy-mapping-3b6c85c5c9cc>
@@ -39,15 +49,6 @@ $1<$2>
 1. Els preus del lloguer a tot Espanya s'han apujat, i la vivenda als pols de treball no serà assequible per als assalariats i molt menys per als joves <https://magnet.xataka.com/preguntas-no-tan-frecuentes/dos-mapas-para-entender-indignacion-espanoles-precio-alquiler>
 
 1. Mapa amb els rècords de temperatura més baixa dels països europeus, amb ampliació específica de la zona dels Balcans <https://viborc.com/lowest-temperatures-records-for-every-european-country/>
-
-1. Els serveis basats en la posició són crítics i molt vulnerables, i la guerra del GPS ja ha començat, via @ibesora <https://foreignpolicy.com/2018/12/17/the-gps-wars-are-here/>
-
-1. Mapes de països inventats generats a base de combinar geometries i continguts de països molt similars de manera creativa <https://sashat.me/2018/12/18/mashup-maps-reflections/>
-
-1. Figuregrounder, una eina senzilla per fer pòster rodons de qualsevol lloc del mapa <http://hanshack.com/figuregrounder/>
-
-1. El mapa de les àrees periurbanes de França, aquelles corones que encerclen els grans pols urbans, o la revenja de l'espai segons el geògraf marxista David Harvey <https://www.causecommune-larevue.fr/david_harvey_la_revanche_de_l_espace>
-
 
 ## Nº123: health, wines, postgres, bpg
 
@@ -106,7 +107,6 @@ and clean design
 Recogito is an interactive tool to transcribe place names from legacy
 geospatial documents
 <http://pelagios.org/recogito/>
-
 
 ## Nº165: CO2, internet, products, cartocss, copernicus
 
@@ -574,4 +574,3 @@ Sis mapes mostren l'anatomia de les grans infraestructures dels USA
 
 Mapa de l'edat de les ciutats alemanyes de més de 100mil habitants
 <http://www.zeit.de/zeit-magazin/2016/48/stadtgeburtstag-alter-staedte-deutschlandkarte>
-
