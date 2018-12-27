@@ -14,6 +14,12 @@ $1<$2>
 
 ## To send
 
+1. Sounding Nature és una exploració global dels més de 500 sons de la natura a 55 països, reimaginats per 250 artistes per reflexionar sobre el dany que els sons generats per l'home estan causant al món natural <http://citiesandmemory.com/sounding-nature/>
+
+1. Processades 6205 imatges Sentinel-2 i 593 imatges Landsat-8 per calcular la durada de la coberta de neu als Pirineus i als Alps durant les temporades 2016-2017 i 2017-2018 <http://www.cesbio.ups-tlse.fr/multitemp/?p=14620>
+
+1. Dos mapes interactius, i la seva documentació, relacionats amb el model global de terratrèmols: el mapa de risc sísmic global i el mapa de perill sísmic global <https://www.globalquakemodel.org/gem>
+
 1. Mapamundi dels idiomes del món fet amb text segons la branca a la que pertanyen <https://rozinavavetsi.crevado.com/gallery/4955-for-fun/35868>
 
 1. OSM com servei de base: magOSM propose d’accéder à des jeux de données thématiques issus d’OpenStreetMap aux formats WFS/WMS <https://magosm.magellium.com>
@@ -42,13 +48,6 @@ $1<$2>
 
 1. Cartogramas, ¿cómo crearlos?🤔En este post @lluisvicens nos da algunas ideas para crear este tipo de mapas con #QGIS3 o #GeoDa <https://www.unigis.es/crear-cartogramas-qgis/>
 
-1. Simulador de despeses de tramesa que permet calcular el cost ambiental i en diners de transportar mercaderies entre dos punts tenint en compte diversos condicionants <https://www.logicout.fr/couts/evaluation/resultats/>
-
-1. El geoetiquetat de les fotografies està fent malbé paratges espectaculars per la massificació de visitants degut a la popularitat de les imatges <http://phototrend.fr/2018/12/video-geolocalisation-photo-environnement/>
-
-1. Els preus del lloguer a tot Espanya s'han apujat, i la vivenda als pols de treball no serà assequible per als assalariats i molt menys per als joves <https://magnet.xataka.com/preguntas-no-tan-frecuentes/dos-mapas-para-entender-indignacion-espanoles-precio-alquiler>
-
-1. Mapa amb els rècords de temperatura més baixa dels països europeus, amb ampliació específica de la zona dels Balcans <https://viborc.com/lowest-temperatures-records-for-every-european-country/>
 
 ## Nº123: health, wines, postgres, bpg
 
