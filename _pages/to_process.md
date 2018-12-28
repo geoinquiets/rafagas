@@ -40,15 +40,6 @@ $1<$2>
 
 1. "We built a nearly complete solar installation database for the contiguous US utilizing a novel deep learning model applied to satellite imagery" <https://www.cell.com/joule/fulltext/S2542-4351(18)30570-1>
 
-1. Plataforma per a la manipulació i visualització de dades de manera senzilla, que fà gràfics i mapes amb tessel·les vector a partir d'arxius excel i text <https://flourish.studio/>
-
-1. Un mapa modern de la ciutat de Nova York per penjar a la paret, primer d'una sèrie de mapes de ciutats amb d'altres en curs <https://futuremaps.com/city-wall-maps/new-york/new-york-street-map-with-cycle-routes-1>
-
-1. Lloc web interactiu on autoaprendre i millorar les habilitat SQL necessàries per treballar amb bases de dades, requisit imprescindible en l'entorn STEM <http://sqlzoo.net>
-
-1. Cartogramas, ¿cómo crearlos?🤔En este post @lluisvicens nos da algunas ideas para crear este tipo de mapas con #QGIS3 o #GeoDa <https://www.unigis.es/crear-cartogramas-qgis/>
-
-
 ## Nº123: health, wines, postgres, bpg
 
 Tests with health and social affairs geodata in France
