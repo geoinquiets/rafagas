@@ -24,8 +24,12 @@ permalink: /atomic_atom.xml
         <title>Nº{{ post.rid}} ({{ raf_counter }}): {{rafaga.desc | xml_escape }}{% if rafaga.via %} via {{rafaga.via | xml_escape }}{% endif %}</title>
         <link href="{{ rafaga.link | xml_escape}}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
-        <id>{{ site.url }}{{ post.id }}#{{ raf_counter }}</id>
-        <content></content>
+        <id>{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html#{{ raf_counter }}</id>
+        <content><![CDATA[
+          Post {{ raf_counter }} of {{ post.rafagas.size }} at issue 
+          <a href="{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html">#{{post.rid}}</a>
+          ]]>
+        </content>
       </entry>
       {% assign raf_counter = raf_counter | minus: 1 %}
     {% endfor %}
