@@ -7,21 +7,16 @@ permalink: /atomic_atom.xml
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>{{ site.title }}</title>
- <link href="{{ site.url }}/atomic_atom.xml" rel="self"/>
- <link href="{{ site.url }}"/>
+ <link href="{{ site.url }}{{ site.baseurl }}/atomic_atom.xml" rel="self"/>
+ <link href="{{ site.url }}{{ site.baseurl }}"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.url }}</id>
+ <id>{{ site.url }}{{ site.baseurl }}</id>
  <author>
    <name>{{ site.author.name }}</name>
    <email>{{ site.author.email }}</email>
- </author>
-
-{% for post in site.posts limit:5 %}
-  {% assign raf_counter = post.rafagas.size %}
-  {% if post.rafagas %}
-    {% for rafaga in post.rafagas reversed %}
+ </author>{% for post in site.posts limit:10 %}{% assign raf_counter = post.rafagas.size %}{% if post.rafagas %} {% for rafaga in post.rafagas reversed %}
       <entry>
-        <title>Nº{{ post.rid}} ({{ raf_counter }}): {{rafaga.desc | xml_escape }}{% if rafaga.via %} via {{rafaga.via | xml_escape }}{% endif %}</title>
+        <title>{{rafaga.desc | xml_escape }}{% if rafaga.via %} via {{rafaga.via | xml_escape }}{% endif %}</title>
         <link href="{{ rafaga.link | xml_escape}}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html#{{ raf_counter }}</id>
@@ -30,20 +25,5 @@ permalink: /atomic_atom.xml
           <a href="{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html">#{{post.rid}}</a>
           ]]>
         </content>
-      </entry>
-      {% assign raf_counter = raf_counter | minus: 1 %}
-    {% endfor %}
-  {% else %}
-    <entry>
-      <title>{{ post.title }}</title>
-      <link href="{{ site.url }}{{ post.url }}"/>
-      <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <id>{{ site.url }}{{ post.id }}</id>
-      <content>
-        {{ post.content | xml_escape }}
-        &lt;p>{{post.author}} &lt;/p>
-      </content>
-    </entry>
-  {% endif %}
-{% endfor %}
+      </entry>{% assign raf_counter = raf_counter | minus: 1 %} {% endfor %}{% endif %} {% endfor %}
 </feed>
