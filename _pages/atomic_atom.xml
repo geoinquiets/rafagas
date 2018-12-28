@@ -14,11 +14,11 @@ permalink: /atomic_atom.xml
  <author>
    <name>{{ site.author.name }}</name>
    <email>{{ site.author.email }}</email>
- </author>{% for post in site.posts limit:10 %}{% assign raf_counter = post.rafagas.size %}{% if post.rafagas %} {% for rafaga in post.rafagas reversed %}
-      <entry>
+ </author>{% for post in site.posts limit:10 %} {% assign raf_counter = post.rafagas.size %} {% if post.rafagas %} {% for rafaga in post.rafagas reversed %}
+      <entry> {% assign new_date = post.date | date: '%Y-%m-%eT00:00:00+00:0' %} {% assign new_date2 = new_date | append: raf_counter  %}
         <title>{{rafaga.desc | xml_escape }}{% if rafaga.via %} via {{rafaga.via | xml_escape }}{% endif %}</title>
         <link href="{{ rafaga.link | xml_escape}}"/>
-        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <updated>{{ new_date2 }}</updated>
         <id>{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html#{{ raf_counter }}</id>
         <content type="html"><![CDATA[
           Post {{ raf_counter }} of {{ post.rafagas.size }} at issue 
