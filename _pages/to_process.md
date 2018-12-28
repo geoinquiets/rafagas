@@ -14,6 +14,14 @@ $1<$2>
 
 ## To send
 
+1. Geovisualitzacions de dades a la web: la presentació (en PDF) de conceptes, eines i recursos per als cartògrafs online via @BorisMericskay https://geoviz.sciencesconf.org/data/pages/Visualisation_de_donnees_spatiales_sur_le_Web.pdf
+
+1. Reflexions sobre el BIM i el SIG després del fórum TIG/SIG de Barcelona fetes per dos analistes dels SIGTE de la Universitat de Girona https://www.unigis.es/que-es-el-bim-forum-tig-sig/
+
+1. Mapa turístic de Senegal amb uns quants punts d'interés per copsar una pinzellada del pais https://map.data-wax.com/websig/lizmap/www/index.php/view/map/?repository=rep007&project=Senegal
+
+1. Sounding Nature és una exploració global dels més de 500 sons de la natura a 55 països, reimaginats per 250 artistes per reflexionar sobre el dany que els sons generats per l'home estan causant al món natural http://citiesandmemory.com/sounding-nature/
+
 1. Sounding Nature és una exploració global dels més de 500 sons de la natura a 55 països, reimaginats per 250 artistes per reflexionar sobre el dany que els sons generats per l'home estan causant al món natural <http://citiesandmemory.com/sounding-nature/>
 
 1. Processades 6205 imatges Sentinel-2 i 593 imatges Landsat-8 per calcular la durada de la coberta de neu als Pirineus i als Alps durant les temporades 2016-2017 i 2017-2018 <http://www.cesbio.ups-tlse.fr/multitemp/?p=14620>
