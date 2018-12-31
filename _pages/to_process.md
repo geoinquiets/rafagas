@@ -14,6 +14,8 @@ $1<$2>
 
 ## To send
 
+### Y18W52
+
 1. Geovisualitzacions de dades a la web: la presentació (en PDF) de conceptes, eines i recursos per als cartògrafs online via @BorisMericskay https://geoviz.sciencesconf.org/data/pages/Visualisation_de_donnees_spatiales_sur_le_Web.pdf
 
 1. Reflexions sobre el BIM i el SIG després del fórum TIG/SIG de Barcelona fetes per dos analistes dels SIGTE de la Universitat de Girona https://www.unigis.es/que-es-el-bim-forum-tig-sig/
@@ -39,14 +41,6 @@ $1<$2>
 1. Com mostrar les dades del temps per a qualsevol població fent crides a la API d'OpenWeather amb React sobre un mapa de Mapbox <https://github.com/AdriSolid/Redux-Weather-App>
 
 1. Tecnologia i innovació ciutadana en la construcció de xarxes socials històriques per a la comprensió del llegat demogràfic a partir de les dades dels padrons històrics <http://dag.cvc.uab.es/xarxes/>
-
-1. Descartes Labs built a machine learning model to identify tree canopy using a combination of lidar, aerial imagery and satellite imagery <https://medium.com/@tim.wallace_98924/descartes-labs-urban-trees-tree-canopy-mapping-3b6c85c5c9cc>
-
-1. This is a dot density map showing where classic christmas dinner items are grown in England, using an open dataset from <http://gov.uk> <https://locationinsights.co.uk/b/c3>
-
-1. The Global Ecosystem Dynamics Investigation, or GEDI aboard the ISS, using advanced laser technology will reveal the three-dimensional structure of forest ecosystems around the globe <https://www.nasa.gov/feature/goddard/2018/gedi-to-measure-earths-forests>
-
-1. "We built a nearly complete solar installation database for the contiguous US utilizing a novel deep learning model applied to satellite imagery" <https://www.cell.com/joule/fulltext/S2542-4351(18)30570-1>
 
 ## Nº123: health, wines, postgres, bpg
 
