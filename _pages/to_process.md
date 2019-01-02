@@ -34,14 +34,6 @@ $1<$2>
 
 1. OSM com servei de base: magOSM propose d’accéder à des jeux de données thématiques issus d’OpenStreetMap aux formats WFS/WMS <https://magosm.magellium.com>
 
-1. PeakFinder AR és una app que mostra els noms de totes les muntanyes i cims en una panoràmica 360, offline i a tot el món <https://www.peakfinder.org/mobile/>
-
-1. Avaluació global dels canvis en el paisatge europeu entre 1992 i 2015 a partir dels mapes d'usos del sól fets per l'ESA <https://www.sciencedirect.com/science/article/pii/S0303243418305841>
-
-1. Com mostrar les dades del temps per a qualsevol població fent crides a la API d'OpenWeather amb React sobre un mapa de Mapbox <https://github.com/AdriSolid/Redux-Weather-App>
-
-1. Tecnologia i innovació ciutadana en la construcció de xarxes socials històriques per a la comprensió del llegat demogràfic a partir de les dades dels padrons històrics <http://dag.cvc.uab.es/xarxes/>
-
 ## Nº123: health, wines, postgres, bpg
 
 Tests with health and social affairs geodata in France
