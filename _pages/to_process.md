@@ -14,17 +14,46 @@ $1<$2>
 
 ## To send
 
-### Y18W52
+### Y19W01
 
-1. Geovisualitzacions de dades a la web: la presentació (en PDF) de conceptes, eines i recursos per als cartògrafs online via @BorisMericskay https://geoviz.sciencesconf.org/data/pages/Visualisation_de_donnees_spatiales_sur_le_Web.pdf
+Un portal personal de mapes amb un seguit de capes curioses i poc habituals
+<http://maps.imagico.de/#map=3/63.800/5.500&lang=en&l=sat2&ui=0>
 
-1. Reflexions sobre el BIM i el SIG després del fórum TIG/SIG de Barcelona fetes per dos analistes dels SIGTE de la Universitat de Girona https://www.unigis.es/que-es-el-bim-forum-tig-sig/
+El mapa de les banderes municipals de Canadà, comentades, fet amb emojis
+<https://burritojustice.github.io/bc-flags/>
 
-1. Mapa turístic de Senegal amb uns quants punts d'interés per copsar una pinzellada del pais https://map.data-wax.com/websig/lizmap/www/index.php/view/map/?repository=rep007&project=Senegal
+La imatge prototípica i tòpica del Nabal blanc, amb tot ple de neu, és ben poc habitual com mostren aquest mapa de probabilitat del món i als USA
+<https://www.vouchercloud.com/resources/white-christmas>
 
-1. Sounding Nature és una exploració global dels més de 500 sons de la natura a 55 països, reimaginats per 250 artistes per reflexionar sobre el dany que els sons generats per l'home estan causant al món natural http://citiesandmemory.com/sounding-nature/
+Un dispositiu ben senzill per bicicletes (o motos) que permet tenir guiatge a partir de la ruta calculada al telèfon
+<https://beeline.co/>
 
-1. Sounding Nature és una exploració global dels més de 500 sons de la natura a 55 països, reimaginats per 250 artistes per reflexionar sobre el dany que els sons generats per l'home estan causant al món natural <http://citiesandmemory.com/sounding-nature/>
+Crear un mapa base de França amb aspecte "BDTOPO® | IGN" de forma automatitzada a partir de les dades OSM
+<https://blog.data-wax.com/2018/11/21/creer-une-pseudo-bdtopo-ign-a-partir-des-donnees-openstreetmap-osm/>
+
+Mapa de l'arbarat públic urbà de Valdivia a Xile, amb el detall de les localitzacions i les espècies i la classificació segons si són nadiues o exòtiques
+<http://rpubs.com/openmapchile/ArboladoUrbano>
+
+Base de dades oberta d'estacions de tren: this repository contains the information Trainline EU uses to identify stations across the diverse systems of the train operators
+<https://github.com/trainline-eu/stations>
+
+Una petita selecció d'il·lustradors de mapes, artistes a mig camí entre la cartografia i les arts plàstiques, triats per @alpoma
+<https://alpoma.net/carto/?p=7220>
+
+Extens article ben documentat sobre el disseny i l'anàlisi dels mapes d'isocrones
+<http://cartonumerique.blogspot.com/2018/12/cartes-isochrones.html>
+
+Dos projectes singulars de gestió forestal per a municipis innovadors que els farà més segurs i ecològics en un cicle de guany socioeconòmic i mediambiental
+<http://www.entrearbres.cat/new/?id=18>
+
+La territorialitat dels llops visualitzada amb les imatges dels moviments enregistrats amb GPS de 7 llops de diferents manades, gràcies @sfggeogis
+<https://www.facebook.com/VoyageursWolfProject/posts/347276326097723?__tn__=-R>
+
+Meshroom is a free, open-source 3D Reconstruction Software based on the AliceVision Photogrammetric Computer Vision framework.
+<https://github.com/alicevision/meshroom>
+
+"España en mapa. Una síntesis geográfica" és el compendi de la geografia i la història d'Espanya que entre d'altres té més de 800 mapes. I es pot descarregar gratuïtament.
+<http://www.ign.es/web/publicaciones-boletines-y-libros-digitales#DA-Espana-en-mapas>
 
 ## Nº123: health, wines, postgres, bpg
 
