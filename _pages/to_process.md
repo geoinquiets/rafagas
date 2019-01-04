@@ -468,7 +468,7 @@ Les megaregions dels USA segons la quantitat de desplaçaments diaris en cotxe
 <http://news.nationalgeographic.com/2016/11/us-commutes-reveal-new-economic-megaregions-map/>
 
 Una llista de llibres interessants relacionats amb temes de trànsit
-<http://transitmap.net/post/153886727725/2016-gift-guide-books>
+http://transitmap.net/post/153886727725/2016-gift-guide-books
 
 Una recepta per netejar les dades del registre de cases rurals i que es pot aplicar a d'altres dades
 <https://escuchandodatos.wordpress.com/2016/11/29/limpieza-de-datos-con-knime/>
