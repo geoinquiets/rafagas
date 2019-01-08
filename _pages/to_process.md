@@ -16,6 +16,8 @@ $1<$2>
 
 ### Y19W01
 
+<http://www.r2d3.us/visual-intro-to-machine-learning-part-1/> (and part 2) via @xurxosanz
+
 Un portal personal de mapes amb un seguit de capes curioses i poc habituals
 <http://maps.imagico.de/#map=3/63.800/5.500&lang=en&l=sat2&ui=0>
 
@@ -42,18 +44,6 @@ Una petita selecció d'il·lustradors de mapes, artistes a mig camí entre la ca
 
 Extens article ben documentat sobre el disseny i l'anàlisi dels mapes d'isocrones
 <http://cartonumerique.blogspot.com/2018/12/cartes-isochrones.html>
-
-Dos projectes singulars de gestió forestal per a municipis innovadors que els farà més segurs i ecològics en un cicle de guany socioeconòmic i mediambiental
-<http://www.entrearbres.cat/new/?id=18>
-
-La territorialitat dels llops visualitzada amb les imatges dels moviments enregistrats amb GPS de 7 llops de diferents manades, gràcies @sfggeogis
-<https://www.facebook.com/VoyageursWolfProject/posts/347276326097723?__tn__=-R>
-
-Meshroom is a free, open-source 3D Reconstruction Software based on the AliceVision Photogrammetric Computer Vision framework.
-<https://github.com/alicevision/meshroom>
-
-"España en mapa. Una síntesis geográfica" és el compendi de la geografia i la història d'Espanya que entre d'altres té més de 800 mapes. I es pot descarregar gratuïtament.
-<http://www.ign.es/web/publicaciones-boletines-y-libros-digitales#DA-Espana-en-mapas>
 
 ## Nº123: health, wines, postgres, bpg
 
