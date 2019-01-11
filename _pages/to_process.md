@@ -14,36 +14,32 @@ $1<$2>
 
 ## To send
 
-### Y19W01
+### Y19W02
 
-<http://www.r2d3.us/visual-intro-to-machine-learning-part-1/> (and part 2) via @xurxosanz
+Els millors mapes de 2018 apareguts a la Canadian Geographic, la revista de la societat geogràfica de Canadà   
+<https://www.canadiangeographic.ca/article/our-best-maps-2018>
 
-Un portal personal de mapes amb un seguit de capes curioses i poc habituals
-<http://maps.imagico.de/#map=3/63.800/5.500&lang=en&l=sat2&ui=0>
+Els boscos del món dibuixats en relleu en funció de la seva biomassa, fet amb Blender  
+<https://i.redd.it/s9sf9mq28u521.jpg>
 
-El mapa de les banderes municipals de Canadà, comentades, fet amb emojis
-<https://burritojustice.github.io/bc-flags/>
+Les fronteres s'estan redibuixant en funció de la connectivitat i perden pes els països mentre que guanyen força les ciutats com a centres productors 
+<https://blog.spatialnetworks.com/how-connectedness-is-revamping-the-world-map-d59a257b8aa0>
 
-La imatge prototípica i tòpica del Nabal blanc, amb tot ple de neu, és ben poc habitual com mostren aquest mapa de probabilitat del món i als USA
-<https://www.vouchercloud.com/resources/white-christmas>
+Els 18 mapes més inspiradors de 2018 per a Mapbox, anomenada la plataforma de mapes i localització de l'any per al 2019  
+<https://blog.mapbox.com/18-maps-that-inspired-us-this-year-c569de845432>
 
-Un dispositiu ben senzill per bicicletes (o motos) que permet tenir guiatge a partir de la ruta calculada al telèfon
-<https://beeline.co/>
+Mapes de malles de bombolles per mostrar la magnitud, i la distribució espacial, dels ramats de bestiar a Europa amb codi per reproduïr-ho amb ggplot2 
+<http://www.maartenlambrechts.com/2018/07/31/beasts-of-europe.html>
 
-Crear un mapa base de França amb aspecte "BDTOPO® | IGN" de forma automatitzada a partir de les dades OSM
-<https://blog.data-wax.com/2018/11/21/creer-une-pseudo-bdtopo-ign-a-partir-des-donnees-openstreetmap-osm/>
+Tesi per al PhD en història "L'État et l'espace colonial : savoirs géographiques entre la France et la Nouvelle-France aux XVIIe et XVIIIe siècles" 
+<https://papyrus.bib.umontreal.ca/xmlui/handle/1866/21137>
 
-Mapa de l'arbarat públic urbà de Valdivia a Xile, amb el detall de les localitzacions i les espècies i la classificació segons si són nadiues o exòtiques
-<http://rpubs.com/openmapchile/ArboladoUrbano>
+El mapa interactiu del Londres medieval que mostra els homicids i les seves causes i premet reviure la violència als carrers per gènere i arma i any i barri  
+<https://www.vrc.crim.cam.ac.uk/vrcresearch/london-medieval-murder-map>
 
-Base de dades oberta d'estacions de tren: this repository contains the information Trainline EU uses to identify stations across the diverse systems of the train operators
-<https://github.com/trainline-eu/stations>
+Morfologies del turisme: una descripció del fenomen turístic a Barcelona a través dels seus impactes, mostra la turitificació de Barcelona amb mapes  
+<http://turismebcn.300000kms.net/>
 
-Una petita selecció d'il·lustradors de mapes, artistes a mig camí entre la cartografia i les arts plàstiques, triats per @alpoma
-<https://alpoma.net/carto/?p=7220>
-
-Extens article ben documentat sobre el disseny i l'anàlisi dels mapes d'isocrones
-<http://cartonumerique.blogspot.com/2018/12/cartes-isochrones.html>
 
 ## Nº123: health, wines, postgres, bpg
 
@@ -458,7 +454,7 @@ Les megaregions dels USA segons la quantitat de desplaçaments diaris en cotxe
 <http://news.nationalgeographic.com/2016/11/us-commutes-reveal-new-economic-megaregions-map/>
 
 Una llista de llibres interessants relacionats amb temes de trànsit
-http://transitmap.net/post/153886727725/2016-gift-guide-books
+<http://transitmap.net/post/153886727725/2016-gift-guide-books>
 
 Una recepta per netejar les dades del registre de cases rurals i que es pot aplicar a d'altres dades
 <https://escuchandodatos.wordpress.com/2016/11/29/limpieza-de-datos-con-knime/>
