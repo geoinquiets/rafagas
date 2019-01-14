@@ -230,8 +230,6 @@ Distàncies isocròniques el 1914 i el 2016 en dos mapes sobreposats (clic per c
 Toponímia de llocs habitats a Alemanya: disitribució de les terminacions dels noms
 <http://i.imgur.com/dJ1NI7v.jpg>
 
-Una ciutat doblegada sobre si mateixa i convertida en tauleta de café
-<http://www.mymodernmet.com/profiles/blogs/mousarris-wave-coffee-table>
 
 ## Nº463: geopopularity, accidents, uninhabited, Pluto, Peutinger
 
