@@ -28,18 +28,6 @@ Les fronteres s'estan redibuixant en funció de la connectivitat i perden pes el
 Els 18 mapes més inspiradors de 2018 per a Mapbox, anomenada la plataforma de mapes i localització de l'any per al 2019  
 <https://blog.mapbox.com/18-maps-that-inspired-us-this-year-c569de845432>
 
-Mapes de malles de bombolles per mostrar la magnitud, i la distribució espacial, dels ramats de bestiar a Europa amb codi per reproduïr-ho amb ggplot2 
-<http://www.maartenlambrechts.com/2018/07/31/beasts-of-europe.html>
-
-Tesi per al PhD en història "L'État et l'espace colonial : savoirs géographiques entre la France et la Nouvelle-France aux XVIIe et XVIIIe siècles" 
-<https://papyrus.bib.umontreal.ca/xmlui/handle/1866/21137>
-
-El mapa interactiu del Londres medieval que mostra els homicids i les seves causes i premet reviure la violència als carrers per gènere i arma i any i barri  
-<https://www.vrc.crim.cam.ac.uk/vrcresearch/london-medieval-murder-map>
-
-Morfologies del turisme: una descripció del fenomen turístic a Barcelona a través dels seus impactes, mostra la turitificació de Barcelona amb mapes  
-<http://turismebcn.300000kms.net/>
-
 
 ## Nº123: health, wines, postgres, bpg
 
