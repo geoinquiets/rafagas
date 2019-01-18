@@ -14,20 +14,6 @@ $1<$2>
 
 ## To send
 
-### Y19W02
-
-Els millors mapes de 2018 apareguts a la Canadian Geographic, la revista de la societat geogràfica de Canadà   
-<https://www.canadiangeographic.ca/article/our-best-maps-2018>
-
-Els boscos del món dibuixats en relleu en funció de la seva biomassa, fet amb Blender  
-<https://i.redd.it/s9sf9mq28u521.jpg>
-
-Les fronteres s'estan redibuixant en funció de la connectivitat i perden pes els països mentre que guanyen força les ciutats com a centres productors 
-<https://blog.spatialnetworks.com/how-connectedness-is-revamping-the-world-map-d59a257b8aa0>
-
-Els 18 mapes més inspiradors de 2018 per a Mapbox, anomenada la plataforma de mapes i localització de l'any per al 2019  
-<https://blog.mapbox.com/18-maps-that-inspired-us-this-year-c569de845432>
-
 
 ## Nº123: health, wines, postgres, bpg
 
