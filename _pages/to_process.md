@@ -28,33 +28,12 @@ La història del barri de Gazochori, creat al voltant de la planta de gas instal
 Isoscope is an interactive tool that creates aesthetic visuals about locations that are reachable by car in a chosen time from a chosen location    
 <https://uclab.fh-potsdam.de/projects/isoscope/>
 
----
-
 El mapa interactiu de les vies per bicicleta a França amb l'estat dels itineraris permet també imprimir mapes a mida segons l'interés de cadascú  
 <https://www.velo-territoires.org/actualite/2018/10/22/websig/>
 
 Biblissima, el portal de la biblioteca virtual de biblioteques (?) ha fet el mapa dels llocs que apareixen a les il·luminacions dels mapes antics, i tenen dos mapes més força interessants  
 <http://beta.biblissima.fr/fr/desc-map>
 
-Les operadores de telefonia als USA venen les dades de posició dels mòbils a qualsevol que les pugui pagar, i passa el que passa
-<https://motherboard.vice.com/amp/en_us/article/nepxbz/i-gave-a-bounty-hunter-300-dollars-located-phone-microbilt-zumigo-tmobile>
-
-La mala praxis cartogràfica per identificar llocs concrets posa en problemes persones innocents arreu del món
-<https://gizmodo.com/how-cartographers-for-the-u-s-military-inadvertently-c-1830758394?>
-
----
-
-Com estan canviant les zones climàtiques del planeta, i les conseqüències que pot tenir per la supervivència humana
-<https://e360.yale.edu/features/redrawing-the-map-how-the-worlds-climate-zones-are-shifting>
-
-El futur de la cartografia és fer mapes en temps real a partir de dades VLR (video, lidar, radar)
-<http://geoawesomeness.com/the-future-of-mapping-is-living-maps/>
-
-El 15% del territori d'Anglaterra i Gal·les no és de ningú, tal com mostra aquest mapa de 210mil Ha sense propietari registrat
-<https://whoownsengland.org/2019/01/11/the-holes-in-the-map-englands-unregistered-land/>
-
-Optimitzar la mida de les tessel·les PNG abans de servir-les executant OptiPNG en paral·lel
-<http://www.paulnorman.ca/blog/2018/12/optimizing-pngs/>
 
 ## Nº123: health, wines, postgres, bpg
 
