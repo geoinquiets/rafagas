@@ -25,6 +25,8 @@ El primer mapa, fet a escala 1:2500, amb les imatges OPAZ, captades per Zephyr, 
 Els USA tenen presència militar al 40% dels països del món per "combatre el terrorisme", a un cost econòmic i humà altíssim que s'analitza en una web dedicada al cost de la guerra
 <https://watson.brown.edu/costsofwar/>
 
+---
+
 El joc promogut per l'estat: la legalització de les màquines escurabutxaques a Illinois no ha tingut l'efecte econòmic previst pels polítics, que volen doblar l'aposta malgrat el cost social  
 <https://features.propublica.org/the-bad-bet/how-illinois-bet-on-video-gambling-and-lost/>
 
@@ -33,6 +35,8 @@ El calendari de les conferències geoespacials que es faran aquest 2019 arreu de
 
 L'estudi "Mapping foreign nationals in Spain: an exploratory approach at local level" amb dades 2010-2015 mostra pèrdua de població i posa en dubte el futur demogràfic d'Espanya 
 <https://genus.springeropen.com/articles/10.1186/s41118-018-0047-5>
+
+---
 
 Qfield per Qgis és l'eina definitiva per treballar al camp recollint dades i editant geometries, amb totes les funcionalitats i en dispositius de mà
 <https://new.opengis.ch/2019/01/08/qfield-1-0-rc1/>
@@ -43,6 +47,8 @@ Driver: an open source platform created in partnership with the World Bank to mi
 Fa una mica de basarda el cost ocult i gens trivial d'utilitzar Google Maps, i sobre tot de permetre sempre la localització, però hi ha alternatives menys invasives
 <https://medium.com/swlh/using-google-maps-costs-more-than-you-think-d62c7d857b2d>
 
+---
+
 Com cartografiar el gruix de neu amb Python emprant Pandas/Geopandas i les dades obertes de MeteoFrance, explicat pas a pas i amb un Jupyter notebook d'exemple
 <https://makina-corpus.com/blog/metier/python-carto>
 
@@ -52,20 +58,6 @@ Operational Framework for Rapid, Very-high Resolution Mapping of Glacial Geomorp
 App per mapejar fluxes geogràfics a partir de dades tabulades per visualitzar moviments de persones o mercaderies entre parells d'ubicacions geogràfiques origen/destinació
 <https://flowmap.blue/>
 
-App excursionista per a mòbils que permet veure el relleu en 3D, desar traces, consultar el mapa en offline, compartir la posició en viu, i altres funcionalitats en desenvolupament
-<https://reliefmaps.io/en>
-
-GeoDa is a free and open source software tool to facilitate new insights from data analysis by exploring and modeling spatial patterns
-<http://geodacenter.github.io/>
-
-On són els desapareguts a Mèxic: més de 2000 fosses clandestines on els criminals enterren les víctimes dels seus delictes
-<https://adondevanlosdesaparecidos.org/>
-
-
-### 2019W03
-
-Artists in Paris: Mapping the 18th-Century Art World, an open-access digital art history project  
-<https://www.artistsinparis.org/#@261848.15527273554,6250566.718238154&z=13.00&y=1675&g=s,hp,p,gp,l,slp,e,o>
 
 
 ## Nº123: health, wines, postgres, bpg
