@@ -47,19 +47,6 @@ Driver: an open source platform created in partnership with the World Bank to mi
 Fa una mica de basarda el cost ocult i gens trivial d'utilitzar Google Maps, i sobre tot de permetre sempre la localització, però hi ha alternatives menys invasives
 <https://medium.com/swlh/using-google-maps-costs-more-than-you-think-d62c7d857b2d>
 
----
-
-Com cartografiar el gruix de neu amb Python emprant Pandas/Geopandas i les dades obertes de MeteoFrance, explicat pas a pas i amb un Jupyter notebook d'exemple
-<https://makina-corpus.com/blog/metier/python-carto>
-
-Operational Framework for Rapid, Very-high Resolution Mapping of Glacial Geomorphology Using Low-cost Unmanned Aerial Vehicles and Structure-from-Motion Approach
-<https://www.mdpi.com/2072-4292/11/1/65/htm>
-
-App per mapejar fluxes geogràfics a partir de dades tabulades per visualitzar moviments de persones o mercaderies entre parells d'ubicacions geogràfiques origen/destinació
-<https://flowmap.blue/>
-
-
-
 ## Nº123: health, wines, postgres, bpg
 
 Tests with health and social affairs geodata in France
