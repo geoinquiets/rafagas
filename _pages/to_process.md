@@ -36,17 +36,6 @@ El calendari de les conferències geoespacials que es faran aquest 2019 arreu de
 L'estudi "Mapping foreign nationals in Spain: an exploratory approach at local level" amb dades 2010-2015 mostra pèrdua de població i posa en dubte el futur demogràfic d'Espanya 
 <https://genus.springeropen.com/articles/10.1186/s41118-018-0047-5>
 
----
-
-Qfield per Qgis és l'eina definitiva per treballar al camp recollint dades i editant geometries, amb totes les funcionalitats i en dispositius de mà
-<https://new.opengis.ch/2019/01/08/qfield-1-0-rc1/>
-
-Driver: an open source platform created in partnership with the World Bank to mitigate road accidents through road incident data management and analysis
-<https://www.azavea.com/projects/driver-road-safety-platform/>
-
-Fa una mica de basarda el cost ocult i gens trivial d'utilitzar Google Maps, i sobre tot de permetre sempre la localització, però hi ha alternatives menys invasives
-<https://medium.com/swlh/using-google-maps-costs-more-than-you-think-d62c7d857b2d>
-
 ## Nº123: health, wines, postgres, bpg
 
 Tests with health and social affairs geodata in France
