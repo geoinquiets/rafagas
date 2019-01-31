@@ -25,17 +25,6 @@ El primer mapa, fet a escala 1:2500, amb les imatges OPAZ, captades per Zephyr, 
 Els USA tenen presència militar al 40% dels països del món per "combatre el terrorisme", a un cost econòmic i humà altíssim que s'analitza en una web dedicada al cost de la guerra
 <https://watson.brown.edu/costsofwar/>
 
----
-
-El joc promogut per l'estat: la legalització de les màquines escurabutxaques a Illinois no ha tingut l'efecte econòmic previst pels polítics, que volen doblar l'aposta malgrat el cost social  
-<https://features.propublica.org/the-bad-bet/how-illinois-bet-on-video-gambling-and-lost/>
-
-El calendari de les conferències geoespacials que es faran aquest 2019 arreu del món  
-<https://www.geospatialworld.net/blogs/prime-geospatial-conferences-that-you-shouldnt-miss-this-year/>
-
-L'estudi "Mapping foreign nationals in Spain: an exploratory approach at local level" amb dades 2010-2015 mostra pèrdua de població i posa en dubte el futur demogràfic d'Espanya 
-<https://genus.springeropen.com/articles/10.1186/s41118-018-0047-5>
-
 ## Nº123: health, wines, postgres, bpg
 
 Tests with health and social affairs geodata in France
