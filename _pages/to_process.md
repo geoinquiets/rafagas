@@ -14,16 +14,75 @@ $1<$2>
 
 ## To send
 
-### 2019W04
+### 2019W05
 
-Chronas is a history map application with over 50 million data points which every registered user can curate and contribute to, gràcies @nuriacartes   
-<https://chronas.org/>
+Llibre "Order without Design: How Markets Shape Cities". An argument that operational urban planning can be improved by the application of the tools of urban economics to the design of regulations and infrastructure.
+<https://mitpress.mit.edu/books/order-without-design>
 
-El primer mapa, fet a escala 1:2500, amb les imatges OPAZ, captades per Zephyr, el primer HAPS d'Airbus (High Altitude Pseudo Satellite, que substituirà els avions i els satèl·lits)
-<https://www.intelligence-airbusds.com/en/5751-image-gallery-details?img=51580#.XDcok1xKibg>
+El nom de noia més popular a cada estat dels USA amb que s'ha batejat les criatures cada dècada des de 1910 fins ara
+<https://public.tableau.com/profile/bo.mccready8742#!/vizhome/TopBabyNamesbyStateOverTime/Maps>
 
-Els USA tenen presència militar al 40% dels països del món per "combatre el terrorisme", a un cost econòmic i humà altíssim que s'analitza en una web dedicada al cost de la guerra
-<https://watson.brown.edu/costsofwar/>
+Projecte en curs per crear el mapa detallat en 3D de la ciutat de Tel Aviv de moment acumula 1600 scans de 4 carrers amb 1,7 TB de dades  
+<https://www.scanthecityproject.com/map>
+
+El bessó digital de Helsinki s'actualitza: les 50mil fotografis aèries del 2017 s'han combinat per generar el nou model 3D de la ciutat  
+<https://hri.fi/en_gb/best-3d-model-in-the-world-improves-with-age/>
+
+---
+
+Open City Model és una iniciativa amb llicència ODbl per crear un model cityGML dels USA amb les geometries en 3D de més 125 milions d'edificis   
+<https://github.com/opencitymodel/opencitymodel>
+
+Mapillary extreu automàticament 42 tipus de geometries noves de les imatges fotogràfiques dels carrers obtingudes per crowdsourcing i les posa al mapa  
+<https://blog.mapillary.com/update/2019/01/23/updating-maps-with-cameras-42-new-point-features.html>
+
+La feina de visualització de dades de Scott Reinhard, amb alguns mapes antics aixecats en 3D que es poden comprar
+<https://scottreinhard.com/Mapping-and-Visualization>
+
+Els resultats econòmics de l'any 2018 exercint com a freelance en l'àmbit geo exposats en obert, per si algú vol seguir aquest camí  
+<https://somethingaboutmaps.wordpress.com/2019/01/21/financial-transparency-2018-edition/>
+
+---
+
+La deformació del sól a Noruega obtinguda per l'anàlisi (InSAR) de llargues sèries temporals d'imatges satèl·lit dels Sentinel  
+<https://insar.ngu.no/>
+
+L'assalt de les comunitats obertes per part de les grans corporacions amb l'objectiu de decidir-ne el destí al marge de la comunitat  
+<https://knowwhereconsulting.co.uk/blog/entryism-in-open-communities/>
+
+Recull extensiu i ben documentat de la violència policial envers el moviment de les armilles grogues
+<https://www.mediapart.fr/studio/panoramique/allo-place-beauvau-cest-pour-un-bilan>
+
+---
+
+Un sistema (codi obert) de geocodificació de posicions amb una resolució d'1 metre i abast global fent servir 3 mots, gràcies @xurxosanz
+<https://fosdem.org/2019/schedule/event/geo_3geonames/>
+
+La llista de projectes de codi obert per al càlcul de rutes compilada a partir de preguntar a la comunitat FOSS
+<https://www.zevross.com/blog/2019/01/29/an-untested-list-of-open-source-options-for-spatial-routing/>
+
+Métode en tres etapes per obrir les dades de transport públic en format GTFS apte per qualsevol organisme o particular
+<https://medium.com/datactivist/pourquoi-et-comment-ouvrir-ses-donn%C3%A9es-de-transport-une-m%C3%A9thode-simple-en-3-%C3%A9tapes-d957f5921e57>
+
+---
+
+La informació de posició que proporcionem involuntariament la volen empaquetar i vendre als planificadors per modelar moviments a les ciutats
+<https://theintercept.com/2019/01/28/google-alphabet-sidewalk-labs-replica-cellphone-data/>
+
+Recull de mapes de prejudicis de diferents comunitats de l'estat espanyol  
+<https://magnet.xataka.com/why-so-serious/los-mapas-de-prejuicios-de-espana-la-hilarante-diseccion-de-topicos-de-cada-comunidad-autonoma>
+
+Introducció en tres capítols a l'us de Python en fluxes de treball geoespacials: Anaconda, Jupyter Notebooks i entorns virtuals   
+<https://www.linkedin.com/pulse/python-geospatial-work-flows-part-3-virtual-andrew-cutts/>
+
+Mapa dels accidents de bicicletes a França entre 2005 i 2017 fet a partir de les dades obertes d'accidents de circulació  
+<https://koumoul.com/reuses/cartographie-des-accidents-de-velo>
+
+---
+
+<div style="height:200px"></div>
+
+---
 
 ## Nº123: health, wines, postgres, bpg
 
