@@ -16,20 +16,6 @@ $1<$2>
 
 ### 2019W05
 
-Llibre "Order without Design: How Markets Shape Cities". An argument that operational urban planning can be improved by the application of the tools of urban economics to the design of regulations and infrastructure.
-<https://mitpress.mit.edu/books/order-without-design>
-
-El nom de noia més popular a cada estat dels USA amb que s'ha batejat les criatures cada dècada des de 1910 fins ara
-<https://public.tableau.com/profile/bo.mccready8742#!/vizhome/TopBabyNamesbyStateOverTime/Maps>
-
-Projecte en curs per crear el mapa detallat en 3D de la ciutat de Tel Aviv de moment acumula 1600 scans de 4 carrers amb 1,7 TB de dades  
-<https://www.scanthecityproject.com/map>
-
-El bessó digital de Helsinki s'actualitza: les 50mil fotografis aèries del 2017 s'han combinat per generar el nou model 3D de la ciutat  
-<https://hri.fi/en_gb/best-3d-model-in-the-world-improves-with-age/>
-
----
-
 Open City Model és una iniciativa amb llicència ODbl per crear un model cityGML dels USA amb les geometries en 3D de més 125 milions d'edificis   
 <https://github.com/opencitymodel/opencitymodel>
 
