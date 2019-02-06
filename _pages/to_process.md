@@ -16,30 +16,16 @@ $1<$2>
 
 ### 2019W05
 
-La deformació del sól a Noruega obtinguda per l'anàlisi (InSAR) de llargues sèries temporals d'imatges satèl·lit dels Sentinel  
-<https://insar.ngu.no/>
-
-L'assalt de les comunitats obertes per part de les grans corporacions amb l'objectiu de decidir-ne el destí al marge de la comunitat  
-<https://knowwhereconsulting.co.uk/blog/entryism-in-open-communities/>
-
-Recull extensiu i ben documentat de la violència policial envers el moviment de les armilles grogues
-<https://www.mediapart.fr/studio/panoramique/allo-place-beauvau-cest-pour-un-bilan>
-
----
-
-Un sistema (codi obert) de geocodificació de posicions amb una resolució d'1 metre i abast global fent servir 3 mots, gràcies @xurxosanz
-<https://fosdem.org/2019/schedule/event/geo_3geonames/>
-
 La llista de projectes de codi obert per al càlcul de rutes compilada a partir de preguntar a la comunitat FOSS
 <https://www.zevross.com/blog/2019/01/29/an-untested-list-of-open-source-options-for-spatial-routing/>
 
 Métode en tres etapes per obrir les dades de transport públic en format GTFS apte per qualsevol organisme o particular
 <https://medium.com/datactivist/pourquoi-et-comment-ouvrir-ses-donn%C3%A9es-de-transport-une-m%C3%A9thode-simple-en-3-%C3%A9tapes-d957f5921e57>
 
----
-
 La informació de posició que proporcionem involuntariament la volen empaquetar i vendre als planificadors per modelar moviments a les ciutats
 <https://theintercept.com/2019/01/28/google-alphabet-sidewalk-labs-replica-cellphone-data/>
+
+---
 
 Recull de mapes de prejudicis de diferents comunitats de l'estat espanyol  
 <https://magnet.xataka.com/why-so-serious/los-mapas-de-prejuicios-de-espana-la-hilarante-diseccion-de-topicos-de-cada-comunidad-autonoma>
