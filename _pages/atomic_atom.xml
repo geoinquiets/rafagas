@@ -20,9 +20,11 @@ permalink: /atomic_atom.xml
         <link href="{{ rafaga.link | xml_escape}}"/>
         <updated>{{ new_date2 }}</updated>
         <id>{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html#{{ raf_counter }}</id>
+        <author><name>{% if rafaga.via %}{{rafaga.via}}{% else %}{{post.author}}{% endif %}</name></author>
         <content type="html"><![CDATA[
-          Post {{ raf_counter }} of {{ post.rafagas.size }} at issue 
-          <a href="{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html">#{{post.rid}}</a>
+          <p><a href="{{rafaga.link}}">{{rafaga.link}}</a></p>
+          <p>Post {{ raf_counter }} of {{ post.rafagas.size }} at issue 
+          <a href="{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html">#{{post.rid}}</a></p>
           ]]>
         </content>
       </entry>{% assign raf_counter = raf_counter | minus: 1 %} {% endfor %}{% endif %} {% endfor %}
