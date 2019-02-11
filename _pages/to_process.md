@@ -10,20 +10,6 @@ permalink: /to_process/
 
 ### 2019W06
 
-Com entendre l'urbanisme de les ciutats amb recursos online d'accés lliure: enllaços a les web de 7 mapes destacats  
-<https://ovacen.com/mapas-urbanismo/>
-
-Treball de recerca sobre els algorismes per a la presa de decisions automatitzada (ADM), que presenten riscos clars de generar discriminacions injustes  
-<https://www.karmapeiro.com/2019/01/30/quan-les-maquines-decideixen-estan-preparats-els-paisos-de-la-ue/>
-
-Ensenyament i cultura: només un 26% dels habitants de Santiago viuen a una distància caminable d'una llibreria o una biblioteca 
-<https://www.latercera.com/la-tercera-pm/noticia/telon-fondo-recoletras-solo-26-los-capitalinos-vive-cerca-del-acceso-los-libros/507705/>
-
-Patterns of genetic differentiation and the footprints of historical migrations in the Iberian Peninsula
-<https://www.nature.com/articles/s41467-018-08272-w>
-
----
-
 Mapa paper de les ciclorutes de la comunitat valenciana descarregable en alta resolució, fet per @santihpuig
 <http://santihpuig.com/map/cicloturismocv_santihpuig.jpg>
 
