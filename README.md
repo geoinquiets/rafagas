@@ -1,9 +1,7 @@
-#Ráfagas
+# Ráfagas
 
-[![](https://travis-ci.org/geoinquiets/rafagas.svg?branch=gh-pages)](https://travis-ci.org/geoinquiets/rafagas)
+[![travis](https://travis-ci.org/geoinquiets/rafagas.svg?branch=gh-pages)](https://travis-ci.org/geoinquiets/rafagas)
 
-Repo to store daily _Ráfagas_ sent by [Raf Roset](http://twitter.com/geoinquiets)
+Repository for geosptial links (_Ráfagas_) sent by [Raf Roset](http://twitter.com/geoinquiets)
 
-Work In Progress
-
-Visit the [website](http://geoinquiets.github.io/rafagas/) but if you want to discuss the links join OSGeo Spanish mailing list (in English) or the Geoinquiets Barcelona list (Catalan).
+Visit the [website](http://geoinquiets.github.io/rafagas/) but if you want to discuss the links join OSGeo Spanish mailing list (in English) or the Geoinquiets Barcelona/Valencia lists (Catalan).

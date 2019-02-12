@@ -10,20 +10,6 @@ permalink: /to_process/
 
 ### 2019W06
 
-Mapa paper de les ciclorutes de la comunitat valenciana descarregable en alta resolució, fet per @santihpuig
-<http://santihpuig.com/map/cicloturismocv_santihpuig.jpg>
-
-Guia i mapa col·laboratiu dels establiments on menjar kebab i patates fregides a França, per ubicació i també classificats i valorats
-<https://www.kebab-frites.com/>
-
-Cartographie des cancers : premières estimations régionales et départementales de l’incidence et de la mortalité pour 24 cancers en France
-<https://www.santepubliquefrance.fr/Actualites/Cartographie-des-cancers-premieres-estimations-regionales-et-departementales-de-l-incidence-et-de-la-mortalite-pour-24-cancers-en-France>
-
-La topografia de la riquesa a Los Angeles, la ciutat on conviuen 58 milmilionaris i 58mil sensesostre, en una visualització de la desigualtat d'ingressos com si fos un terreny   
-<https://nunderwood6.github.io/topography_of_wealth/>
-
----
-
 El mapa de la corrupció percebuda arreu del món, a partir de l'índex publicat per Transpareny International amb dades 2018   
 <https://www.visualcapitalist.com/visualizing-corruption-around-the-world/>
 
