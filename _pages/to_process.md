@@ -10,17 +10,6 @@ permalink: /to_process/
 
 ### 2019W06
 
-El mapa de la corrupció percebuda arreu del món, a partir de l'índex publicat per Transpareny International amb dades 2018   
-<https://www.visualcapitalist.com/visualizing-corruption-around-the-world/>
-
-Les ciutats s'estan expandint horitzontalment en lloc de crèixer verticalment, i a la llarga genera problemes de sostenibilitat i de desigualtat i mediambientals   
-<https://www.wri.org/blog/2019/01/too-many-cities-are-growing-out-rather-3-reasons-s-problem>
-
-Els vaixells robótics autònoms del MIT que naveguen pels canals d'Amsterdam per capturar la ciutat en 3D des de l'aigua   
-<https://www.designboom.com/technology/mit-roboat-laserscape-amsterdam-canals-01-30-2019>
-
----
-
 Crònica comentada de la primera #geomob feta a Barcelona, amb la relació dels ponents i els projectes que s'hi van presentar
 <http://knowwhereconsulting.co.uk/blog/geomob-bcn-is-born/>
 
