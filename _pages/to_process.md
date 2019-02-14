@@ -10,20 +10,6 @@ permalink: /to_process/
 
 ### 2019W06
 
-Crònica comentada de la primera #geomob feta a Barcelona, amb la relació dels ponents i els projectes que s'hi van presentar
-<http://knowwhereconsulting.co.uk/blog/geomob-bcn-is-born/>
-
-Atles de França amb la geovisualització de les dades epidemiològiques de salut, amb selecció d'indicadors i capacitat d'exportar i imprimir i importar dades
-<https://geodes.santepubliquefrance.fr/#view=map2&c=indicator>
-
-Visualització distorsionada de la xarxa ferroviària holandesa en funció de la intensitat de trànsit i la interconnexió de les estacions en el dia més mogut de 2018
-<http://tulpinteractive.com/on-time-every-time/>
-
-Atles dels alfabets en perill de desaparició, amb mostres dels caracters i petita glosa de cada sistema d'escriptura
-<https://www.endangeredalphabets.net/>
-
----
-
 El mapa de l'arquitectura de la xarxa troncal d'Internet al món a través dels principals enllaços internacionals
 <https://global-internet-map-2018.telegeography.com/>
 
