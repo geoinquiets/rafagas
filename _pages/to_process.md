@@ -10,20 +10,6 @@ permalink: /to_process/
 
 ### 2019W07
 
-El mapa de l'estrès que la sequera provoca a les collites forma part del Water Risk Atlas, una eina online de visualització de riscos   
-<https://resourcewatch.org/data/explore/ed521429-58b4-4c55-9bbe-4f4bfd2fcb1f>
-
-La pesca al mar de Xina des de 1960 ha acabat amb l'abundància de peixos, fins al punt de ser un factor desestabilitzador de primer ordre a l'Àsia   
-<https://worldview.stratfor.com/article/fish-overlooked-destabilizer-south-china-sea>
-
-Reserveu-vos la data: dimecres 24 d'abril hi haurà la segona #geomobBCN a CoWorkIdea a partir de les 1800 amb 4 ponents de projectes molt interessants   
-<https://geomobldn.org/post/apr-24th-2019-geomobbcn-details>
-
-Un arxiu online de mapes ombrejats a mà, de diferents autors i artistes, escanejats i alguns fins i tot georeferenciats sense restriccions d'ús   
-<http://www.shadedreliefarchive.com/>
-
----
-
 Dues setmanes de post diari per aprendre Leaflet a la web de Spatial Galaxy, editors del llibre Leaflet Cookbook
 <http://spatialgalaxy.net/2019/01/23/two-weeks-of-leaflet-day-1/>
 
@@ -76,6 +62,25 @@ Un visualitzador web ben senzill per veure arxius CityJSON online arrosegant-los
 
 Tots els cursos online d'introducció a la cìencia de dades valorats en una guia ràpida, gràcies #xurxosanz   
 <https://medium.freecodecamp.org/i-ranked-all-the-best-data-science-intro-courses-based-on-thousands-of-data-points-db5dc7e3eb8e>
+
+
+### 2019W08
+
+Realitat augmentada, natura, GPS i animals virtuals en una app per apropar els més joves a la vida salvatge d'una manera divertida i enriquidora https://www.pocketpalsapp.com/? https://twitter.com/LinksGeo/status/1097368369601437697/photo/1 https://pbs.twimg.com/media/Dzqit1bWoAEjKIA.png:large
+
+Imatges radar emprades per conèixer les condicions del gel serveixen d'ajuda als caçadors innuit per millorar els desplaçaments https://www.cbc.ca/news/canada/north/hunters-radar-maps-ice-navigation-1.5018722 https://twitter.com/LinksGeo/status/1097368117980860416/photo/1 https://pbs.twimg.com/media/DzqifNkWwAAG0p-.png:large
+
+Plànols detallats dels districtes de la ciutat de València fets de nou amb gust exquisit i estil art-deco per @thisismikehall, a la venda https://shop.thisismikehall.com/collections/districts-of-valencia https://twitter.com/LinksGeo/status/1097367863797657601/photo/1 https://pbs.twimg.com/media/DzqiQZQW0AEqGnA.png:large
+
+L'edició de Febrer de la revista Geospatal World (PDF) amb un seguit de visions sobre el futur geo dels principals actors del sector https://twitter.com/DescartesLabs/status/1096110836509224960?s=19 https://twitter.com/LinksGeo/status/1097367620662296577/photo/1 https://pbs.twimg.com/media/DzqiCOpWwAErxjU.png:large
+
+Cadastre solar de Lió: el mapa de l'aprofitament solar, fotovoltaic o tèrmic, de les cobertes dels edificis, que també té una versió per mòbil https://www.grandlyon.com/services/connaitre-ensoleillement-toit.html https://twitter.com/LinksGeo/status/1097730756678426625/photo/1 https://pbs.twimg.com/media/DzvsTivXgAAHIZH.png:large
+
+El primer dimecres de mes hi ha sessions en viu de cartografia, en streaming per Youtube, a càrrec de @pinakographos https://somethingaboutmaps.wordpress.com/2019/02/13/upcoming-live-events/ https://twitter.com/LinksGeo/status/1097730504114270211/photo/1 https://pbs.twimg.com/media/DzvsE3aXQAA3Xjg.png:large
+
+Mapa que mostra les principals rutes comercials de l'alta edat mitjana, just després dels vikings i abans del domini mongol https://imgur.com/MsXaOdV https://twitter.com/LinksGeo/status/1097730250568597504/photo/1 https://pbs.twimg.com/media/Dzvr2G3XcAA4N51.png:large
+
+El descens del 12% des del 2000 fins ara en l'àrea de boscos cremats ha generat menys emissions de metà, malgrat que aquests s'incrementen igualment per altres factors https://www.nasa.gov/feature/jpl/nasa-led-study-solves-a-methane-puzzle/ https://twitter.com/LinksGeo/status/1097730033718906881/photo/1 https://pbs.twimg.com/media/DzvrpehX0AA4lE9.png:large
 
 ## Tooling
 
