@@ -74,17 +74,19 @@ if __name__ == "__main__":
 
     p = Path('_posts/')
     for md in sorted(p.glob('2019/*.md'), reverse=True):
+            
         if Microlink.HAS_REACHED_LIMIT:
             logging.warn('At Microlink limit, aborting')
             break
-        with md.open() as md_reader:
-            post = frontmatter.load(md_reader)
-            if ('rid' in post):
-                rid = post['rid']
-                logging.info(f'Processing rafaga {rid}...')
-                post_processed = process(post)
-                if post_processed is not None:
-                    with md.open(mode='w') as md_writer:
-                        md_writer.write(frontmatter.dumps(post_processed))
+        if str(md).find('template') == -1 :
+            with md.open() as md_reader:
+                post = frontmatter.load(md_reader)
+                if ('rid' in post):
+                    rid = post['rid']
+                    logging.info(f'Processing rafaga {rid}...')
+                    post_processed = process(post)
+                    if post_processed is not None:
+                        with md.open(mode='w') as md_writer:
+                            md_writer.write(frontmatter.dumps(post_processed))
 
     logging.info(f'Made {Microlink.microlink_counter} requests to microlink')

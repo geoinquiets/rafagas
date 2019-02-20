@@ -10,20 +10,6 @@ permalink: /to_process/
 
 ### 2019W07
 
-Dues setmanes de post diari per aprendre Leaflet a la web de Spatial Galaxy, editors del llibre Leaflet Cookbook
-<http://spatialgalaxy.net/2019/01/23/two-weeks-of-leaflet-day-1/>
-
-El valor econòmic de la geoinformació en 3D, amb un ràtio cost-benefici 1:3 segons l'estudi de 2017 fet per 11 PMA europees
-<https://www.gim-international.com/content/article/the-search-for-the-economic-value-of-3d-geoinformation?platform=hootsuite>
-
-Dones i SIG: Twenty-three stories about how ordinary girls with very different passions have become extraordinary women and made significant contributions to our world  
-<https://www.amazon.com/Women-GIS-Mapping-Their-Stories-ebook-dp-B07HXZ2PB4/dp/B07HXZ2PB4/ref=mt_kindle?_encoding=UTF8&me=&qid=>
-
-Dades globals, mapes del món i animacions per ordinador de la classificació climàtica Köppen-Geiger   
-<http://koeppen-geiger.vu-wien.ac.at/>
-
----
-
 Lloc web social per annotar els països visitats, a partir dels quals fa recomanacions per a futures destinacions
 <https://www.roadgoat.com>
 
@@ -72,16 +58,27 @@ Imatges radar emprades per conèixer les condicions del gel serveixen d'ajuda al
 
 Plànols detallats dels districtes de la ciutat de València fets de nou amb gust exquisit i estil art-deco per @thisismikehall, a la venda https://shop.thisismikehall.com/collections/districts-of-valencia https://twitter.com/LinksGeo/status/1097367863797657601/photo/1 https://pbs.twimg.com/media/DzqiQZQW0AEqGnA.png:large
 
+---
+
 L'edició de Febrer de la revista Geospatal World (PDF) amb un seguit de visions sobre el futur geo dels principals actors del sector https://twitter.com/DescartesLabs/status/1096110836509224960?s=19 https://twitter.com/LinksGeo/status/1097367620662296577/photo/1 https://pbs.twimg.com/media/DzqiCOpWwAErxjU.png:large
 
 Cadastre solar de Lió: el mapa de l'aprofitament solar, fotovoltaic o tèrmic, de les cobertes dels edificis, que també té una versió per mòbil https://www.grandlyon.com/services/connaitre-ensoleillement-toit.html https://twitter.com/LinksGeo/status/1097730756678426625/photo/1 https://pbs.twimg.com/media/DzvsTivXgAAHIZH.png:large
 
 El primer dimecres de mes hi ha sessions en viu de cartografia, en streaming per Youtube, a càrrec de @pinakographos https://somethingaboutmaps.wordpress.com/2019/02/13/upcoming-live-events/ https://twitter.com/LinksGeo/status/1097730504114270211/photo/1 https://pbs.twimg.com/media/DzvsE3aXQAA3Xjg.png:large
 
+---
+
 Mapa que mostra les principals rutes comercials de l'alta edat mitjana, just després dels vikings i abans del domini mongol https://imgur.com/MsXaOdV https://twitter.com/LinksGeo/status/1097730250568597504/photo/1 https://pbs.twimg.com/media/Dzvr2G3XcAA4N51.png:large
 
 El descens del 12% des del 2000 fins ara en l'àrea de boscos cremats ha generat menys emissions de metà, malgrat que aquests s'incrementen igualment per altres factors https://www.nasa.gov/feature/jpl/nasa-led-study-solves-a-methane-puzzle/ https://twitter.com/LinksGeo/status/1097730033718906881/photo/1 https://pbs.twimg.com/media/DzvrpehX0AA4lE9.png:large
 
+Informació actualizada del cost de la vida, indicadors de vivenda, salut, contaminació i altres proporcionada pels usuaris de tot el món https://www.numbeo.com/cost-of-living/ https://twitter.com/LinksGeo/status/1098093143151517696/photo/1 https://pbs.twimg.com/media/Dz015PVX4AEMCEK.png:large
+
+El clima de les ciutats dels USA es desplaçarà centenars de quilòmetres en una generació amb les emissions actuals https://www.umces.edu/futureurbanclimates https://twitter.com/LinksGeo/status/1098092894693543936/photo/1 https://pbs.twimg.com/media/Dz01qwRW0AAEZMP.png:large
+
+---
+
+L'atles col·laboratiu del canvi per veure com evoluciona el món geogràficament a escala global i també local, gràcies @jsenag https://mapstory.org/ https://twitter.com/LinksGeo/status/1098092639583379456/photo/1 https://pbs.twimg.com/media/Dz01b7bW0AArqBQ.png:large
 ## Tooling
 
 ```text
