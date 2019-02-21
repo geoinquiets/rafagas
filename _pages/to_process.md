@@ -10,20 +10,6 @@ permalink: /to_process/
 
 ### 2019W07
 
-Lloc web social per annotar els països visitats, a partir dels quals fa recomanacions per a futures destinacions
-<https://www.roadgoat.com>
-
-Exemple de renderitzacions realistes del terreny, estàtiques, dinàmiques, interactives, en 2D i 3D amb tecnologies i dades obertes
-<https://makina-corpus.com/blog/metier/2019/modeles-numeriques-terrain-ombrage-3D>
-
-Un globus terraqüi fet amb WebGL per explorar els darrers 30 anys de sismes arreu del món amb dades de cada terratrèmol
-<http://www.ninepointfive.org/>
-
-Afegir relleu i sensació 3D a mapes topogràfics antics per donar-los una nova dimensió a Blender, amb un breu pas a pas
-<http://www.joshuastevens.net/blog/tactile-topography/>
-
----
-
 El projecte Alerta Forestal, un sistema d’alertes primerenques per valorar l’estat de salut actual dels boscos catalans, té una app per enviar afectacions    <https://play.google.com/store/apps/details?id=io.cordova.alertaforestal>
 
 El centre de visualitzacions científiques de la NASA té un recull interessant d'animacions zoom in zoom out fetes amb diverses fonts d'imatges satèl·lit    
@@ -79,6 +65,16 @@ El clima de les ciutats dels USA es desplaçarà centenars de quilòmetres en un
 ---
 
 L'atles col·laboratiu del canvi per veure com evoluciona el món geogràficament a escala global i també local, gràcies @jsenag https://mapstory.org/ https://twitter.com/LinksGeo/status/1098092639583379456/photo/1 https://pbs.twimg.com/media/Dz01b7bW0AArqBQ.png:large
+
+Mapping the Oceans: How cartographers saw the world in the Age of Discovery https://www.laphamsquarterly.org/roundtable/mapping-oceans https://twitter.com/LinksGeo/status/1098455532598452224/photo/1 https://pbs.twimg.com/media/Dz5_fEFXQAArwxE.png:large
+
+La versió 2019 del mapa de cables submarins arreu del món, ara amb zoom interactiu https://submarine-cable-map-2019.telegeography.com/ https://twitter.com/LinksGeo/status/1098455282592727040/photo/1 https://pbs.twimg.com/media/Dz5_QhVWsAA7Xin.png:large
+
+Cercador de vols barats imminents amb visualització sobre el mapa per escapar del despatx ara mateix https://greatescape.co/ https://twitter.com/LinksGeo/status/1098455029772623872/photo/1 https://pbs.twimg.com/media/Dz5_ByzX4AAS3vo.png:large
+
+---
+
+Google Earth, Google SketchUp and GIS software; An Interoperable Work Flow for Generating Elevation Data https://www.preprints.org/manuscript/201901.0302/v1 https://twitter.com/LinksGeo/status/1098454793868189696/photo/1 https://pbs.twimg.com/media/Dz5-0DZXcAA7lpH.png:large
 ## Tooling
 
 ```text
