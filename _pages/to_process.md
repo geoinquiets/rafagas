@@ -93,7 +93,18 @@ Un assaig fotogràfic online, presentat també com un llibre en diversos formats
 "Playa Burbuja, un viaje al reino de los señores del ladrillo" recull i documenta la història de la corrupció i els abusos de l'urbanisme al Mediterrani     
 <https://datadista.com/>
 
+---
 
+Les massacres de la població aborígen australiana recollides en un mapa, obert a la col·laboració ciutadana per afegir contribucions
+https://namesofplaces.maps.arcgis.com/apps/MapJournal/index.html?appid=1fca23b6fd87494e8f98ff2e29c71b4b 
+
+El mapa de les destileries de whisky arreu del món, tot i que sembla que fora d'Irlanda i Escòcia no n'hi ha cap
+https://www.mapotic.com/whisky-distilleries-scotland 
+
+Atles de la PAC: les xifres i els reptes de la política agrària comuna de la Unió Europea
+http://fr.boell.org/fr/atlas-de-la-pac
+
+Mapes a Àfrica: com aconseguir bones geodades per fer millors estudis amb eines de codi obert i equips al terreny ****https://www.azavea.com/blog/2019/02/21/mapping-africa-crowdsourced-machine-learning/
 
 
 ## Tooling
