@@ -5,29 +5,7 @@ title: "To process "
 permalink: /to_process/
 ---
 
-
 ## To send
-
-Un visualitzador web ben senzill per veure arxius CityJSON online arrosegant-los contra una finestra del navegador   
-<https://twitter.com/tudelft3d/status/1095381160786649088?s=19>
-
-"Influència i infraestructura: els interessos estratègics dels projectes estrangers" un informe molt complet sobre les tàctiques de Xina per dominar el món 
-<https://www.csis.org/analysis/influence-and-infrastructure-strategic-stakes-foreign-projects>
-
-Tots els cursos online d'introducció a la cìencia de dades valorats en una guia ràpida, gràcies #xurxosanz   
-<https://medium.freecodecamp.org/i-ranked-all-the-best-data-science-intro-courses-based-on-thousands-of-data-points-db5dc7e3eb8e>
-
-Realitat augmentada, natura, GPS i animals virtuals en una app per apropar els més joves a la vida salvatge d'una manera divertida i enriquidora
-<https://www.pocketpalsapp.com/?>
-<https://twitter.com/LinksGeo/status/1097368369601437697/photo/1>
-<https://pbs.twimg.com/media/Dzqit1bWoAEjKIA.png:large>
-
-Imatges radar emprades per conèixer les condicions del gel serveixen d'ajuda als caçadors innuit per millorar els desplaçaments
-<https://www.cbc.ca/news/canada/north/hunters-radar-maps-ice-navigation-1.5018722>
-<https://twitter.com/LinksGeo/status/1097368117980860416/photo/1>
-<https://pbs.twimg.com/media/DzqifNkWwAAG0p-.png:large>
-
----
 
 Plànols detallats dels districtes de la ciutat de València fets de nou amb gust exquisit i estil art-deco per @thisismikehall, a la venda
 <https://shop.thisismikehall.com/collections/districts-of-valencia>
