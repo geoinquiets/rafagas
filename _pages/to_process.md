@@ -7,23 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-El descens del 12% des del 2000 fins ara en l'àrea de boscos cremats ha generat menys emissions de metà, malgrat que aquests s'incrementen igualment per altres factors
-<https://www.nasa.gov/feature/jpl/nasa-led-study-solves-a-methane-puzzle/>
-
-Informació actualizada del cost de la vida, indicadors de vivenda, salut, contaminació i altres proporcionada pels usuaris de tot el món
-<https://www.numbeo.com/cost-of-living/>
-
-El clima de les ciutats dels USA es desplaçarà centenars de quilòmetres en una generació amb les emissions actuals
-<https://www.umces.edu/futureurbanclimates>
-
-L'atles col·laboratiu del canvi per veure com evoluciona el món geogràficament a escala global i també local, gràcies @jsenag
-<https://mapstory.org/>
-
-Mapping the Oceans: How cartographers saw the world in the Age of Discovery
-<https://www.laphamsquarterly.org/roundtable/mapping-oceans>
-
----
-
 La versió 2019 del mapa de cables submarins arreu del món, ara amb zoom interactiu
 <https://submarine-cable-map-2019.telegeography.com/>
 
