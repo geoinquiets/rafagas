@@ -7,20 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-La versió 2019 del mapa de cables submarins arreu del món, ara amb zoom interactiu
-<https://submarine-cable-map-2019.telegeography.com/>
-
-Cercador de vols barats imminents amb visualització sobre el mapa per escapar del despatx ara mateix
-<https://greatescape.co/>
-
-Google Earth, Google SketchUp and GIS software; An Interoperable Work Flow for Generating Elevation Data
-<https://www.preprints.org/manuscript/201901.0302/v1>
-
-"Command line cartography" una introducció breu a les opcions per manipular dades geo de Mapshaper des de la consola
-<https://moriartynaps.org/command-carto-part-one/>
-
----
-
 El paper central de la Xina en el nou ordre euroasiàtic a partir dels projectes geoestratègics i les infraestructure construïdes i previstes
 <https://www.aspeniaonline.it/la-cina-e-il-nuovo-ordine-euro-asiatico/>
 
@@ -59,6 +45,34 @@ http://texty.org.ua/d/2018/amber_eng/
 
 El corredor mediterrani a Espanya, un projecte de desenvolupament convertit en una palanca de negociació política
 http://geoconfluences.ens-lyon.fr/informations-scientifiques/dossiers-regionaux/territoires-europeens-regions-etats-union/rte-t/corridor-mediterraneen-espagne-serpent-de-mer
+
+---
+
+Un viatge interactiu per la prehistòria del planeta Terra, de Pangea fins avui, emprant un globus 3D, gràcies GeniC
+http://dinosaurpictures.org/ancient-earth#0
+
+La mobilitat residencial a França, un estudi amb visualitzador interactiu de les tendències i els impactes territorials
+https://observatoire-territoires.github.io/synthese_mob_resid/
+
+Cinc consells per a dissenyadors que treballen amb desenvolupadors, i cinc consells recíprocs de desenvolupadors per a dissenyadors
+https://www.esri.com/arcgis-blog/products/developers/uncategorized/5-tips-for-designers-who-work-with-developers/
+
+Deep Learning aplicat a l'urbanisme per predir l'evolució de les ciutats
+https://www.paisajetransversal.org/2019/02/Modelo-predictivo-de-densidades-urbanas-a-partir-de-la-lectura-de-fotos-aereas-Sistemas-informacion-geografica-GIS-Barcelona-Bogota-Urbanismo-Analisis-Deep-Learning-Densidad.html 
+
+---
+
+"Behind the curve" és un documental de Netflix sobre els terraplanistes de tot el món, aquells que creuen realment que la Terra és plana
+https://www.behindthecurvefilm.com/
+
+El festival de les geografies personals explora com l'art es pot fer servir per crear mapes personalitzats, fins el 19 de març a Iowa
+http://tibichelcea.net/fpg/
+
+Lidar i anàlisi precís de dades lligat a models de visió per computador per mantenir línies elèctriques i evitar problemes amb l'arbrat
+https://enview.com/electric/ 
+
+Fam i mort a la India el 1630, un storymap que explica el viatge de Peter Mundy amb passatges escollits del seu propi llibre Itinerarium Mundi
+http://humanities-research.exeter.ac.uk/famineanddearth/map/
 
 ## Tooling
 
