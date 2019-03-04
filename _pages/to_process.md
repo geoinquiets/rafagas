@@ -7,18 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Les massacres de la població aborígen australiana recollides en un mapa, obert a la col·laboració ciutadana per afegir contribucions
-<https://namesofplaces.maps.arcgis.com/apps/MapJournal/index.html?appid=1fca23b6fd87494e8f98ff2e29c71b4b>
-
-El mapa de les destileries de whisky arreu del món, tot i que sembla que fora d'Irlanda i Escòcia no n'hi ha cap
-<https://www.mapotic.com/whisky-distilleries-scotland>
-
-Atles de la PAC: les xifres i els reptes de la política agrària comuna de la Unió Europea
-<http://fr.boell.org/fr/atlas-de-la-pac>
-
-Mapes a Àfrica: com aconseguir bones geodades per fer millors estudis amb eines de codi obert i equips al terreny <https://www.azavea.com/blog/2019/02/21/mapping-africa-crowdsourced-machine-learning/>
-
----
 
 L'Atles Crític d'Internet utilitza l'anàlisi espacial per entendre els problemes socials, polítics i econòmics d'internet a través de la forma
 <http://www.internet-atlas.net/>
@@ -74,6 +62,19 @@ La desaparició del permafrost serà el pitjor efecte del canvi climàtic, i ja 
 Mapa de similituds entre països a partir de diversos indicadors, utilitzant l'algoritme d'aprenentatge automàtic t-SNE per agrupar visualment punts de dades
 <https://projects.interacta.io/country-tsne/ >
 
+---
+
+Un nou model predictiu per fer un map més acurat de la xarxa elèctrica amb dades públiques
+https://code.fb.com/connectivity/electrical-grid-mapping/
+
+Automated MappinG Platform, un experiment de Toyota per fer mapes de carreteres automàticament amb les dades de les càmeres dels vehicles
+https://www.tri-ad.global/news/20190228
+
+La comparació entre Arcgis i Qgis des de la perspectiva d'un educador, post original de 2014 revisat el 2019
+http://amdgs.co.uk/opinion/arcgis-v-qgis-an-educators-perspective-2019-update/
+
+Les instruccions tècniques per fer el mapa de muntanyes de llum, el mapa de població segons l'emissió lumínica de les ciutats
+https://petrichor.studio/2019/02/14/earth-at-night-mountains-of-light/
 
 ## Tooling
 
