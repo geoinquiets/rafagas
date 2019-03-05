@@ -7,21 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-
-L'Atles Crític d'Internet utilitza l'anàlisi espacial per entendre els problemes socials, polítics i econòmics d'internet a través de la forma
-<http://www.internet-atlas.net/>
-
-Tècniques de machine learning amb imatge satèl·lit per identificar les zones de barraquisme potencial a les ciutats d'Amèrica del Sud
-<https://ap-latam.dymaxionlabs.com/en/>
-
-Les mines il·legals d'ambre a Ucraïna deixen un paisatge lunar amb grans afectacions, recollides en un projecte de machine learning a partir d'imatge satèl·lit
-<http://texty.org.ua/d/2018/amber_eng/>
-
-El corredor mediterrani a Espanya, un projecte de desenvolupament convertit en una palanca de negociació política
-<http://geoconfluences.ens-lyon.fr/informations-scientifiques/dossiers-regionaux/territoires-europeens-regions-etats-union/rte-t/corridor-mediterraneen-espagne-serpent-de-mer>
-
----
-
 Un viatge interactiu per la prehistòria del planeta Terra, de Pangea fins avui, emprant un globus 3D, gràcies GeniC
 <http://dinosaurpictures.org/ancient-earth#0>
 
@@ -75,6 +60,20 @@ http://amdgs.co.uk/opinion/arcgis-v-qgis-an-educators-perspective-2019-update/
 
 Les instruccions tècniques per fer el mapa de muntanyes de llum, el mapa de població segons l'emissió lumínica de les ciutats
 https://petrichor.studio/2019/02/14/earth-at-night-mountains-of-light/
+
+---
+
+Mapa detallat dels viatges per carretera més èpics de la literatura nord-americana
+https://www.atlasobscura.com/articles/the-obsessively-detailed-map-of-american-literatures-most-epic-road-trips
+
+Les passejades d'Odisseu, o com es posa un mite en un mapa interpretant el text antic per trobar Ítaca
+https://www.laphamsquarterly.org/roundtable/geography-odyssey
+
+La paradoxa de la línia de costa, quina longitud depèn de l'escala amb què es mesura, explicada de forma entenedora
+https://www.sketchplanations.com/post/183170271181/the-coastline-paradox-this-is-the-fascinating 
+
+Una combinació de tecnologies en un museu interactiu per mostrar 1000 anys d'història de l'abadia benedictina d'Ename a Bèlgica
+https://enameabbey.wordpress.com/2019/03/02/1000-years-of-history-in-one-view/ 
 
 ## Tooling
 
