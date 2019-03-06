@@ -7,9 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Un viatge interactiu per la prehistòria del planeta Terra, de Pangea fins avui, emprant un globus 3D, gràcies GeniC
-<http://dinosaurpictures.org/ancient-earth#0>
-
 La mobilitat residencial a França, un estudi amb visualitzador interactiu de les tendències i els impactes territorials
 <https://observatoire-territoires.github.io/synthese_mob_resid/>
 
