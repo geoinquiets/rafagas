@@ -7,9 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-La mobilitat residencial a França, un estudi amb visualitzador interactiu de les tendències i els impactes territorials
-<https://observatoire-territoires.github.io/synthese_mob_resid/>
-
 Cinc consells per a dissenyadors que treballen amb desenvolupadors, i cinc consells recíprocs de desenvolupadors per a dissenyadors
 <https://www.esri.com/arcgis-blog/products/developers/uncategorized/5-tips-for-designers-who-work-with-developers/>
 
