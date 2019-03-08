@@ -7,14 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Cinc consells per a dissenyadors que treballen amb desenvolupadors, i cinc consells recíprocs de desenvolupadors per a dissenyadors
-<https://www.esri.com/arcgis-blog/products/developers/uncategorized/5-tips-for-designers-who-work-with-developers/>
-
-Deep Learning aplicat a l'urbanisme per predir l'evolució de les ciutats
-<https://www.paisajetransversal.org/2019/02/Modelo-predictivo-de-densidades-urbanas-a-partir-de-la-lectura-de-fotos-aereas-Sistemas-informacion-geografica-GIS-Barcelona-Bogota-Urbanismo-Analisis-Deep-Learning-Densidad.html >
-
----
-
 "Behind the curve" és un documental de Netflix sobre els terraplanistes de tot el món, aquells que creuen realment que la Terra és plana
 <https://www.behindthecurvefilm.com/>
 
