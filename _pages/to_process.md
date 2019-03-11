@@ -7,12 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-"Behind the curve" és un documental de Netflix sobre els terraplanistes de tot el món, aquells que creuen realment que la Terra és plana
-<https://www.behindthecurvefilm.com/>
-
-El festival de les geografies personals explora com l'art es pot fer servir per crear mapes personalitzats, fins el 19 de març a Iowa
-<http://tibichelcea.net/fpg/>
-
 Lidar i anàlisi precís de dades lligat a models de visió per computador per mantenir línies elèctriques i evitar problemes amb l'arbrat
 <https://enview.com/electric/ >
 
