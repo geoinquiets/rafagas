@@ -7,14 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Lidar i anàlisi precís de dades lligat a models de visió per computador per mantenir línies elèctriques i evitar problemes amb l'arbrat
-<https://enview.com/electric/ >
-
-Fam i mort a la India el 1630, un storymap que explica el viatge de Peter Mundy amb passatges escollits del seu propi llibre Itinerarium Mundi
-<http://humanities-research.exeter.ac.uk/famineanddearth/map/>
-
----
-
 "Global Gas Lock-in: Bridge to Disaster" és un informe de l'increment del consum de gas a Europe combinat amb la intenció de no dependre de Rússia
 <https://www.rosalux.eu/fileadmin/user_upload/Publications/2017/Global_Gas_Lock-in.pdf>
 
