@@ -7,9 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-"Global Gas Lock-in: Bridge to Disaster" és un informe de l'increment del consum de gas a Europe combinat amb la intenció de no dependre de Rússia
-<https://www.rosalux.eu/fileadmin/user_upload/Publications/2017/Global_Gas_Lock-in.pdf>
-
 Les alternatives de mapes per quan vols treure Google de la teva vida i has de prescindir de Google Maps
 <https://medium.com/@stouff.nicolas/de-googleing-my-digital-life-goodbye-google-maps-381c76587690 >
 
