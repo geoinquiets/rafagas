@@ -7,9 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Les alternatives de mapes per quan vols treure Google de la teva vida i has de prescindir de Google Maps
-<https://medium.com/@stouff.nicolas/de-googleing-my-digital-life-goodbye-google-maps-381c76587690 >
-
 La desaparició del permafrost serà el pitjor efecte del canvi climàtic, i ja s'està començant a notar a llocs com Tibet
 <https://multimedia.scmp.com/news/world/article/3000839/permafrost/>
 
