@@ -7,14 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-La desaparició del permafrost serà el pitjor efecte del canvi climàtic, i ja s'està començant a notar a llocs com Tibet
-<https://multimedia.scmp.com/news/world/article/3000839/permafrost/>
-
-Mapa de similituds entre països a partir de diversos indicadors, utilitzant l'algoritme d'aprenentatge automàtic t-SNE per agrupar visualment punts de dades
-<https://projects.interacta.io/country-tsne/ >
-
----
-
 Un nou model predictiu per fer un map més acurat de la xarxa elèctrica amb dades públiques
 https://code.fb.com/connectivity/electrical-grid-mapping/
 
