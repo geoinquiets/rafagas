@@ -7,12 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Segmentació semàntica d'imatges geoespacials per al reconeixement i extracció automàtic d'edificacions emprant aprenentatge profund
-https://github.com/datapink/robosat.pink
-
-Una guia amb consells i recomanacions per afegir i mantenir les rutes de transport públic a OSM
-https://osmand.net/blog/guideline-pt
-
 The RIEGL miniVUX-1UAV is an extremely lightweight airborne laser scanner, designed specifically for integration with UAS/UAV/RPAS
 http://www.riegl.com/products/unmanned-scanning/riegl-minivux-1uav/
 
