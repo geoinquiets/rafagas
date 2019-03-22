@@ -7,12 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-The RIEGL miniVUX-1UAV is an extremely lightweight airborne laser scanner, designed specifically for integration with UAS/UAV/RPAS
-http://www.riegl.com/products/unmanned-scanning/riegl-minivux-1uav/
-
-Tots els núvols de punts de l'USGS agrupats en una mateix pàgina d'accés directe amb Entwine per veure'ls amb Potree i Plasio
-https://usgs.entwine.io/
-
 Un curs online de cartografia de 6 setmanes (2-3 hores per setmana) amb excel·lents professors del 10 d'abril al 23 de maig
 https://www.esri.com/training/catalog/596e584bb826875993ba4ebf/cartography/
 
