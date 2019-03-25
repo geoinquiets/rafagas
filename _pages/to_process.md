@@ -7,14 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Un curs online de cartografia de 6 setmanes (2-3 hores per setmana) amb excel·lents professors del 10 d'abril al 23 de maig
-https://www.esri.com/training/catalog/596e584bb826875993ba4ebf/cartography/
-
-El mapa dels llocs que no surten al mapa d'OSM, en un mapa d'OSM (place=village i no hi ha cap highway-values: residential, unclassified or service en 700 m)
-https://resultmaps.neis-one.org/unmapped#9/42.1553/2.1396
-
----
-
 Un nou model predictiu per fer un map més acurat de la xarxa elèctrica amb dades públiques
 https://code.fb.com/connectivity/electrical-grid-mapping/
 
