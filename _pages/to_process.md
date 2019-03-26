@@ -7,12 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Un nou model predictiu per fer un map més acurat de la xarxa elèctrica amb dades públiques
-https://code.fb.com/connectivity/electrical-grid-mapping/
-
-Automated MappinG Platform, un experiment de Toyota per fer mapes de carreteres automàticament amb les dades de les càmeres dels vehicles
-https://www.tri-ad.global/news/20190228
-
 La comparació entre Arcgis i Qgis des de la perspectiva d'un educador, post original de 2014 revisat el 2019
 http://amdgs.co.uk/opinion/arcgis-v-qgis-an-educators-perspective-2019-update/
 
