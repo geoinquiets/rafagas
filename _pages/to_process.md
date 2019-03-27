@@ -7,14 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-La comparació entre Arcgis i Qgis des de la perspectiva d'un educador, post original de 2014 revisat el 2019
-http://amdgs.co.uk/opinion/arcgis-v-qgis-an-educators-perspective-2019-update/
-
-Les instruccions tècniques per fer el mapa de muntanyes de llum, el mapa de població segons l'emissió lumínica de les ciutats
-https://petrichor.studio/2019/02/14/earth-at-night-mountains-of-light/
-
----
-
 Mapa detallat dels viatges per carretera més èpics de la literatura nord-americana
 https://www.atlasobscura.com/articles/the-obsessively-detailed-map-of-american-literatures-most-epic-road-trips
 
