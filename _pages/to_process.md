@@ -7,12 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Mapa detallat dels viatges per carretera més èpics de la literatura nord-americana
-https://www.atlasobscura.com/articles/the-obsessively-detailed-map-of-american-literatures-most-epic-road-trips
-
-Les passejades d'Odisseu, o com es posa un mite en un mapa interpretant el text antic per trobar Ítaca
-https://www.laphamsquarterly.org/roundtable/geography-odyssey
-
 La paradoxa de la línia de costa, quina longitud depèn de l'escala amb què es mesura, explicada de forma entenedora
 https://www.sketchplanations.com/post/183170271181/the-coastline-paradox-this-is-the-fascinating 
 
