@@ -7,12 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-La paradoxa de la línia de costa, quina longitud depèn de l'escala amb què es mesura, explicada de forma entenedora
-https://www.sketchplanations.com/post/183170271181/the-coastline-paradox-this-is-the-fascinating 
-
-Una combinació de tecnologies en un museu interactiu per mostrar 1000 anys d'història de l'abadia benedictina d'Ename a Bèlgica
-https://enameabbey.wordpress.com/2019/03/02/1000-years-of-history-in-one-view/ 
-
 ## Tooling
 
 Links to new line
