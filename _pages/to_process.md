@@ -7,26 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Entendre i visualitzar els problemes crítics dels USA en àmbits com feina, educació i habilitats, a través de la indústria i la geografia
-https://datausa.io/
-
-Projecte online de visualització del relleu on es pot controlar l'exageració vertical, fet amb Mapbox SDK a Unity
-http://barankahyaoglu.com/map/
-
-El despoblament: la pèrdua d'habitants a l'Espanya buida comporta també la pèrdua d'infraestructres, inversions i serveis bàsics
-https://ethic.es/2019/04/el-mapa-de-la-espana-vacia/
-
-El mapa més detallat de densitat de població a l'Àfrica l'ha fet Facebook amb aprenentatge profund i es pot descarregar gratuïtament per països
-https://data.humdata.org/organization/facebook
-
-Un projecte de ciència ciutadana oberta i reutilitzable per fomentar la recollida de plàstics i obtenir littercoins (blockchain sense valor)
-https://openlittermap.com/en
-
-Una aplicació per comparar els temps estimats de viatge i les indicacions en un mapa en 3D, fet amb Python i Cesiumjs i Gmaps
-https://github.com/willgeary/Wayfinder3D
-
----
-
 Pràcticament un de cada cinc casos d'asma en criatures als USA és provocat per la contaminació de l'aire a causa dels cotxes
 https://www.citylab.com/environment/2019/04/mapping-where-traffic-air-pollution-hurts-children-most/587170/ 
 
@@ -42,6 +22,17 @@ https://github.com/geobeyond/cog
 Oskari és un projecte de codi obert per crear mapes online a partir de fonts de dades obertes
 http://oskari.org/
 
+Mapamundi amb totes les regions vitivinícoles del món i les seves denominacions
+https://biarritz.io/map/
+
+La ruta de 20mil km que conecta totes les capitals dels estats contingus dels USA per fer turisme il·limitat
+https://metricmaps.org/2019/01/13/12477-mile-trip-to-each-contiguous-us-state-capital/
+
+Un portal immobiliari USA amb una calculadora per viure a llocs que tinguin un bon índex de passejabilitat
+https://www.walkscore.com/
+
+Cartograma dels països del món segons el nivell d'inversió estrangera directa que atreuen
+https://howmuch.net/articles/countries-receiving-most-investment-from-abroad
 
 ## Tooling
 
