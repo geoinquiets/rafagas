@@ -7,32 +7,26 @@ permalink: /to_process/
 
 ## To send
 
-Pràcticament un de cada cinc casos d'asma en criatures als USA és provocat per la contaminació de l'aire a causa dels cotxes
-https://www.citylab.com/environment/2019/04/mapping-where-traffic-air-pollution-hurts-children-most/587170/ 
-
-Martin és un servidor de tessel·les vector al vol des de PostGIS pensat per a bases de dades molt grans fet amb Rust
-https://github.com/urbica/martin
-
-Terracotta és un servidor de tessel·les XYZ versàtil i lleuger de codi obert fet amb Flask i Rasterio per posar GeoTIFF online fàcilment
-https://terracotta-python.readthedocs.io/en/latest/
-
-Una API RESTful que processa GeoTIFF, els converteix a COG (cloud optimized GeoTIFF) i els serveix online com un objecte qualsevol
-https://github.com/geobeyond/cog
-
-Oskari és un projecte de codi obert per crear mapes online a partir de fonts de dades obertes
-http://oskari.org/
-
-Mapamundi amb totes les regions vitivinícoles del món i les seves denominacions
-https://biarritz.io/map/
-
-La ruta de 20mil km que conecta totes les capitals dels estats contingus dels USA per fer turisme il·limitat
-https://metricmaps.org/2019/01/13/12477-mile-trip-to-each-contiguous-us-state-capital/
-
 Un portal immobiliari USA amb una calculadora per viure a llocs que tinguin un bon índex de passejabilitat
 https://www.walkscore.com/
 
 Cartograma dels països del món segons el nivell d'inversió estrangera directa que atreuen
 https://howmuch.net/articles/countries-receiving-most-investment-from-abroad
+
+Cartografia en l'època de la intel·ligència artificial: realment podem deixar els mapes en mans de robots?
+https://medium.com/descarteslabs-team/mapmaking-in-the-age-of-artificial-intelligence-da9e71be21d3
+
+Els brots de xarampió (eradicat el 2000) que hi ha hagut als USA aquest 2019, i que ja supera en afectats tots els casos de l'any 2014 que fou el pitjor any fins ara
+https://www.nytimes.com/interactive/2019/04/30/health/measles-outbreak-by-state-map.html
+
+La presència militar dels USA a Àfrica sempre ha estat descrita com molt lleugera, però sembla ben bé el contrari
+https://geopoliticalfutures.com/us-military-african-front/
+
+El portal webgis de Brindisi amb més de 120 capes d'informació per la gestió del territori passat i present
+https://www.brindisiwebgis.it//
+
+Mapes 3D amb precisió centimètrica per obsoletar el GPS via reconeixement d'objectes al món real, gràcies DGomez
+https://www.technologyreview.es/s/11100/estos-mapas-3d-con-precision-centimetrica-dejaran-obsoleto-al-gps
 
 ## Tooling
 
