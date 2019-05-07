@@ -7,26 +7,24 @@ permalink: /to_process/
 
 ## To send
 
-Un portal immobiliari USA amb una calculadora per viure a llocs que tinguin un bon índex de passejabilitat
-https://www.walkscore.com/
-
-Cartograma dels països del món segons el nivell d'inversió estrangera directa que atreuen
-https://howmuch.net/articles/countries-receiving-most-investment-from-abroad
-
-Cartografia en l'època de la intel·ligència artificial: realment podem deixar els mapes en mans de robots?
-https://medium.com/descarteslabs-team/mapmaking-in-the-age-of-artificial-intelligence-da9e71be21d3
-
-Els brots de xarampió (eradicat el 2000) que hi ha hagut als USA aquest 2019, i que ja supera en afectats tots els casos de l'any 2014 que fou el pitjor any fins ara
-https://www.nytimes.com/interactive/2019/04/30/health/measles-outbreak-by-state-map.html
-
-La presència militar dels USA a Àfrica sempre ha estat descrita com molt lleugera, però sembla ben bé el contrari
-https://geopoliticalfutures.com/us-military-african-front/
-
-El portal webgis de Brindisi amb més de 120 capes d'informació per la gestió del territori passat i present
-https://www.brindisiwebgis.it//
-
 Mapes 3D amb precisió centimètrica per obsoletar el GPS via reconeixement d'objectes al món real, gràcies DGomez
 https://www.technologyreview.es/s/11100/estos-mapas-3d-con-precision-centimetrica-dejaran-obsoleto-al-gps
+
+Com calcular i afegir les ombres en els creuaments a diferent alçada en les tessel·les vector, per fer mapes amb el millor gust possible
+https://www.jonahadkins.com/esri/cartography/2019/05/04/shadowplay
+
+Tessel·les vector, models de dades, mapes base, consultes SQL, tot el què hi ha darrera de Geofable, un lloc web per fer mapes i explicar històries
+https://docs.google.com/presentation/d/1XpNTH6baQsSqoLW8oZ9dQtixyxsOMNHk8SzBf3KQkfw/edit?usp=drivesdk
+
+Una recepta senzilla i fàcil de dur a la pràctica per crear i servir mapes vector amb estil propi amb productes de codi obert
+https://yasoob.me/posts/custom-map-with-tileserver-gl/
+
+La lluita pel dret a conduir cotxes un mateix sense automatismes ni ajudes iniciada per la Human Driving Association es podria aplicar a altres camps
+https://www.newyorker.com/culture/annals-of-inquiry/the-fight-for-the-right-to-drive
+
+La crisi demogràfica alemanya generada per la migració est-oest de milions de persones, analitzada amb dades en un scrollymap potent
+https://www.zeit.de/politik/deutschland/2019-05/ost-west-wanderung-abwanderung-ostdeutschland-umzug
+
 
 ## Tooling
 
