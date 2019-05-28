@@ -19,8 +19,8 @@ sass:
 # About/contact
 author:
   name:              Geoinquiets
-  twitter:           geoinquiets
-  url:               https://twitter.com/geoinquiets
+  twitter:           LinksGeo
+  url:               https://twitter.com/LinksGeo
   email:             jsanz@cartodb.com
 
 
@@ -58,4 +58,4 @@ defaults:
       type: posts
     values:
       author: Raf
-      twitter: geoinquiets
+      twitter: LinksGeo
