@@ -7,17 +7,15 @@ permalink: /to_process/
 
 ## To send
 
-El creixement de Manhattan durant 400 anys vist a través dels mapes que conserven la NYPL i la LOC
 
-https://www.angieslist.com/articles/watch-manhattan-grow-over-400-years.htm
+La mida dels flocs de neu es pot observar des de satèl·lit i contribueix a millorar les prediccions del clima
 
-El drama de la frontera sud dels USA no és la invasió, sinó els migrants perduts que moren al desert
+http://www.esa.int/Our_Activities/Observing_the_Earth/Copernicus/Sentinel-3/Snow_grain_size_it_matters
 
-https://www.nytimes.com/interactive/2019/05/29/opinion/migrant-crisis.html
 
-Mapa interactiu dels recursos minerals de Croàcia, amb un apartat especial per als hidrocarburs
+Uns quants professionals SIG amb molt bones referències ofereixen serveis de suport per Qgis i altres tasques FOSS4G
 
-http://resources-croatia.giscloud.com/
+https://www.qcooperative.net/
 
 ## Tooling
 
