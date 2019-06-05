@@ -7,15 +7,8 @@ permalink: /to_process/
 
 ## To send
 
-
-La mida dels flocs de neu es pot observar des de satèl·lit i contribueix a millorar les prediccions del clima
-
-http://www.esa.int/Our_Activities/Observing_the_Earth/Copernicus/Sentinel-3/Snow_grain_size_it_matters
-
-
-Uns quants professionals SIG amb molt bones referències ofereixen serveis de suport per Qgis i altres tasques FOSS4G
-
-https://www.qcooperative.net/
+Tots els camins duen a Roma, edició USA: en aquest cas a les 9 ciutats de diferents estats que es diuen Roma
+http://roadstorome.moovellab.com/maps/roads-to-romes/#3.62/39.46/-95.79
 
 ## Tooling
 
