@@ -7,9 +7,6 @@ permalink: /to_process/
 
 ## To send
 
-Tots els camins duen a Roma, edició USA: en aquest cas a les 9 ciutats de diferents estats que es diuen Roma
-http://roadstorome.moovellab.com/maps/roads-to-romes/#3.62/39.46/-95.79
-
 ## Tooling
 
 Links to new line
