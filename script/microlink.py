@@ -43,13 +43,13 @@ class Microlink(object):
                 return result
             elif r_json['status'] == 'fail':
                 message = r_json['message']
-                logging.error(f'Microlink error: {message}')
+                logging.error('Microlink error: {}'.format(message))
                 if r.status_code == 429:
                     Microlink.HAS_REACHED_LIMIT = True
                 return None
 
         except Exception as e:
-            logging.error(f'Error processing {url}')
+            logging.error('Error processing {}'.format(url))
             logging.error(e)
 
 
@@ -83,10 +83,10 @@ if __name__ == "__main__":
                 post = frontmatter.load(md_reader)
                 if ('rid' in post):
                     rid = post['rid']
-                    logging.info(f'Processing rafaga {rid}...')
+                    logging.info('Processing rafaga {}...'.format(rid))
                     post_processed = process(post)
                     if post_processed is not None:
                         with md.open(mode='w') as md_writer:
                             md_writer.write(frontmatter.dumps(post_processed))
 
-    logging.info(f'Made {Microlink.microlink_counter} requests to microlink')
+    logging.info('Made {} requests to microlink'.format(Microlink.microlink_counter))
