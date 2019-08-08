@@ -27,7 +27,7 @@ Nº{{ post.rid}}: {% for rafaga in post.rafagas %}{{rafaga.keyw | downcase}}{% u
 {{ post.date | date: "%a, %d %b %Y" }} by {{post.author}}
 {% for rafaga in post.rafagas %}
 * {{ rafaga.desc | xml_escape }} {% if rafaga.via %}via {{ rafaga.via }}{% endif %}
-  {{ rafaga.link }}
+  {{ rafaga.link | xml_escape }}
 {% endfor %}</content>
  </entry>
  {% endfor %}
