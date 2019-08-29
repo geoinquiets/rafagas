@@ -16,9 +16,9 @@ layout: default
 
     <li {%if rafaga.invalid %}style="text-decoration:line-through"{% endif %}>
       {{rafaga.desc}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}<br>
-      {% unless rafaga.invalid %}<a href="{{rafaga.link}}" {%if rafaga.nocheck %}data-proofer-ignore{% endif %}>{% endunless %}
+      {% unless rafaga.invalid %}<span class="rafaga-li"><a href="{{rafaga.link}}" {%if rafaga.nocheck %}data-proofer-ignore{% endif %}>{% endunless %}
       {{rafaga.link}}
-      {% unless rafaga.invalid %}</a>{% endunless %}
+      {% unless rafaga.invalid %}</a></span>{% endunless %}
     </li>
     {% endfor %}
   </ul>
