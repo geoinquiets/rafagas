@@ -8,7 +8,7 @@ PROJECT_DEPS := Gemfile package.json
 .PHONY: serve microlink build
 
 serve:
-	JEKYLL_ENV=production $(JEKYLL) serve  --incremental --port 8000 --host `hostname -I`
+	JEKYLL_ENV=production $(JEKYLL) serve  --incremental --port 8000
 
 clean:
 	$(JEKYLL) clean
