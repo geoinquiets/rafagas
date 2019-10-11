@@ -33,4 +33,5 @@ cache:
 
 # Optional: disable email notifications about the outcome of your builds
 notifications:
-  email: true
+  email:
+    - xurxosanz@gmail.com
