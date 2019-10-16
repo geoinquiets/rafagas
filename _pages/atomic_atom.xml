@@ -2,8 +2,7 @@
 layout: null
 permalink: /atomic_atom.xml
 ---
-
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>{{ site.title }}</title>
@@ -14,17 +13,15 @@ permalink: /atomic_atom.xml
  <author>
    <name>{{ site.author.name }}</name>
    <email>{{ site.author.email }}</email>
- </author>{% for post in site.posts limit:10 %} {% assign raf_counter = post.rafagas.size %} {% if post.rafagas %} {% for rafaga in post.rafagas reversed %}
-      <entry> {% assign new_date = post.date | date: '%Y-%m-%eT00:00:00+00:0' %} {% assign new_date2 = new_date | append: raf_counter  %}
+ </author>{% for post in site.posts limit:5 %} {% assign raf_counter = post.rafagas.size %} {% if post.rafagas %} {% for rafaga in post.rafagas reversed %}
+      <entry> {% assign new_date = post.date | date: '%Y-%m-%dT00:00:00+00:0' %} {% assign new_date2 = new_date | append: raf_counter  %}
         <title>{{rafaga.desc | xml_escape }}{% if rafaga.via %} via {{rafaga.via | xml_escape }}{% endif %} #{{ rafaga.keyw | slugify }}</title>
-        <link href="{{ rafaga.link | xml_escape}}"/>
-        {% if rafaga.microlink %}
-        <link rel="related" href="{{ rafaga.microlink.image | xml_escape }}"/>
-        {% endif %}
+        <link href="{{ rafaga.link | xml_escape}}"{% if rafaga.lang %} hreflang="{{rafaga.lang}}"{% endif %}/>
+        {% if rafaga.microlink.image %}<link rel="related" href="{{ rafaga.microlink.image | xml_escape }}"/>{% endif %}
         <updated>{{ new_date2 }}</updated>
-        <id>{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html#{{ raf_counter }}</id>
+        <id>{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%d'}}.html#{{ raf_counter }}</id>
         <author><name>{% if rafaga.via %}{{rafaga.via}}{% else %}{{post.author}}{% endif %}</name></author>
-        <content type="html"><![CDATA[
+        <content type="html"{% if rafaga.lang %} xml:lang="{{rafaga.lang}}"{% endif %}><![CDATA[
           <p><a href="{{rafaga.link}}">{{rafaga.link}}</a></p>
           <p>Post {{ raf_counter }} of {{ post.rafagas.size }} at issue 
           <a href="{{ site.url }}{{ site.baseurl }}/{{ post.date | date: '%Y/%m-%e'}}.html">#{{post.rid}}</a></p>
