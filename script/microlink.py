@@ -73,7 +73,7 @@ if __name__ == "__main__":
         datefmt='%I:%M:%S %p')
 
     p = Path('_posts/')
-    for md in sorted(p.glob('2019/*.md'), reverse=True)[:5]:
+    for md in sorted(p.glob('2020/*.md'), reverse=True)[:5]:
             
         if Microlink.HAS_REACHED_LIMIT:
             logging.warn('At Microlink limit, aborting')
