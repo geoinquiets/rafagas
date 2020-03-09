@@ -2,6 +2,7 @@ import requests
 import logging
 from pathlib import Path
 import frontmatter
+import time
 
 for key in logging.Logger.manager.loggerDict:
     logging.getLogger(key).setLevel(logging.CRITICAL)
@@ -62,6 +63,7 @@ def process(post):
             microlink_data = Microlink.microlink(rafaga['link'])
             if microlink_data is not None:
                 rafaga['microlink'] = microlink_data
+                time.sleep(2)
 
     return post
 
@@ -76,7 +78,7 @@ if __name__ == "__main__":
     for md in sorted(p.glob('2020/*.md'), reverse=True)[:5]:
             
         if Microlink.HAS_REACHED_LIMIT:
-            logging.warn('At Microlink limit, aborting')
+            logging.warning('At Microlink limit, aborting')
             break
         if str(md).find('template') == -1 :
             with md.open() as md_reader:
