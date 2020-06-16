@@ -8,14 +8,14 @@ PROJECT_DEPS := Gemfile package.json
 .PHONY: serve microlink build
 
 serve:
-	JEKYLL_ENV=production $(JEKYLL) serve  --incremental --port 8000
+	JEKYLL_ENV=production RUBYOPT='-W0' $(JEKYLL) serve  --incremental --port 8000
 
 clean:
-	$(JEKYLL) clean
+	RUBYOPT='-W0' $(JEKYLL) clean
 
 microlink:
 	$(PYTHON) script/microlink.py 
 
 build:
-	$(JEKYLL) build
+	RUBYOPT='-W0' $(JEKYLL) build
 
