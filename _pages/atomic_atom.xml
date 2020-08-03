@@ -13,8 +13,8 @@ regenerate: true
  <id>{{ site.url }}{{ site.baseurl }}</id>
  <author>
    <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
- </author>{% for post in site.posts limit:5 %} {% assign raf_counter = post.rafagas.size %} {% if post.rafagas %} {% for rafaga in post.rafagas reversed %}
+   <email>{{ site.author.email }}</email>{% assign posts = site.posts | where: "draft", false %}
+ </author>{% for post in posts limit:5 %} {% assign raf_counter = post.rafagas.size %} {% if post.rafagas %} {% for rafaga in post.rafagas reversed %}
       <entry> {% assign new_date = post.date | date: '%Y-%m-%dT00:00:00+00:0' %} {% assign new_date2 = new_date | append: raf_counter  %}
         <title>{{rafaga.desc | xml_escape }}{% if rafaga.via %} via {{rafaga.via | xml_escape }}{% endif %} #{{ rafaga.keyw | slugify }}</title>
         <link href="{{ rafaga.link | xml_escape}}"{% if rafaga.lang %} hreflang="{{rafaga.lang}}"{% endif %}/>

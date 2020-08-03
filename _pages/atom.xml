@@ -16,8 +16,8 @@ regenerate: true
    <name>{{ site.author.name }}</name>
    <email>{{ site.author.email }}</email>
  </author>
-
- {% for post in site.posts limit:10 %}
+ {% assign posts = site.posts | where: "draft", false %}
+ {% for post in posts limit:10 %}
  <entry>
    <title> Nº{{ post.rid}}: {% for rafaga in post.rafagas %}{{rafaga.keyw | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %} </title>
    <link href="{{ site.url }}/rafagas{{ post.url }}"/>

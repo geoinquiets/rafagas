@@ -5,8 +5,10 @@ permalink: /
 regenerate: true
 ---
 
+{% assign posts = site.posts | where: "draft", false %}
+
 <div class="posts">
-  {% for post in site.posts limit:25 %}
+  {% for post in posts limit:25 %}
   <article class="post">
     <h1 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
