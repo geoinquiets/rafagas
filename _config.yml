@@ -34,7 +34,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-mentions
   - jekyll-sitemap
-  - jemoji
 
 jekyll-mentions:
       base_url: https://twitter.com
@@ -59,3 +58,5 @@ defaults:
     values:
       author: Raf
       twitter: LinksGeo
+
+highlighter: null
