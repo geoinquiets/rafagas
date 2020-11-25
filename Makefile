@@ -3,8 +3,6 @@ BUNDLE := bundle
 JEKYLL := $(BUNDLE) exec jekyll
 PYTHON := ./env/bin/python
 
-PROJECT_DEPS := Gemfile package.json
-
 .PHONY: serve microlink build
 
 serve:
