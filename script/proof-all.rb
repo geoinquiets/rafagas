@@ -1,7 +1,7 @@
 require 'html-proofer'
 
 options = { 
-    :url_ignore => [/localhost:4000/],
+    :url_ignore => [/localhost:4000/,/geoinquiets.github.io/],
     :log_level => :info,
     :assume_extension => true ,
     :external_only => true,
