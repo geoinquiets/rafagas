@@ -34,19 +34,17 @@ jobs:
       - name: Run the link check
         id: link-check-run
         run: |
-          OUTPUT=$(bundle exec ruby script/proof-all.rb 2>&1 || true)
-          OUTPUT="${OUTPUT//'%'/'%25'}​【7,6 m】"
-          OUTPUT="${OUTPUT//$'\n'/'%0A'}"
-          OUTPUT="${OUTPUT//$'\r'/'%0D'}"
+          OUTPUT=$(bundle exec ruby script/proof-all.rb 2>&1 | grep http || true)
           echo "::set-output name=result::$OUTPUT"
 
-      - uses: marocchino/sticky-pull-request-comment@v2
+      - name: 'Comment PR'
+        uses: actions/github-script@0.3.0
+        if: github.event_name == 'pull_request'
         with:
-          header: link-check
-          message: |
-            ```
-            ${{ steps.link-check-run.outputs.result }}
-            ```
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+            github.issues.createComment({ issue_number, owner, repo, body: "```${{ steps.link-check-run.outputs.result }}```" });
 
       - name: Check outputs
         run: |
