@@ -3,8 +3,30 @@ on: [push]
 jobs:
   link-checker:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
+
+      - name: Install libcurl4-openssl-dev
+        run: sudo apt-get install -y libcurl4-openssl-dev
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.4.1
+          bundler-cache: true
+
+      - name: Cache folders
+        uses: actions/cache@v2
+        with:
+          path: |
+            tmp
+            _site
+          key: ${{ runner.os }}-cache
+
+      - name: Build the site
+        run: bundle exec jekyll build
+        env:
+          NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+      - name: Run the link check
+        run: bundle exec ruby script/proof-all.rb
