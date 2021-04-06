@@ -29,4 +29,4 @@ jobs:
           NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
       - name: Run the link check
-        run: bundle exec ruby script/proof-all.rb | tee tmp/checker.log || true
+        run: bundle exec ruby script/proof-all.rb 2>&1 | tee checker.log || true
