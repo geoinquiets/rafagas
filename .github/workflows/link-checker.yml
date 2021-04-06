@@ -30,3 +30,6 @@ jobs:
 
       - name: Run the link check
         run: bundle exec ruby script/proof-all.rb 2>&1 | tee checker.log || true
+
+      - name: Check outputs
+        run: grep http checker.log || true
