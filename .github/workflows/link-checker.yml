@@ -51,7 +51,7 @@ jobs:
 
       - name: Check outputs
         run: |
-          if echo ${{ steps.link-check-run.outputs.result }} | grep http
+          if echo "${{ steps.link-check-run.outputs.result }}" | grep http
           then 
             exit 1
           fi
