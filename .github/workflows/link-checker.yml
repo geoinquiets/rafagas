@@ -26,7 +26,7 @@ jobs:
       - name: Build the site
         run: bundle exec jekyll build
         env:
-          NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+          NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
       - name: Run the link check
         run: bundle exec ruby script/proof-all.rb
