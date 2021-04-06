@@ -34,21 +34,22 @@ jobs:
       - name: Run the link check
         id: link-check-run
         run: |
-          OUTPUT=$(bundle exec ruby script/proof-all.rb 2>&1 | grep http || true)
+          OUTPUT=$(bundle exec ruby script/proof-all.rb 2>&1 | grep -oP 'External link \K.*+' || true)
           echo "::set-output name=result::$OUTPUT"
 
-      - name: 'Comment PR'
-        uses: actions/github-script@0.3.0
-        if: github.event_name == 'pull_request'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
-            github.issues.createComment({ issue_number, owner, repo, body: "```${{ steps.link-check-run.outputs.result }}```" });
+      # - name: 'Comment PR'
+      #   uses: actions/github-script@0.3.0
+      #   if: github.event_name == 'pull_request'
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     script: |
+      #       const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+      #       github.issues.createComment({ issue_number, owner, repo, body: "```${{ steps.link-check-run.outputs.result }}```" });
 
       - name: Check outputs
         run: |
-          if echo "${{ steps.link-check-run.outputs.result }}" | grep http
+          echo ${{ steps.link-check-run.outputs.result }}
+          if $(cat ${{ steps.link-check-run.outputs.result }} | wc -l)
           then 
             exit 1
           fi
