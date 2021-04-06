@@ -1,4 +1,4 @@
-name: link-checker
+name: Rafagas workflow
 on:
   pull_request:
     branches:
