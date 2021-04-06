@@ -9,7 +9,7 @@ options = {
     :check_html => true,
     :check_img_http => true,
     :check_opengraph => true,
-    :enforce_https => true,
+    :enforce_https => false,
     :cache => {
       :timeframe => '1w'
     },
