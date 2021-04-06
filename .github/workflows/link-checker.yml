@@ -40,13 +40,13 @@ jobs:
           OUTPUT="${OUTPUT//$'\r'/'%0D'}"
           echo "::set-output name=result::$OUTPUT"
 
-      - uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          header: link-check
-          message: |
-            ```
-            ${{ steps.link-check-run.outputs.result }}
-            ```
+        # - uses: marocchino/sticky-pull-request-comment@v2
+        #   with:
+        #     header: link-check
+        #     message: |
+        #       ```
+        #       ${{ steps.link-check-run.outputs.result }}
+        #       ```
 
       - name: Check outputs
         run: |
