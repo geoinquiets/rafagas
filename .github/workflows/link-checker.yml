@@ -2,7 +2,7 @@ name: link-checker
 on:
   pull_request:
     branches:
-      - gh_pages
+      - gh-pages
 jobs:
   link-checker:
     runs-on: ubuntu-latest
