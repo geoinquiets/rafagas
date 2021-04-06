@@ -1,5 +1,9 @@
 name: link-checker
-on: [push]
+on:
+  push:
+  pull_request:
+    branches:
+      - gh_pages
 jobs:
   link-checker:
     runs-on: ubuntu-latest
@@ -29,7 +33,25 @@ jobs:
           NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
       - name: Run the link check
-        run: bundle exec ruby script/proof-all.rb 2>&1 | tee checker.log || true
+        id: link-check-run
+        run: |
+          OUTPUT=$(bundle exec ruby script/proof-all.rb 2>&1)
+          OUTPUT="${OUTPUT//'%'/'%25'}​【7,6 m】"
+          OUTPUT="${OUTPUT//$'\n'/'%0A'}"
+          OUTPUT="${OUTPUT//$'\r'/'%0D'}"
+          echo "::set-output name=result::$OUTPUT"
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: link-check
+          message: |
+            ```
+            ${{ steps.link-check-run.outputs.result }}
+            ```
 
       - name: Check outputs
-        run: if grep http checker.log; then exit 1; fi
+        run: |
+          if echo ${{ steps.link-check-run.outputs.result }} | grep http
+          then 
+            exit 1
+          fi
