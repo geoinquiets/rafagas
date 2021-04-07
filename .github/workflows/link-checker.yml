@@ -38,7 +38,7 @@ jobs:
           echo "::set-output name=count::$(cat output.log | tail -n1)"
 
       - name: Add comment to PR
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && github.repository_owner == 'geoinquiets'
         env:
           URL: ${{ github.event.pull_request.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
