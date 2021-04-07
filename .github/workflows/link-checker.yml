@@ -35,8 +35,13 @@ jobs:
         id: link-check-run
         run: |
           bundle exec ruby script/proof-all.rb 2>&1 | grep -oP 'External link \K.*+' >> output.log || true
-          RESULT=$(cat output.log | wc -l)
-          echo "::set-output name=result::$RESULT"
+          echo "::set-output name=result::$$(cat output.log | wc -l)"
+
+      - name: Read links
+        id: broken-links
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: output.log
 
       - name: Add comment to PR
         if: github.event_name == 'pull_request'
@@ -44,12 +49,12 @@ jobs:
           URL: ${{ github.event.pull_request.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          OUTPUT="$(cat output.log)" curl \
+          curl \
             -X POST \
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data "{ \"body\": \"### Link check\n\n```\n${{OUTPUT}}\n```\" }"
+            --data "{ \"body\": \"### ${{ steps.link-check-run.outputs.result }} broken links\n\n```\n${{ steps.broken-links.outputs.content }}\n```\" }"
 
       # - name: Check outputs
       #   run: |
