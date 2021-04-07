@@ -24,7 +24,7 @@ jobs:
           path: |
             tmp
             _site
-          key: ${{ runner.os }}-cache
+          key: rafagas-cache
 
       - name: Build the site
         run: bundle exec jekyll build
@@ -57,17 +57,18 @@ jobs:
           URL: ${{ github.event.pull_request.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          OUTPUT=$(cat output.log)
           curl \
             -X POST \
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data '{ "body": "```\n$(cat output.log)\n```" }'
+            --data '{ "body": "```${OUTPUT}```" }'
 
-      - name: Check outputs
-        run: |
-          cat output.log
-          if [ ${{ steps.link-check-run.outputs.result }} -ne 0 ] 
-          then
-            exit 1
-          fi
+      # - name: Check outputs
+      #   run: |
+      #     cat output.log
+      #     if [ ${{ steps.link-check-run.outputs.result }} -ne 0 ] 
+      #     then
+      #       exit 1
+      #     fi
