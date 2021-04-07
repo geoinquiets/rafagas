@@ -44,12 +44,13 @@ jobs:
           URL: ${{ github.event.pull_request.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          OUTPUT="$(cat output.log)"
           curl \
             -X POST \
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data "{ \"body\": \"### Link check\n\n```\n$(cat output.log)\n```\" }"
+            --data "{ \"body\": \"### Link check\n\n```\n${{OUTPUT}}\n```\" }"
 
       # - name: Check outputs
       #   run: |
