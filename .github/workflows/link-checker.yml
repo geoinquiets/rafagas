@@ -48,6 +48,6 @@ jobs:
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data "{ \"body\": \"${{ steps.link-check-run.outputs.count }}\n\n Check the `Run the link check` step output at ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}"
+            --data "{ \"body\": \"${{ steps.link-check-run.outputs.count }}\n\n Check the `Run the link check` step output at ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}?check_suite_focus=true\"}"
 
 
