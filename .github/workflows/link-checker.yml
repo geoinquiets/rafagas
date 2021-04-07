@@ -35,7 +35,7 @@ jobs:
         id: link-check-run
         run: |
           bundle exec ruby script/proof-all.rb 2>&1 | tee output.log || true
-          echo "::set-output name=count::$(cat output.log | grep -c http | wc -l)"
+          echo "::set-output name=count::$(cat output.log | tail -n1)"
 
       - name: Add comment to PR
         if: github.event_name == 'pull_request'
@@ -48,6 +48,6 @@ jobs:
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data "{ \"body\": There are **${{ steps.link-check-run.outputs.count }} broken links**\n\n Check the `Run the link check` step output at $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID\"}"
+            --data "{ \"body\": \"${{ steps.link-check-run.outputs.count }}\n\n Check the `Run the link check` step output at ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}"
 
 
