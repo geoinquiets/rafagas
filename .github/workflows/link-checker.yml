@@ -35,7 +35,20 @@ jobs:
         id: link-check-run
         run: |
           bundle exec ruby script/proof-all.rb 2>&1 | grep -oP 'External link \K.*+' > output.log || true
-          echo "::set-output name=result::$(cat output.log)"
+          echo "::set-output name=result::\"$(cat output.log)\""
+
+      - name: 'Comment PR'
+        uses: actions/github-script@0.3.0
+        if: github.event_name == 'pull_request'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+            github.issues.createComment({ 
+              issue_number, 
+              owner, 
+              repo, 
+              body: "```\n${{ steps.link-check-run.outputs.result }}\n```" });
 
       - name: Check outputs
         run: |
