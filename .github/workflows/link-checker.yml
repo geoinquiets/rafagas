@@ -44,8 +44,7 @@ jobs:
           URL: ${{ github.event.pull_request.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          OUTPUT="$(cat output.log)"
-          curl \
+          OUTPUT="$(cat output.log)" curl \
             -X POST \
             $URL \
             -H "Content-Type: application/json" \
