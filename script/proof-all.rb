@@ -14,7 +14,7 @@ options = {
       :timeframe => '1w'
     },
     :typhoeus => { 
-        :followlocation => true
+        :followlocation => true,
         :ssl_verifypeer => false,
         :ssl_verifyhost => 0,
         :connecttimeout => 30,
