@@ -1,9 +1,8 @@
 name: Rafagas workflow
 on:
   workflow_dispatch:
-  pull_request:
-    branches:
-      - gh-pages
+  schedule:
+    - cron:  '0 4 * * *'
 jobs:
   link-checker:
     runs-on: ubuntu-latest
