@@ -6,6 +6,7 @@ on:
 jobs:
   link-checker:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'geoinquiets
 
     steps:
       - uses: actions/checkout@v2
@@ -36,18 +37,3 @@ jobs:
         run: |
           bundle exec ruby script/proof-all.rb 2>&1 | tee output.log || true
           echo "::set-output name=count::$(cat output.log | tail -n1)"
-
-      - name: Add comment to PR
-        if: github.event_name == 'pull_request' && github.repository_owner == 'geoinquiets'
-        env:
-          URL: ${{ github.event.pull_request.comments_url }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          curl \
-            -X POST \
-            $URL \
-            -H "Content-Type: application/json" \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            --data "{ \"body\": \"${{ steps.link-check-run.outputs.count }}\n\n Check the `Run the link check` step output at ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}?check_suite_focus=true\"}"
-
-
