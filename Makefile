@@ -18,4 +18,4 @@ build:
 	RUBYOPT='-W0' $(JEKYLL) build
 
 check-last-job:
-	gh run view --log $$(gh run list | tail -n1 | grep -Eo '[0-9]+$$')| grep -oP '(?<=External link ).*(?= failed)'
+	gh run view --log $$(gh run list | head -n1 | grep -Eo '[0-9]+$$')| grep -oP '(?<=External link ).*(?= failed)'
