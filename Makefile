@@ -14,6 +14,9 @@ clean:
 microlink:
 	$(PYTHON) script/microlink.py 
 
+update:
+	$(PYTHON) script/update_rafaga.py 
+
 build:
 	RUBYOPT='-W0' $(JEKYLL) build
 
