@@ -8,5 +8,6 @@ tmp/
 errors.log
 00_to_process.md
 env
+script/.ipynb_checkpoints
 
 *template.md
