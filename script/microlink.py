@@ -83,7 +83,7 @@ if __name__ == "__main__":
         if str(md).find('template') == -1 :
             with md.open() as md_reader:
                 post = frontmatter.load(md_reader)
-                if ('rid' in post):
+                if ('rid' in post and not 'invalid' in post):
                     rid = post['rid']
                     logging.info('Processing rafaga {}...'.format(rid))
                     post_processed = process(post)
