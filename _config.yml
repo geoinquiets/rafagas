@@ -60,3 +60,10 @@ defaults:
       twitter: LinksGeo
 
 highlighter: null
+
+
+
+theme: minima
+minima:
+  date_format: "%Y-%m-%d"
+repository: geoinquiets/rafagas
