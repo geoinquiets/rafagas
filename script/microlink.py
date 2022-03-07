@@ -60,10 +60,10 @@ def process(post):
         if rafaga.get('microlink') is not None or rafaga.get('invalid') or rafaga.get('nocheck'):
             logging.debug('Skipping link')
         elif Microlink.HAS_REACHED_LIMIT is not True:
+            time.sleep(2)
             microlink_data = Microlink.microlink(rafaga['link'])
             if microlink_data is not None:
                 rafaga['microlink'] = microlink_data
-                time.sleep(2)
 
     return post
 
