@@ -11,3 +11,4 @@ env
 script/.ipynb_checkpoints
 
 *template.md
+.brokdb
