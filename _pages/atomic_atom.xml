@@ -16,7 +16,7 @@ regenerate: true
    <email>{{ site.author.email }}</email>{% assign posts = site.posts | where: "draft", false %}
  </author>{% for post in posts limit:5 %} {% assign raf_counter = post.rafagas.size %} {% if post.rafagas %} {% for rafaga in post.rafagas reversed %}
       <entry> {% assign new_date = post.date | date: '%Y-%m-%dT00:00:00+00:0' %} {% assign new_date2 = new_date | append: raf_counter  %}
-        <title>{{rafaga.desc | truncate: 250 | xml_escape }}{% if rafaga.via %} via {{rafaga.via | xml_escape }}{% endif %} #{{ rafaga.keyw | slugify }}</title>
+        <title>{{rafaga.desc | xml_escape }}{% if rafaga.via %} via {{rafaga.via | xml_escape }}{% endif %} #{{ rafaga.keyw | slugify }}</title>
         <link href="{{ rafaga.link | xml_escape}}"{% if rafaga.lang %} hreflang="{{rafaga.lang}}"{% endif %}/>
         {% if rafaga.microlink.image %}<link rel="related" href="{{ rafaga.microlink.image | xml_escape }}"/>{% endif %}
         <updated>{{ new_date2 }}</updated>
