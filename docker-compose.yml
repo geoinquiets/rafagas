@@ -4,8 +4,6 @@ services:
   jekyll:
     image: jekyll/jekyll:latest
     command: jekyll serve --watch --force_polling --incremental --port 8000
-    ports:
-      - 4000:4000
     volumes:
       - .:/srv/jekyll
       - /srv/jekyll/env
