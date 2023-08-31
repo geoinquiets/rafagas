@@ -3,13 +3,14 @@ version: '3'
 services:
   jekyll:
     image: jekyll/jekyll:latest
-    command: jekyll serve --watch --force_polling --incremental --port 8000
+    command: jekyll serve --watch --force_polling --incremental --port 8000 --livereload --livereload-port --future
     volumes:
       - .:/srv/jekyll
       - /srv/jekyll/env
       - jekyll:/usr/local/bundle
     ports:
       - '8000:8000'
+      - '35729:35729'
     environment: 
       RUBYOPT: '-W0'
       JEKYLL_ENV: production 
