@@ -56,14 +56,18 @@ class Microlink(object):
 
 def process(post):
     for rafaga in post['rafagas']:
-        logging.debug(rafaga['link'])
-        if rafaga.get('microlink') is not None or rafaga.get('invalid') or rafaga.get('nocheck'):
-            logging.debug('Skipping link')
-        elif Microlink.HAS_REACHED_LIMIT is not True:
-            time.sleep(2)
-            microlink_data = Microlink.microlink(rafaga['link'])
-            if microlink_data is not None:
-                rafaga['microlink'] = microlink_data
+        if 'link' not in rafaga:
+            rid = post['rid']
+            logging.error(f'Error in rafaga {rid}, check the content!!')
+        else:
+            logging.debug(rafaga['link'])
+            if rafaga.get('microlink') is not None or rafaga.get('invalid') or rafaga.get('nocheck'):
+                logging.debug('Skipping link')
+            elif Microlink.HAS_REACHED_LIMIT is not True:
+                time.sleep(2)
+                microlink_data = Microlink.microlink(rafaga['link'])
+                if microlink_data is not None:
+                    rafaga['microlink'] = microlink_data
 
     return post
 
