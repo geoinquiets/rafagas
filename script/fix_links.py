@@ -70,7 +70,7 @@ def processRafaga(post, skipInvalids=True):
             if linkCheck["url"] != link:
                 rafaga["link"] = linkCheck["url"]
         else:
-            logger.debug(f"[Checked] Skipping {link}")
+            logger.info(f"[Checked] Skipping in rafaga {post['rid']}: {link}")
     return post
 
 
@@ -87,7 +87,7 @@ def processFile(md):
                 result = "Written"
                 with md.open(mode="w") as md_writer:
                     md_writer.write(frontmatter.dumps(post_processed))
-                logger.debug("Rafaga %s processed with result %s", rid, result)
+                logger.info("Rafaga %s processed with result %s", rid, result)
         return {"file": str(md), "result": result}
 
 
