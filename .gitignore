@@ -1,20 +1,23 @@
-.sass-cache
+__pycache__
 _site
+
+.brokdb
 .DS_Store
-Gemfile.lock
 .jekyll-metadata
+.sass-cache
 .vscode/*
-tmp/
-errors.log
-00_to_process.md
-env
-script/.ipynb_checkpoints
+
+*.pyc
+*.swp
 
 *template.md
-.brokdb
-FIXME.txt
+00_to_process.md
 
-*.swp
 crawl
-*.pyc
+env
 
+errors.log
+FIXME.txt
+Gemfile.lock
+script/.ipynb_checkpoints
+tmp/
