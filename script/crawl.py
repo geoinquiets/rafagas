@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 import os
-import sys
+import os.path
 import random
 import logging
 from multiprocessing import Pool
 from pathlib import Path
-import datetime
 import frontmatter
+import json
+from pathlib import Path
 
-from utils.check_url import checkUrl
+from utils.crawl_url import processLink, getHash
 
 
 # create logger
@@ -19,14 +20,13 @@ for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
 LINKS_PROCESS = int(os.environ.get("LINKS_PROCESS") or 50)
-LINKS_SKIP_INVALIDS = int(os.environ.get("LINKS_SKIP_INVALIDS") or 1) == 1
-
 LOG_LEVEL = os.environ.get("LINKS_LOG_LEVEL") or logging.INFO
 LOG_FORMAT = " %(asctime)s - %(levelname)-8s %(message)s"
 LOG_DATE_FMT = "%I:%M:%S %p"
 
-POOL_SIZE = 15
-LINKS_DAYS = int(os.environ.get("CHECK_DAYS") or 7)
+POOL_SIZE = 18
+
+DESTINATION_DIR = "./crawl"
 
 logging.basicConfig(format=LOG_FORMAT, datefmt=LOG_DATE_FMT)
 
@@ -36,7 +36,6 @@ logger.info("Logger set up")
 
 
 # Functions
-
 
 def filterInvalid(rafaga):
     link = rafaga["link"]
@@ -49,36 +48,38 @@ def filterInvalid(rafaga):
 
 
 def processRafaga(post, skipInvalids=True):
+    rafagaFolder = f"{DESTINATION_DIR}/{post['rid']}"
+    Path(rafagaFolder).mkdir(parents=True, exist_ok=True)
+
     rafagas = (
         filter(filterInvalid, post["rafagas"]) if skipInvalids else post["rafagas"]
     )
-    logger.debug(f"{len(rafagas)} links in this rafaga to process")
 
     for rafaga in rafagas:
         link = rafaga["link"]
-        now = datetime.datetime.now()
-        lastCheck = (
-            datetime.datetime.fromisoformat(rafaga["lastCheck"])
-            if "lastCheck" in rafaga
-            else now
-        )
-
-        if lastCheck == now or (now - lastCheck).days > LINKS_DAYS:
+        hash = getHash(link)
+        if not os.path.isfile(f"{rafagaFolder}/{hash}.json"):
             logger.debug(f"Checking {link}")
-            linkCheck = checkUrl(link)
-            rafaga["lastCheck"] = lastCheck.isoformat()
-            
-            # Reset the invalid key
-            rafaga.pop("invalid", None)
-            if linkCheck["code"] >= 400:
-                rafaga["invalid"] = True
-            
-            # Reset the url if got a new one
-            if linkCheck["url"] != link:
-                rafaga["link"] = linkCheck["url"]
+            try:
+                data = processLink(post["rid"], post["date"], rafaga)
+            except TypeError as e:
+                logger.critical(e.with_traceback())
+                logger.critical(f"Error processing link {link} at  {post['rid']}")
+                import sys
+                sys.exit(1)
+
+            if data:
+                try:
+                    with open(f"{rafagaFolder}/{data['id']}.json", "w") as writer:
+                        writer.write(json.dumps(data))
+                except TypeError as e:
+                    logger.critical(e.with_traceback())
+                    logger.critical(f"Error processing {link} at {post['rid']}")
+                    import sys
+                    sys.exit(1)
+        
         else:
-            logger.info(f"[Checked] Skipping in rafaga {post['rid']}: {link}")
-    return post
+            logger.debug("Link already processed")
 
 
 def processFile(md):
@@ -89,13 +90,11 @@ def processFile(md):
             rid = post["rid"]
             result = "Read"
             logger.debug("Processing rafaga {}...".format(rid))
-            post_processed = processRafaga(post, skipInvalids=LINKS_SKIP_INVALIDS)
+            post_processed = processRafaga(post)
             if post_processed is not None:
-                result = "Written"
-                with md.open(mode="w") as md_writer:
-                    md_writer.write(frontmatter.dumps(post_processed))
-                logger.info("Rafaga %s processed with result %s", rid, result)
-        return {"file": str(md), "result": result}
+                result = "Failed"
+                logger.debug("Rafaga %s processed with result %s", rid, result)
+        return {"rid": rid, "result": result}
 
 
 if __name__ == "__main__":
@@ -105,10 +104,10 @@ if __name__ == "__main__":
     allPosts = list(filter(lambda f: str(f).find("template") == -1, p.glob("**/*.md")))
     logger.info("%s rafagas in the repository", len(allPosts))
 
-    randomizedPosts = list(allPosts)
-    random.shuffle(randomizedPosts)
+    # randomizedPosts = list(allPosts)
+    # random.shuffle(randomizedPosts)
 
-    posts = randomizedPosts[:LINKS_PROCESS]
+    posts = allPosts[:LINKS_PROCESS]
 
     logger.info("Processing %s rafagas", LINKS_PROCESS)
 
