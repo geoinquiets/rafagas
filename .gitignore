@@ -15,3 +15,6 @@ script/.ipynb_checkpoints
 FIXME.txt
 
 *.swp
+crawl
+*.pyc
+
