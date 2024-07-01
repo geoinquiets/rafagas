@@ -94,7 +94,9 @@ def processFile(md):
             if post_processed is not None:
                 result = "Failed"
                 logger.debug("Rafaga %s processed with result %s", rid, result)
-        return {"rid": rid, "result": result}
+            return {"rid": rid, "result": result}
+        else:
+            logger.critical(post)
 
 
 if __name__ == "__main__":
