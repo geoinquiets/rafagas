@@ -8,7 +8,7 @@ from pathlib import Path
 import datetime
 import frontmatter
 
-from utils.check_url import checkUrl
+from check_url import checkUrl
 
 
 # create logger
@@ -19,7 +19,7 @@ for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
 LINKS_PROCESS = int(os.environ.get("LINKS_PROCESS") or 50)
-LINKS_SKIP_INVALIDS = int(os.environ.get("LINKS_SKIP_INVALIDS") or 1) == 1
+LINKS_CHECK_INVALIDS = os.environ.get("LINKS_CHECK_INVALIDS","N") == "N"
 
 LOG_LEVEL = os.environ.get("LINKS_LOG_LEVEL") or logging.INFO
 LOG_FORMAT = " %(asctime)s - %(levelname)-8s %(message)s"
@@ -32,7 +32,13 @@ logging.basicConfig(format=LOG_FORMAT, datefmt=LOG_DATE_FMT)
 
 logger = logging.getLogger("fix_links")
 logger.setLevel(LOG_LEVEL)
+
 logger.info("Logger set up")
+logger.info(f"LOG_LEVEL={LOG_LEVEL}")
+logger.info(f"LINKS_PROCESS={LINKS_PROCESS}")
+logger.info(f"LINKS_CHECK_INVALIDS={LINKS_CHECK_INVALIDS}")
+logger.info(f"LINKS_PROCESS={LINKS_PROCESS}")
+logger.info(f"LINKS_DAYS={LINKS_DAYS}")
 
 
 # Functions
@@ -49,7 +55,7 @@ def filterInvalid(rafaga):
 
 
 def processRafaga(post, skipInvalids=True):
-    rafagas = (
+    rafagas = list(
         filter(filterInvalid, post["rafagas"]) if skipInvalids else post["rafagas"]
     )
     logger.debug(f"{len(rafagas)} links in this rafaga to process")
@@ -66,7 +72,6 @@ def processRafaga(post, skipInvalids=True):
         if lastCheck == now or (now - lastCheck).days > LINKS_DAYS:
             logger.debug(f"Checking {link}")
             linkCheck = checkUrl(link)
-            rafaga["lastCheck"] = lastCheck.isoformat()
             
             # Reset the invalid key
             rafaga.pop("invalid", None)
@@ -77,7 +82,9 @@ def processRafaga(post, skipInvalids=True):
             if linkCheck["url"] != link:
                 rafaga["link"] = linkCheck["url"]
         else:
-            logger.info(f"[Checked] Skipping in rafaga {post['rid']}: {link}")
+            logger.debug(f"[Checked] Skipping in rafaga {post['rid']}: {link}")
+
+        rafaga["lastCheck"] = now.isoformat()
     return post
 
 
@@ -89,18 +96,18 @@ def processFile(md):
             rid = post["rid"]
             result = "Read"
             logger.debug("Processing rafaga {}...".format(rid))
-            post_processed = processRafaga(post, skipInvalids=LINKS_SKIP_INVALIDS)
+            post_processed = processRafaga(post, skipInvalids=(not LINKS_CHECK_INVALIDS))
             if post_processed is not None:
                 result = "Written"
                 with md.open(mode="w") as md_writer:
                     md_writer.write(frontmatter.dumps(post_processed))
-                logger.info("Rafaga %s processed with result %s", rid, result)
+                logger.debug("Rafaga %s processed with result %s", rid, result)
         return {"file": str(md), "result": result}
 
 
 if __name__ == "__main__":
     # Main
-    p = Path(f"{os.path.dirname(__file__)}/../_posts/")
+    p = Path(f"{os.path.dirname(__file__)}/../../_posts/")
 
     allPosts = list(filter(lambda f: str(f).find("template") == -1, p.glob("**/*.md")))
     logger.info("%s rafagas in the repository", len(allPosts))

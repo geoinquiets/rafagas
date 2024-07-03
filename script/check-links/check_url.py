@@ -33,6 +33,7 @@ def replaceHttpHttps(url):
     return re.sub('^http:', 'https:', url)
 
 def checkUrl(url, timeout=TIMEOUT):
+    logger.info(url)
     try:
         rHead = requests.head(
             url,
