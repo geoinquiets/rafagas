@@ -19,7 +19,7 @@ for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
 LINKS_PROCESS = int(os.environ.get("LINKS_PROCESS") or 50)
-LINKS_CHECK_INVALIDS = os.environ.get("LINKS_CHECK_INVALIDS","N") == "N"
+LINKS_CHECK_INVALIDS = os.environ.get("LINKS_CHECK_INVALIDS","Y") == "Y"
 
 LOG_LEVEL = os.environ.get("LINKS_LOG_LEVEL") or logging.INFO
 LOG_FORMAT = " %(asctime)s - %(levelname)-8s %(message)s"
@@ -37,7 +37,6 @@ logger.info("Logger set up")
 logger.info(f"LOG_LEVEL={LOG_LEVEL}")
 logger.info(f"LINKS_PROCESS={LINKS_PROCESS}")
 logger.info(f"LINKS_CHECK_INVALIDS={LINKS_CHECK_INVALIDS}")
-logger.info(f"LINKS_PROCESS={LINKS_PROCESS}")
 logger.info(f"LINKS_DAYS={LINKS_DAYS}")
 
 
@@ -66,10 +65,10 @@ def processRafaga(post, skipInvalids=True):
         lastCheck = (
             datetime.datetime.fromisoformat(rafaga["lastCheck"])
             if "lastCheck" in rafaga
-            else now
+            else None
         )
 
-        if lastCheck == now or (now - lastCheck).days > LINKS_DAYS:
+        if lastCheck == None or (now - lastCheck).days > LINKS_DAYS:
             logger.debug(f"Checking {link}")
             linkCheck = checkUrl(link)
             
@@ -77,14 +76,15 @@ def processRafaga(post, skipInvalids=True):
             rafaga.pop("invalid", None)
             if linkCheck["code"] >= 400:
                 rafaga["invalid"] = True
-            
             # Reset the url if got a new one
-            if linkCheck["url"] != link:
+            elif linkCheck["url"] != link:
                 rafaga["link"] = linkCheck["url"]
+            
+            # Set the new check date
+            rafaga["lastCheck"] = now.isoformat()
         else:
             logger.debug(f"[Checked] Skipping in rafaga {post['rid']}: {link}")
 
-        rafaga["lastCheck"] = now.isoformat()
     return post
 
 
