@@ -62,3 +62,18 @@
 .post ul a {
   font-size:0.8em;
 }
+
+.post li.invalid {
+  font-style: italic;
+}
+
+.post img.warning-invalid {
+  display: inline;
+  height: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.post a.archive-link {
+  color: darkred;
+}
