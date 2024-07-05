@@ -1,0 +1,21 @@
+<li {%if invalid == "true" %}class="invalid"{% endif %}>
+    {%if invalid == "true" %} 
+    <img class="warning-invalid"
+        src="{{ site.baseurl }}/public/warning-64.png"
+        title="This link is tagged as invalid so it will probably won't work. A link to archive.org is added for your convenience, good luck!"
+        >
+    {% endif %} 
+    {{desc}}  {% if via != "" %}via {{via}}{% endif %}
+    {% if lang != "" %}[{{lang | upcase}}]{% endif %}
+    <br>
+      <span class="rafaga-li">
+        <a href="{{link}}">
+            {{link}}
+        </a>
+        {%if invalid == "true" %} 
+        | <a class="archive-link" href="https://web.archive.org/web/*/{{link}}" >
+            archive.org
+        </a>
+        {% endif %} 
+    </span>
+</li>

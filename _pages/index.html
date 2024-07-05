@@ -30,14 +30,19 @@ regenerate: true
     {% if post.rafagas %}
     <ul>
       {% for rafaga in post.rafagas %}
-      <li {%if rafaga.invalid %}style="text-decoration:line-through"{% endif %}>
-          {{rafaga.desc | truncate: 250}}  {% if rafaga.via %}via {{rafaga.via}}{% endif %}
-          {% if rafaga.lang %}[{{rafaga.lang | upcase}}]{% endif %}
-          <br>
-          {% unless rafaga.invalid %}<span class="rafaga-li"><a href="{{rafaga.link}}" {%if rafaga.nocheck %}data-proofer-ignore{% endif %}>{% endunless %}
-          {{rafaga.link}}
-          {% unless rafaga.invalid %}</a></span>{% endunless %}
-        </li>
+        {% capture desc %}{{rafaga.desc}}{% endcapture %}
+        {% capture link %}{{rafaga.link}}{% endcapture %}
+        {% capture via %}{{rafaga.via}}{% endcapture %}
+        {% capture desc %}{{rafaga.desc}}{% endcapture %}
+        {% capture invalid %}{{rafaga.invalid | default: "false"}}{% endcapture %}
+        {% capture lang %}{{rafaga.lang}}{% endcapture %}
+        {% include link.html 
+          desc=desc
+          link=link
+          via=via
+          invalid=invalid
+          lang=lang
+          %}
       {% endfor %}
     </ul>
     {% endif %}
