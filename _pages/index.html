@@ -23,9 +23,13 @@ regenerate: true
       </a>
     </h1>
 
+    {% assign firstRafaga = post.rafagas | first %}
+    {% assign lastCheck = firstRafaga.lastCheck %}
     <p class="post-date">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%a, %d %b %Y" }}</time>
-      by {{post.author}}
+      by {{post.author}}{% if lastCheck %},
+      last check: {{ lastCheck  | date: "%a, %d %b %Y" }}
+      {% endif %}
     </p>
     {% if post.rafagas %}
     <ul>
