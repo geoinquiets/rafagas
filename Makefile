@@ -22,3 +22,6 @@ build:
 
 check-last-job:
 	gh run view --log $$(gh run list -L 1| head -n1 | grep -Eo '[0-9]{9}')| grep -oP '(?<=External link ).*(?= failed)'
+
+check-links:
+	$(PYTHON) script/check-links/
