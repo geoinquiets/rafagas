@@ -18,7 +18,7 @@ for key in logging.Logger.manager.loggerDict:
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
-LINKS_PROCESS = int(os.environ.get("LINKS_PROCESS") or 50)
+POSTS_TO_PROCESS = int(os.environ.get("POSTS_TO_PROCESS") or 10)
 LINKS_CHECK_INVALIDS = os.environ.get("LINKS_CHECK_INVALIDS","Y") == "Y"
 
 LOG_LEVEL = os.environ.get("LINKS_LOG_LEVEL") or logging.INFO
@@ -35,7 +35,7 @@ logger.setLevel(LOG_LEVEL)
 
 logger.info("Logger set up")
 logger.info(f"LOG_LEVEL={LOG_LEVEL}")
-logger.info(f"LINKS_PROCESS={LINKS_PROCESS}")
+logger.info(f"POSTS_TO_PROCESS={POSTS_TO_PROCESS}%")
 logger.info(f"LINKS_CHECK_INVALIDS={LINKS_CHECK_INVALIDS}")
 logger.info(f"LINKS_DAYS={LINKS_DAYS}")
 
@@ -115,9 +115,11 @@ if __name__ == "__main__":
     randomizedPosts = list(allPosts)
     random.shuffle(randomizedPosts)
 
-    posts = randomizedPosts[:LINKS_PROCESS]
+    postsToProcess = round(len(randomizedPosts) * POSTS_TO_PROCESS / 100)
 
-    logger.info("Processing %s rafagas", LINKS_PROCESS)
+    posts = randomizedPosts[:postsToProcess]
+
+    logger.info("Processing %s rafagas", postsToProcess)
 
     with Pool(POOL_SIZE) as p:
         results = p.map(processFile, posts)
