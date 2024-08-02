@@ -3,5 +3,5 @@ layout: null
 permalink: /archive.csv
 regenerate: true
 ---
-"id","keyw","desc","link","lang","via","invalid","nocheck"{% assign posts = site.posts | where: "draft", false %}{%for post in posts %}{% for rafaga in post.rafagas %}
-"{{ post.rid }}","{{ rafaga.keyw }}","{{ rafaga.desc | escape}}","{{ rafaga.link}}",{% if rafaga.lang %}"{{ rafaga.lang | downcase }}"{% else %}"en"{% endif %},{% if rafaga.via %}"{{ rafaga.via}}"{% else %}"Raf"{% endif %},{% if rafaga.invalid %}true{% else %}false{% endif %},{% if rafaga.nocheck %}true{% else %}false{% endif %}{% endfor %}{% endfor %}
+"date","id","keyw","desc","link","lang","via","invalid","lastcheck"{% assign posts = site.posts | where: "draft", false %}{% for post in posts %}{% for rafaga in post.rafagas %}
+"{{post.date | date_to_xmlschema}}","{{ post.rid }}","{{ rafaga.keyw }}","{{ rafaga.desc | escape }}","{{ rafaga.link }}",{% if rafaga.lang %}"{{ rafaga.lang | downcase }}"{% else %}"en"{% endif %},{% if rafaga.via %}"{{ rafaga.via}}"{% else %}"Raf"{% endif %},{% if rafaga.invalid %}true{% else %}false{% endif %},{% if rafaga.lastCheck %}"{{ rafaga.lastCheck | date_to_xmlschema }}"{% else %}{% endif %}{% endfor %}{% endfor %}
