@@ -15,7 +15,7 @@ layout: default
   <div class="rafaga-data">
     <p class="post-date">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%a, %d %b %Y" }}</time>
-      {%- if lastCheck -%}, last check: {{ lastCheck  | date: "%a, %d %b %Y" }}{%- endif %}
+      {%- if lastCheck -%}, last check: {{ lastCheck  | date: "%a, %d %b %Y" }}{%- endif %}. <a href="{{ site.github.repo }}/commits/gh-pages/{{ page.path }}">Post history</a>
     </p>
   </div>
 
