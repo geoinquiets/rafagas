@@ -79,6 +79,8 @@ def process_links(csv_file, out_dir, single_file, subset):
                     logger.error(f"Invalid date format: {date_str}")
                     raise ValueError(f"Invalid date format: {date_str}")
             date_fmt = date_obj.strftime("%Y-%m-%d")
+            date_year = date_obj.strftime("%Y")
+            date_month = date_obj.strftime("%m")
 
             # Get the base domain from the URL
             base_domain = url.split('/')[2] if '://' in url else url.split('/')[0]
@@ -87,17 +89,17 @@ def process_links(csv_file, out_dir, single_file, subset):
             basename = f"{date_fmt}-{id_}-{base_domain}"
 
             # Try to find a file with the basename and any extension
-            out_date_dir = os.path.join(out_dir, date_fmt)
+            out_date_dir = os.path.join(out_dir, date_year, date_month)
             file_exsits = False
+            
             # walk the directory tree to find the file
             for root, _, files in os.walk(out_date_dir):
                 for file in files:
                     if file.startswith(basename):
                         file_exsits = True
                         break
-
             if file_exsits:
-                logger.debug(f"File {basename} already exists at {out_date_dir}")
+                logger.debug(f"File {basename} already exists at {out_date_dir}, skipping download.")
             else:
                 logger.debug(f"File {basename} does not exist, it will be downloaded at {out_date_dir}")
 
