@@ -18,7 +18,7 @@ for key in logging.Logger.manager.loggerDict:
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
-POSTS_TO_PROCESS = int(os.environ.get("POSTS_TO_PROCESS") or 10)
+POSTS_TO_PROCESS = int(os.getenv("POSTS_TO_PROCESS","20"))
 LINKS_CHECK_INVALIDS = os.environ.get("LINKS_CHECK_INVALIDS","Y") == "Y"
 
 LOG_LEVEL = os.environ.get("LINKS_LOG_LEVEL") or logging.INFO

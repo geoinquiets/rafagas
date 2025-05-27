@@ -21,3 +21,4 @@ FIXME.txt
 Gemfile.lock
 script/.ipynb_checkpoints
 tmp/
+vendor
