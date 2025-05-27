@@ -13,7 +13,7 @@ _site
 *template.md
 00_to_process.md
 
-crawl
+crawl*
 env
 
 errors.log
