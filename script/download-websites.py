@@ -3,7 +3,7 @@ import csv
 from multiprocessing import Pool
 import os
 import subprocess
-from datetime import datetime
+from datetime import datetime, timedelta
 
 DEFAULT_SINGLE_FILE = "/home/j/.nvm/versions/node/v20.18.2/bin/single-file"
 DEFAULT_CSV_FILE = "_site/archive.csv"
@@ -20,7 +20,6 @@ logging.basicConfig(
     datefmt='%H:%M:%S',
 )
 logger = logging.getLogger(__name__)
-
 
 def process_links(csv_file, out_dir, single_file, subset):
     with open(csv_file, newline='', encoding='utf-8') as csvfile:
@@ -43,7 +42,7 @@ def process_links(csv_file, out_dir, single_file, subset):
         ]
         for pattern in patterns:
             rows = [row for row in rows if pattern not in row['link']]
-        logger.info(f"Found {len(rows)} rows after filtering excluded patterns.")
+        logger.info(f"Found {len(rows)} rows and {len(rows)} rows after filtering excluded patterns.")
 
         # Randomly select a subset of rows to process
         if subset > 0:
@@ -140,9 +139,31 @@ if __name__ == "__main__":
 
     logger.info(f"{len(commands)} commands to run in {THREADS} processes.")
 
+    # Read past failed commands from a CSV file with the command and date
+    checked_urls_file = "crawl_sites/checked_urls.csv"
+    checked_urls = []
+    if os.path.exists(checked_urls_file):
+        with open(checked_urls_file, newline='', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                checked_urls.append(row)
+
+    # Get a date object for one month ago
+    now = datetime.now()
+    one_month_ago = now -timedelta(days=30)
+
     # Use a pool of workers to run the commands in parallel
     def run_command(command):
         try:
+            url = command[-1].replace('"','')
+
+            # Find command in the list of failed commands
+            for check in checked_urls:
+                date = datetime.strptime(check['date'], "%Y-%m-%d")
+                if check['url'] == url and date > one_month_ago:
+                    logger.info(f"Skipping command for {url} as it was already checked on {check['date']}.")
+                    return subprocess.run(f"echo 'Skipping url'", shell=True)
+            
             logger.info(f"Running command for url {command[-1]}")
             for index, arg in enumerate(command):
                 if arg.startswith("--output-directory"):
@@ -159,8 +180,60 @@ if __name__ == "__main__":
     with Pool(THREADS) as pool:
         results = pool.map(run_command, commands)
         for result in results:
+            url = result.args.split(" ")[-1].replace('"','') if isinstance(result, subprocess.CompletedProcess) else None
             if result.returncode != 0:
                 logger.error(f"Command failed with return code {result.returncode}")
+                if url:
+                    checked_urls.append({
+                        'date': now.strftime("%Y-%m-%d"),
+                        'url': url
+                    })
+                else:
+                    logger.error(f"No URL found in the command: {result.args if hasattr(result, 'args') else 'N/A'}")
             else:
                 logger.info("Command executed successfully.")
+
+                # Check for the number of args and skip if not enough args
+                if len(result.args.split(" ")) < 8:
+                    logger.debug(f"Command did not have enough arguments to determine output directory and filename: {result.args}")
+                    continue
+
+                # Find if the file was successfully downloaded
+                out_dir = result.args.split(" ")[5]
+                filename_prefix = result.args.split(" ")[7].replace("{filename-extension}","")
+
+                # Check if the file exists
+                file_exists = False
+                for root, _, files in os.walk(out_dir):
+                    for file in files:
+                        if file.startswith(filename_prefix):
+                            file_exists = True
+                            break
+                
+                if file_exists:
+                    logger.info(f"File {filename_prefix} successfully downloaded in {out_dir}.")
+                    # If url was in checked_urls, remove it
+                    checked_urls = [check for check in checked_urls if check['url'] != url]
+                else:
+                    logger.error(f"File {filename_prefix} was not downloaded successfully in {out_dir}.")
+                    if url:
+                        checked_urls.append({
+                            'date': now.strftime("%Y-%m-%d"),
+                            'url': url
+                        })
+    
+    # Remove any duplicates from checked_urls keeping the last entry
+    seen_urls = set()
+    checked_urls = [check for check in reversed(checked_urls) if check['url'] not in seen_urls and not seen_urls.add(check['url'])]
+
+    # Write the checked URLs to a CSV file
+    with open(checked_urls_file, 'w', newline='', encoding='utf-8') as csvfile:
+        logger.info(f"Writing {len(checked_urls)} checked URLs to {checked_urls_file}")
+        fieldnames = ['date', 'url']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for check in checked_urls:
+            writer.writerow(check)
+
+
     print("All commands executed successfully.")
