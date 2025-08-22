@@ -52,7 +52,7 @@ def process_links(csv_file, out_dir, single_file, subset):
         if subset > 0:
             import random
 
-            random.seed(42)  # For reproducibility
+            #random.seed(42)  # For reproducibility
             random.shuffle(rows)
             if subset > len(rows):
                 print(
