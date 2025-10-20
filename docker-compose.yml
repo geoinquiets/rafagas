@@ -1,10 +1,10 @@
 services:
   jekyll:
     image: jekyll/jekyll:latest
-    command: jekyll serve --watch --force_polling --incremental --port 8000 --livereload --livereload-port --future
+    command: jekyll serve --watch --force_polling --incremental --port 8000 --livereload --livereload-port --future --drafts
     volumes:
-      - .:/srv/jekyll
-      - ./vendor/bundle:/usr/local/bundle:Z"
+      - ".:/srv/jekyll:Z"
+      - "./vendor/bundle:/usr/local/bundle:Z"
     ports:
       - '8000:8000'
       - '35729:35729'
