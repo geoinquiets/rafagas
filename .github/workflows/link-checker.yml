@@ -9,8 +9,8 @@ on:
     - cron: "0 4 * * *"
 jobs:
   link-checker:
+    if: github.repository == 'geoinquiets/rafagas'
     runs-on: ubuntu-latest
-    # Removed repository owner check to allow running on forks
 
     steps:
       - uses: actions/checkout@v4
