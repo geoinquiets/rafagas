@@ -1,31 +1,37 @@
 name: Rafagas workflow
 on:
   workflow_dispatch:
+  push:
+    branches: ["master", "main"]
+  pull_request:
+    branches: ["master", "main"]
   schedule:
-    - cron:  '0 4 * * *'
+    - cron: "0 4 * * *"
 jobs:
   link-checker:
+    if: github.repository == 'geoinquiets/rafagas'
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'geoinquiets'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Install libcurl4-openssl-dev
         run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.4.1
+          ruby-version: "3.1"
           bundler-cache: true
 
       - name: Cache folders
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             tmp
             _site
-          key: rafagas-cache
+          key: rafagas-cache-${{ github.run_id }}
+          restore-keys: |
+            rafagas-cache
 
       - name: Build the site
         run: bundle exec jekyll build
@@ -36,4 +42,5 @@ jobs:
         id: link-check-run
         run: |
           bundle exec ruby script/proof-all.rb 2>&1 | tee output.log || true
-          echo "::set-output name=count::$(cat output.log | tail -n1)"
+          # echo "::set-output..." is deprecated, using GITHUB_OUTPUT
+          echo "count=$(cat output.log | tail -n1)" >> $GITHUB_OUTPUT
