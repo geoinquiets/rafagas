@@ -61,7 +61,10 @@ def processLink(postId, postDate, rafagaData):
         # Get metadata
         metadata = extract_metadata(downloaded, default_url=link)
         if metadata:
-            data['crawl'].update({k: v for k, v in metadata.as_dict().items() if v})
+            data['crawl'].update({
+                k: v for k, v in metadata.as_dict().items()
+                if v is not None and isinstance(v, (str, int, float, bool, list, dict))
+            })
         # Extract text
         text = extract(downloaded, url=link, include_links=True, favor_precision=True)
         if text: 

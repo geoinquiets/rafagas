@@ -1,24 +1,31 @@
 SHELL := /bin/bash
-BUNDLE := bundle
-JEKYLL := $(BUNDLE) exec jekyll
 PYTHON := ./env/bin/python
 
-.PHONY: serve microlink build
+.PHONY: serve microlink build download-websites crawl clean
 
 serve:
-	JEKYLL_ENV=production RUBYOPT='-W0' $(JEKYLL) serve  --incremental --port 8000 --future
+	docker compose up
 
 clean:
-	RUBYOPT='-W0' $(JEKYLL) clean
+	docker compose run --rm jekyll jekyll clean
 
 microlink:
-	$(PYTHON) script/microlink.py 
+	uv run script/microlink.py 
 
 update:
 	$(PYTHON) script/update_rafaga.py 
 
+download-websites: build
+	uv run script/download-websites.py
+
+crawl:
+	uv run script/crawling/__main__.py
+
+# For the first run of the build, the entrypoint 
+# needs to be removed to allow the installations of the gems
 build:
-	RUBYOPT='-W0' $(JEKYLL) build
+	@docker compose exec jekyll jekyll build 2>/dev/null || \
+		docker compose run --rm --entrypoint "" jekyll jekyll build
 
 check-last-job:
 	gh run view --log $$(gh run list -L 1| head -n1 | grep -Eo '[0-9]{9}')| grep -oP '(?<=External link ).*(?= failed)'
