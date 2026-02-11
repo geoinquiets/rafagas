@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 PYTHON := ./env/bin/python
 
-.PHONY: serve microlink build download-websites crawl clean
+.PHONY: serve microlink build download-websites crawl clean check-links
 
 serve:
 	docker compose up
@@ -29,4 +29,4 @@ check-last-job:
 	gh run view --log $$(gh run list -L 1| head -n1 | grep -Eo '[0-9]{9}')| grep -oP '(?<=External link ).*(?= failed)'
 
 check-links:
-	$(PYTHON) script/check-links/
+	uv run script/check-links/__main__.py
