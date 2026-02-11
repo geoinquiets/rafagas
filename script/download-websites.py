@@ -15,7 +15,7 @@ from datetime import datetime, timedelta
 DEFAULT_DOCKER_IMAGE = "capsulecode/singlefile"
 DEFAULT_CSV_FILE = "_site/archive.csv"
 DEFAULT_OUT_DIR = "crawl_sites"
-DEFAULT_THREADS = 3
+DEFAULT_THREADS = 6
 DEFAULT_SUBSET = 0
 DEFAULT_BROWSER_WAIT_DELAY = "40000"  # 40 seconds
 
