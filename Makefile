@@ -21,11 +21,9 @@ download-websites: build
 crawl:
 	uv run script/crawling/__main__.py
 
-# For the first run of the build, the entrypoint 
-# needs to be removed to allow the installations of the gems
 build:
 	@docker compose exec jekyll jekyll build 2>/dev/null || \
-		docker compose run --rm --entrypoint "" jekyll jekyll build
+		docker compose run --rm jekyll jekyll build
 
 check-last-job:
 	gh run view --log $$(gh run list -L 1| head -n1 | grep -Eo '[0-9]{9}')| grep -oP '(?<=External link ).*(?= failed)'
