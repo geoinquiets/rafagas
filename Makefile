@@ -15,7 +15,14 @@ microlink:
 	$(PYTHON) script/microlink.py 
 
 update:
-	$(PYTHON) script/update_rafaga.py 
+	docker run --rm \
+		-v "$$(pwd):/app" \
+		-v rafagas-uv-cache:/root/.cache/uv \
+		-w /app \
+		-e DEEPL_API_KEY \
+		-e POST_DATE \
+		ghcr.io/astral-sh/uv:python3.12-alpine \
+		uv run script/update_rafaga.py 
 
 build:
 	RUBYOPT='-W0' $(JEKYLL) build

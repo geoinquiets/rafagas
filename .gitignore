@@ -20,5 +20,6 @@ errors.log
 FIXME.txt
 Gemfile.lock
 script/.ipynb_checkpoints
+pending_rafagas.yaml
 tmp/
 vendor
