@@ -26,9 +26,11 @@ services:
     volumes:
       - ".:/app:Z"
       - /var/run/docker.sock:/var/run/docker.sock
+      - uv_cache:/root/.cache/uv
     working_dir: /app
     environment:
       HOST_PROJECT_DIR: ${PWD}
 
 volumes:
   bundle_cache:
+  uv_cache:
