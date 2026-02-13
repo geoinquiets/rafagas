@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: serve microlink build download-websites crawl clean check-links check-last-job
+.PHONY: serve microlink update build download-websites crawl clean check-links check-last-job
 
 serve:
 	docker compose up
@@ -12,14 +12,7 @@ microlink:
 	docker compose run --rm scripts uv run script/microlink.py
 
 update:
-	docker run --rm \
-		-v "$$(pwd):/app" \
-		-v rafagas-uv-cache:/root/.cache/uv \
-		-w /app \
-		-e DEEPL_API_KEY \
-		-e POST_DATE \
-		ghcr.io/astral-sh/uv:python3.12-alpine \
-		uv run script/update_rafaga.py
+	docker compose run --rm -e DEEPL_API_KEY -e POST_DATE scripts uv run script/update_rafaga.py
 
 download-websites: build
 	docker compose run --rm scripts uv run script/download-websites.py
