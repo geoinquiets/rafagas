@@ -4,6 +4,9 @@ services:
     command: jekyll serve --watch --force_polling --incremental --port 8000 --livereload --livereload-port --future --drafts --config _config.yml,_config.dev.yml
     volumes:
       - ".:/srv/jekyll:Z"
+      - /srv/jekyll/crawl_sites
+      - /srv/jekyll/crawl
+      - /srv/jekyll/env
       - bundle_cache:/usr/local/bundle
     ports:
       - '8000:8000'

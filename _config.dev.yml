@@ -3,6 +3,10 @@ baseurl:
 # Development optimizations for frontpage-only work
 limit_posts: 30
 
+# Just on plugin
+plugins:
+  - jekyll-paginate
+
 # Exclude old content to speed up builds
 exclude:
   - crawl
