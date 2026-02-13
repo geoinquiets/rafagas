@@ -12,25 +12,18 @@ The main branch of this repo is `gh-pages` as this website is hosted by [GitHub 
 
 ## Build the website locally
 
-This website uses [Jekyll][1], a static website generator. The minimal requirements to run this site could be:
+This website uses [Jekyll][1], a static website generator, and runs entirely through [Docker Compose][5]. The only requirements are:
 
-* The Ruby language runtime
-* Ruby Bundler manager
-* `Makefile` manager 
+* [Docker][6] (with Compose)
+* `make`
 
-Once the repo is cloned you can run `bundle install` in the project folder to install all the dependencies and `make serve` to run jekyll in development mode. It will autogenerate content as it's stored but check the console output for errors in your posts.
-
-Visit the website at `http://localhost:8000/rafagas/`.
-
-## Build the website with Docker Compose
-
-If you prefer not to mess with Ruby, you can execute the [Docker Compose][5] template that relies in the official [Jekyll Docker][6] container image. Simply execute `docker-compose up` to start the server.
+Once the repo is cloned, run `make serve` to start the Jekyll development server. It will autogenerate content as it's stored but check the console output for errors in your posts.
 
 Visit the website at `http://localhost:8000/rafagas/`.
 
 [4]: https://jekyllrb.com/docs/
 [5]: https://docs.docker.com/compose/
-[6]: https://hub.docker.com/r/jekyll/jekyll/
+[6]: https://docs.docker.com/get-docker/
 
 ## Create a new post
 
@@ -91,24 +84,10 @@ Additionally, the following properties can be also added to any link:
 
 There is a script at `./script/microlink.py` that will send each non-enriched link from the last five posts to <https://microlink.io> API endpoint to gather a few details from the link itself. This new details are saved in a `microlink` property. After the file checking the frontmatter is rewritten so don't worry if you see your content a bit different.
 
-To run this script first you need to create a Python environment and install the script dependencies:
+Run the script with `make microlink`. No local Python installation is needed; it runs inside Docker. It will take a few seconds to gather all the metadata. You may want to have the Jekyll server running to see if the website remains the same after running the script.
 
 ```bash
-$ python3 -m venv env
-$ source ./env/bin/activate
-$(env) pip install requests PyYAML python-frontmatter
-```
-
-With these dependencies installed you can run the script with `make microlink`. It will take a few seconds to gather all the metadata. You may want to have the jekyll server running to see if the website remains the same after running the script.
-
-```bash
-$ make microlink 
-./env/bin/python script/microlink.py 
- 09:31:17 AM - INFO     Processing rafaga 1456...
- 09:31:42 AM - INFO     Processing rafaga 1455...
- 09:31:42 AM - INFO     Processing rafaga 1454...
- 09:31:42 AM - INFO     Processing rafaga 1453...
- 09:31:42 AM - INFO     Made 3 requests to microlink
+$ make microlink
 ```
 
 ## Contribute your post

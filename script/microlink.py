@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.10"
+# dependencies = [
+#     "requests",
+#     "python-frontmatter",
+# ]
+# ///
+
 import requests
 import logging
 from pathlib import Path

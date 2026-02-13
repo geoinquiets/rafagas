@@ -1,16 +1,37 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.10"
+# dependencies = []
+# ///
+
 import csv
+from dataclasses import dataclass
 from multiprocessing import Pool
 import os
+import shutil
 import subprocess
 from datetime import datetime, timedelta
 
-DEFAULT_SINGLE_FILE = "/home/j/.nvm/versions/node/v20.18.2/bin/single-file"
+DEFAULT_DOCKER_IMAGE = "capsulecode/singlefile"
 DEFAULT_CSV_FILE = "_site/archive.csv"
 DEFAULT_OUT_DIR = "crawl_sites"
-DEFAULT_THREADS = 3
+DEFAULT_THREADS = 6
 DEFAULT_SUBSET = 0
 DEFAULT_BROWSER_WAIT_DELAY = "40000"  # 40 seconds
+
+# When running inside a container with the host Docker socket mounted,
+# volume mount paths in nested `docker run` commands must use host paths.
+# Set HOST_PROJECT_DIR to the host project root to remap paths automatically.
+HOST_PROJECT_DIR = os.environ.get("HOST_PROJECT_DIR")
+
+
+@dataclass
+class DownloadTask:
+    """Holds a download command together with its metadata."""
+    command: list
+    url: str
+    out_dir: str
+    filename_prefix: str
 
 # set up logging
 import logging
@@ -23,7 +44,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def process_links(csv_file, out_dir, single_file, subset):
+def process_links(csv_file, out_dir, docker_image, subset):
     with open(csv_file, newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
         rows = [row for row in reader]
@@ -61,7 +82,7 @@ def process_links(csv_file, out_dir, single_file, subset):
                 subset = len(rows)
             rows = rows[:subset]
 
-        commands = []
+        tasks = []
         for row in rows:
             date_str = row["date"]
             id_ = row["id"]
@@ -96,15 +117,24 @@ def process_links(csv_file, out_dir, single_file, subset):
 
             # Try to find a file with the basename and any extension
             out_date_dir = os.path.join(out_dir, date_year, date_month)
-            file_exsits = False
+            abs_out_date_dir = os.path.abspath(out_date_dir)
+
+            # When running inside a container, Docker volume mount paths
+            # must reference the host filesystem, not the container's.
+            if HOST_PROJECT_DIR:
+                host_out_date_dir = os.path.join(HOST_PROJECT_DIR, out_date_dir)
+            else:
+                host_out_date_dir = abs_out_date_dir
+
+            file_exists = False
 
             # walk the directory tree to find the file
             for root, _, files in os.walk(out_date_dir):
                 for file in files:
                     if file.startswith(basename):
-                        file_exsits = True
+                        file_exists = True
                         break
-            if file_exsits:
+            if file_exists:
                 logger.debug(
                     f"File {basename} already exists at {out_date_dir}, skipping download."
                 )
@@ -113,22 +143,27 @@ def process_links(csv_file, out_dir, single_file, subset):
                     f"File {basename} does not exist, it will be downloaded at {out_date_dir}"
                 )
 
-                # Build single-file command
-                commands.append(
-                    [
-                        single_file,
-                        "--dump-content=false",
-                        "--browser-wait-delay",
-                        DEFAULT_BROWSER_WAIT_DELAY,
-                        "--output-directory",
-                        out_date_dir,
-                        "--filename-template",
-                        f'"{basename}.{{filename-extension}}"',
-                        f'"{url}"',
-                    ]
+                filename_prefix = f"{basename}."
+
+                # Build docker command with volume mount for the output directory
+                tasks.append(
+                    DownloadTask(
+                        command=[
+                            "docker", "run", "--rm",
+                            "-v", f"{host_out_date_dir}:/usr/src/app/out",
+                            docker_image,
+                            "--dump-content=false",
+                            "--browser-wait-delay", DEFAULT_BROWSER_WAIT_DELAY,
+                            "--filename-template", f"{filename_prefix}{{filename-extension}}",
+                            url,
+                        ],
+                        url=url,
+                        out_dir=abs_out_date_dir,
+                        filename_prefix=filename_prefix,
+                    )
                 )
 
-        return commands
+        return tasks
 
 
 if __name__ == "__main__":
@@ -150,9 +185,9 @@ if __name__ == "__main__":
         "--threads", type=int, help="Number of threads to use.", default=DEFAULT_THREADS
     )
     parser.add_argument(
-        "--single-file",
-        help="Path to the single-file executable.",
-        default=DEFAULT_SINGLE_FILE,
+        "--docker-image",
+        help="Docker image for single-file-cli.",
+        default=DEFAULT_DOCKER_IMAGE,
     )
     parser.add_argument(
         "--log-level",
@@ -172,13 +207,31 @@ if __name__ == "__main__":
     CSV_FILE = args.csv_file
     OUT_DIR = args.out_dir
     THREADS = args.threads
-    SINGLE_FILE = args.single_file
+    DOCKER_IMAGE = args.docker_image
     SUBSET = args.subset
 
-    commands = process_links(CSV_FILE, OUT_DIR, SINGLE_FILE, SUBSET)
-    commands_str = [" ".join(cmd) for cmd in commands]
+    if not shutil.which("docker"):
+        logger.error(
+            "docker not found on PATH. "
+            "Install Docker: https://docs.docker.com/get-docker/"
+        )
+        raise SystemExit(1)
 
-    logger.info(f"{len(commands)} commands to run in {THREADS} processes.")
+    # Ensure the Docker image is available locally
+    result = subprocess.run(
+        ["docker", "image", "inspect", DOCKER_IMAGE],
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        logger.info(f"Docker image '{DOCKER_IMAGE}' not found locally, pulling...")
+        pull = subprocess.run(["docker", "pull", DOCKER_IMAGE])
+        if pull.returncode != 0:
+            logger.error(f"Failed to pull Docker image '{DOCKER_IMAGE}'.")
+            raise SystemExit(1)
+
+    tasks = process_links(CSV_FILE, OUT_DIR, DOCKER_IMAGE, SUBSET)
+
+    logger.info(f"{len(tasks)} tasks to run in {THREADS} processes.")
 
     # Read past failed commands from a CSV file with the command and date
     checked_urls_file = "crawl_sites/checked_urls.csv"
@@ -193,89 +246,65 @@ if __name__ == "__main__":
     now = datetime.now()
     one_month_ago = now - timedelta(days=30)
 
-    # Use a pool of workers to run the commands in parallel
-    def run_command(command):
+    # Use a pool of workers to run the tasks in parallel
+    def run_task(task):
         try:
-            url = command[-1].replace('"', "")
-
-            # Find command in the list of failed commands
+            # Check if this URL was already checked recently
             for check in checked_urls:
                 date = datetime.strptime(check["date"], "%Y-%m-%d")
-                if check["url"] == url and date > one_month_ago:
+                if check["url"] == task.url and date > one_month_ago:
                     logger.info(
-                        f"Skipping command for {url} as it was already checked on {check['date']}."
+                        f"Skipping {task.url} as it was already checked on {check['date']}."
                     )
-                    return subprocess.run(f"echo 'Skipping url'", shell=True)
+                    return task, None  # None signals a skip
 
-            logger.info(f"Running command for url {command[-1]}")
-            for index, arg in enumerate(command):
-                if arg.startswith("--output-directory"):
-                    out_dir = os.path.abspath(arg)
-            os.makedirs(out_dir, exist_ok=True)
-            # Run the command
-            logger.debug(f"Running command: {' '.join(command)}")
-            result = subprocess.run(" ".join(command), shell=True)
-            return result
-        except subprocess.CalledProcessError as e:
+            logger.info(f"Running command for url {task.url}")
+            os.makedirs(task.out_dir, exist_ok=True)
+            logger.debug(f"Running command: {task.command}")
+            result = subprocess.run(task.command)
+            return task, result
+        except Exception as e:
             logger.error(f"Command failed: {e}")
-            return e
+            return task, e
 
     with Pool(THREADS) as pool:
-        results = pool.map(run_command, commands)
-        for result in results:
-            url = (
-                result.args.split(" ")[-1].replace('"', "")
-                if isinstance(result, subprocess.CompletedProcess)
-                else None
-            )
-            if result.returncode != 0:
-                logger.error(f"Command failed with return code {result.returncode}")
-                if url:
-                    checked_urls.append({"date": now.strftime("%Y-%m-%d"), "url": url})
-                else:
-                    logger.error(
-                        f"No URL found in the command: {result.args if hasattr(result, 'args') else 'N/A'}"
-                    )
-            else:
-                logger.info("Command executed successfully.")
+        outcomes = pool.map(run_task, tasks)
+        for task, result in outcomes:
+            # Skipped tasks
+            if result is None:
+                continue
 
-                # Check for the number of args and skip if not enough args
-                if len(result.args.split(" ")) < 8:
-                    logger.debug(
-                        f"Command did not have enough arguments to determine output directory and filename: {result.args}"
-                    )
-                    continue
+            # Failed tasks
+            if not isinstance(result, subprocess.CompletedProcess) or result.returncode != 0:
+                rc = result.returncode if hasattr(result, "returncode") else "N/A"
+                logger.error(f"Command failed (rc={rc}) for {task.url}")
+                checked_urls.append({"date": now.strftime("%Y-%m-%d"), "url": task.url})
+                continue
 
-                # Find if the file was successfully downloaded
-                out_dir = result.args.split(" ")[5]
-                filename_prefix = result.args.split(" ")[7].replace(
-                    "{filename-extension}", ""
+            # Successful tasks — verify the file was actually created
+            logger.info("Command executed successfully.")
+            file_exists = False
+            for root, _, files in os.walk(task.out_dir):
+                for file in files:
+                    if file.startswith(task.filename_prefix):
+                        file_exists = True
+                        break
+
+            if file_exists:
+                logger.info(
+                    f"File {task.filename_prefix}* successfully downloaded in {task.out_dir}."
                 )
-
-                # Check if the file exists
-                file_exists = False
-                for root, _, files in os.walk(out_dir):
-                    for file in files:
-                        if file.startswith(filename_prefix):
-                            file_exists = True
-                            break
-
-                if file_exists:
-                    logger.info(
-                        f"File {filename_prefix} successfully downloaded in {out_dir}."
-                    )
-                    # If url was in checked_urls, remove it
-                    checked_urls = [
-                        check for check in checked_urls if check["url"] != url
-                    ]
-                else:
-                    logger.error(
-                        f"File {filename_prefix} was not downloaded successfully in {out_dir}."
-                    )
-                    if url:
-                        checked_urls.append(
-                            {"date": now.strftime("%Y-%m-%d"), "url": url}
-                        )
+                # Remove from checked_urls if previously failed
+                checked_urls = [
+                    check for check in checked_urls if check["url"] != task.url
+                ]
+            else:
+                logger.error(
+                    f"File {task.filename_prefix}* was not downloaded in {task.out_dir}."
+                )
+                checked_urls.append(
+                    {"date": now.strftime("%Y-%m-%d"), "url": task.url}
+                )
 
     # Remove any duplicates from checked_urls keeping the last entry
     seen_urls = set()
