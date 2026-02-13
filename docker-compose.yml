@@ -16,6 +16,8 @@ services:
       RUBYOPT: '-W0'
       JEKYLL_ENV: development 
       BUNDLE_PATH: /usr/local/bundle
+      JEKYLL_UID: ${DOCKER_UID:-1000}
+      JEKYLL_GID: ${DOCKER_GID:-1000}
 
   scripts:
     profiles:
@@ -23,13 +25,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.scripts
+    user: "${DOCKER_UID:-1000}:${DOCKER_GID:-1000}"
+    group_add:
+      - "${DOCKER_SOCKET_GID}"
     volumes:
       - ".:/app:Z"
       - /var/run/docker.sock:/var/run/docker.sock
-      - uv_cache:/root/.cache/uv
+      - uv_cache:/tmp/uv-cache
     working_dir: /app
     environment:
       HOST_PROJECT_DIR: ${PWD}
+      UV_CACHE_DIR: /tmp/uv-cache
 
 volumes:
   bundle_cache:

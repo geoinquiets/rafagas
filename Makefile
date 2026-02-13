@@ -1,5 +1,9 @@
 SHELL := /bin/bash
 
+export DOCKER_UID := $(shell id -u)
+export DOCKER_GID := $(shell id -g)
+export DOCKER_SOCKET_GID := $(shell stat -c '%g' /var/run/docker.sock 2>/dev/null)
+
 .PHONY: serve microlink update build download-websites crawl clean check-links check-last-job
 
 serve:

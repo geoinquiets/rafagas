@@ -4,4 +4,6 @@ FROM ghcr.io/astral-sh/uv:python3.12-bookworm
 
 COPY --from=docker-cli /usr/local/bin/docker /usr/local/bin/docker
 
+RUN mkdir -p /tmp/uv-cache && chmod 777 /tmp/uv-cache
+
 WORKDIR /app
