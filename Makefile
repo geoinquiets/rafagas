@@ -1,7 +1,6 @@
 SHELL := /bin/bash
-PYTHON := ./env/bin/python
 
-.PHONY: serve microlink build download-websites crawl clean check-links
+.PHONY: serve microlink build download-websites crawl clean check-links check-last-job
 
 serve:
 	docker compose up
@@ -10,16 +9,13 @@ clean:
 	docker compose run --rm jekyll jekyll clean
 
 microlink:
-	uv run script/microlink.py 
-
-update:
-	$(PYTHON) script/update_rafaga.py 
+	docker compose run --rm scripts uv run script/microlink.py
 
 download-websites: build
-	uv run script/download-websites.py
+	docker compose run --rm scripts uv run script/download-websites.py
 
 crawl:
-	uv run script/crawling/__main__.py
+	docker compose run --rm scripts uv run script/crawling/__main__.py
 
 build:
 	@docker compose exec jekyll jekyll build 2>/dev/null || \
@@ -29,4 +25,4 @@ check-last-job:
 	gh run view --log $$(gh run list -L 1| head -n1 | grep -Eo '[0-9]{9}')| grep -oP '(?<=External link ).*(?= failed)'
 
 check-links:
-	uv run script/check-links/__main__.py
+	docker compose run --rm scripts uv run script/check-links/__main__.py

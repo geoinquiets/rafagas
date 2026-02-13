@@ -48,7 +48,6 @@ exclude:
   - "crawl"
   - "crawl_sites"
   - "tmp"
-  - "env"
   - "docker-compose.yml"
   - "Makefile"
 

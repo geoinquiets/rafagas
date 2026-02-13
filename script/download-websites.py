@@ -19,6 +19,11 @@ DEFAULT_THREADS = 6
 DEFAULT_SUBSET = 0
 DEFAULT_BROWSER_WAIT_DELAY = "40000"  # 40 seconds
 
+# When running inside a container with the host Docker socket mounted,
+# volume mount paths in nested `docker run` commands must use host paths.
+# Set HOST_PROJECT_DIR to the host project root to remap paths automatically.
+HOST_PROJECT_DIR = os.environ.get("HOST_PROJECT_DIR")
+
 
 @dataclass
 class DownloadTask:
@@ -113,6 +118,14 @@ def process_links(csv_file, out_dir, docker_image, subset):
             # Try to find a file with the basename and any extension
             out_date_dir = os.path.join(out_dir, date_year, date_month)
             abs_out_date_dir = os.path.abspath(out_date_dir)
+
+            # When running inside a container, Docker volume mount paths
+            # must reference the host filesystem, not the container's.
+            if HOST_PROJECT_DIR:
+                host_out_date_dir = os.path.join(HOST_PROJECT_DIR, out_date_dir)
+            else:
+                host_out_date_dir = abs_out_date_dir
+
             file_exists = False
 
             # walk the directory tree to find the file
@@ -137,7 +150,7 @@ def process_links(csv_file, out_dir, docker_image, subset):
                     DownloadTask(
                         command=[
                             "docker", "run", "--rm",
-                            "-v", f"{abs_out_date_dir}:/usr/src/app/out",
+                            "-v", f"{host_out_date_dir}:/usr/src/app/out",
                             docker_image,
                             "--dump-content=false",
                             "--browser-wait-delay", DEFAULT_BROWSER_WAIT_DELAY,
