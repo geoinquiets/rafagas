@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+# /// script
+# requires-python = ">=3.10"
+# dependencies = [
+#     "requests",
+#     "python-frontmatter",
+# ]
+# ///
+
 import os
 import sys
 import random

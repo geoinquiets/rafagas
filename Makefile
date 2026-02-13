@@ -1,27 +1,28 @@
 SHELL := /bin/bash
-BUNDLE := bundle
-JEKYLL := $(BUNDLE) exec jekyll
-PYTHON := ./env/bin/python
 
-.PHONY: serve microlink build
+.PHONY: serve microlink build download-websites crawl clean check-links check-last-job
 
 serve:
-	JEKYLL_ENV=production RUBYOPT='-W0' $(JEKYLL) serve  --incremental --port 8000 --future
+	docker compose up
 
 clean:
-	RUBYOPT='-W0' $(JEKYLL) clean
+	docker compose run --rm jekyll jekyll clean
 
 microlink:
-	$(PYTHON) script/microlink.py 
+	docker compose run --rm scripts uv run script/microlink.py
 
-update:
-	$(PYTHON) script/update_rafaga.py 
+download-websites: build
+	docker compose run --rm scripts uv run script/download-websites.py
+
+crawl:
+	docker compose run --rm scripts uv run script/crawling/__main__.py
 
 build:
-	RUBYOPT='-W0' $(JEKYLL) build
+	@docker compose exec jekyll jekyll build 2>/dev/null || \
+		docker compose run --rm jekyll jekyll build
 
 check-last-job:
 	gh run view --log $$(gh run list -L 1| head -n1 | grep -Eo '[0-9]{9}')| grep -oP '(?<=External link ).*(?= failed)'
 
 check-links:
-	$(PYTHON) script/check-links/
+	docker compose run --rm scripts uv run script/check-links/__main__.py

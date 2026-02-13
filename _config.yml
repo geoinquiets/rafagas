@@ -45,6 +45,11 @@ exclude:
   - "Rakefile"
   - "vendor"
   - "script"
+  - "crawl"
+  - "crawl_sites"
+  - "tmp"
+  - "docker-compose.yml"
+  - "Makefile"
 
 defaults:
   - scope:

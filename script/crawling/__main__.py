@@ -1,4 +1,13 @@
 #!/usr/bin/env python
+# /// script
+# requires-python = ">=3.10"
+# dependencies = [
+#     "python-frontmatter",
+#     "python-dateutil",
+#     "trafilatura",
+# ]
+# ///
+
 import os
 import os.path
 import random
@@ -7,7 +16,6 @@ from multiprocessing import Pool
 from pathlib import Path
 import frontmatter
 import json
-from pathlib import Path
 
 from crawl_url import processLink, getHash
 
@@ -23,7 +31,7 @@ for key in logging.Logger.manager.loggerDict:
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
-LINKS_PROCESS = int(os.environ.get("LINKS_PROCESS") or 50)
+LINKS_PROCESS = int(os.environ.get("LINKS_PROCESS") or 2000)
 LOG_LEVEL = os.environ.get("LINKS_LOG_LEVEL") or logging.INFO
 LOG_FORMAT = " %(asctime)s - %(levelname)-8s %(message)s"
 LOG_DATE_FMT = "%I:%M:%S %p"
@@ -73,8 +81,7 @@ def processRafaga(post, skipInvalids=True):
             try:
                 data = processLink(post["rid"], post["date"], rafaga)
             except TypeError as e:
-                logger.critical(e.with_traceback())
-                logger.critical(f"Error processing link {link} at  {post['rid']}")
+                logger.critical(f"Error processing link {link} at  {post['rid']}", exc_info=True)
                 import sys
                 sys.exit(1)
 
@@ -84,8 +91,7 @@ def processRafaga(post, skipInvalids=True):
                         writer.write(json.dumps(data))
                     results.append(PROCESSED)
                 except TypeError as e:
-                    logger.critical(e.with_traceback())
-                    logger.critical(f"Error processing {link} at {post['rid']}")
+                    logger.critical(f"Error processing {link} at {post['rid']}", exc_info=True)
                     import sys
                     sys.exit(1)
         

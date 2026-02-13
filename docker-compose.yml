@@ -4,10 +4,31 @@ services:
     command: jekyll serve --watch --force_polling --incremental --port 8000 --livereload --livereload-port --future --drafts --config _config.yml,_config.dev.yml
     volumes:
       - ".:/srv/jekyll:Z"
-      - "./vendor/bundle:/usr/local/bundle:Z"
+      - /srv/jekyll/crawl_sites
+      - /srv/jekyll/crawl
+      - bundle_cache:/usr/local/bundle
     ports:
       - '8000:8000'
       - '35729:35729'
+    extra_hosts:
+      - "api.github.com:127.0.0.1"
     environment: 
       RUBYOPT: '-W0'
       JEKYLL_ENV: development 
+      BUNDLE_PATH: /usr/local/bundle
+
+  scripts:
+    profiles:
+      - scripts
+    build:
+      context: .
+      dockerfile: Dockerfile.scripts
+    volumes:
+      - ".:/app:Z"
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /app
+    environment:
+      HOST_PROJECT_DIR: ${PWD}
+
+volumes:
+  bundle_cache:
