@@ -6,11 +6,14 @@
 # ]
 # ///
 
+import re
 import requests
 import logging
 from pathlib import Path
 import frontmatter
 import time
+
+_MAPBOX_TOKEN_RE = re.compile(r'[?&]access_token=pk\.eyJ[A-Za-z0-9_.=\-]+')
 
 for key in logging.Logger.manager.loggerDict:
     logging.getLogger(key).setLevel(logging.CRITICAL)
@@ -42,13 +45,13 @@ class Microlink(object):
                     'logo') and type(data.get('logo')) is dict else None
 
                 if image:
-                    result['image'] = image
+                    result['image'] = _MAPBOX_TOKEN_RE.sub('', image)
                 if desc:
                     result['desc'] = desc
                 if title:
                     result['title'] = title
                 if logo:
-                    result['logo'] = logo
+                    result['logo'] = _MAPBOX_TOKEN_RE.sub('', logo)
                 return result
             elif r_json['status'] == 'fail':
                 message = r_json['message']
