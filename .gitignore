@@ -22,3 +22,4 @@ script/.ipynb_checkpoints
 pending_rafagas.yaml
 tmp/
 vendor
+.env
