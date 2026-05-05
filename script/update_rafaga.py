@@ -25,7 +25,7 @@ All options can be set via CLI flags or environment variables:
 import argparse
 import logging
 import os
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -137,8 +137,15 @@ def fetch_mastodon_feed(feed_url: str) -> list[dict]:
         logging.error("Feed parsing error: %s", feed.bozo_exception)
         return []
 
+    cutoff = date.today() - timedelta(weeks=3)
     entries: list[dict] = []
     for item in feed.entries:
+        published = item.get("published_parsed") or item.get("updated_parsed")
+        if published:
+            entry_date = date(*published[:3])
+            if entry_date < cutoff:
+                logging.info("  Skipping old entry (%s): %s", entry_date, item.get("link", ""))
+                continue
         html = item.get("summary", "") or item.get("description", "")
         if not html:
             continue
