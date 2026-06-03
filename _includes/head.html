@@ -32,6 +32,10 @@
   {% if site.search %}
   <link rel="stylesheet" href="{{ site.baseurl }}/pagefind/pagefind-component-ui.css">
   <script src="{{ site.baseurl }}/pagefind/pagefind-component-ui.js" type="module"></script>
+  <script type="module">
+    await import('{{ site.baseurl }}/pagefind/pagefind-highlight.js');
+    new PagefindHighlight({ highlightParam: "highlight" });
+  </script>
   {% endif %}
 
   <!-- RSS -->
