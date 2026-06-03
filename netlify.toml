@@ -1,0 +1,3 @@
+[build]
+  publish = "_site"
+  command = "bundle exec jekyll build --baseurl \"\" --future && (npx -y pagefind@1.3.0 --site _site || true)"
