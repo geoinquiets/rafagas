@@ -24,6 +24,17 @@
   --pf-border-radius: 2px;
 }
 
+// Excerpt: default is single-line ellipsis (white-space:nowrap + overflow:hidden).
+// Allow up to 4 lines so the matched term is actually visible in results.
+pagefind-modal .pf-result-excerpt {
+  white-space: normal !important;
+  overflow: hidden !important;
+  text-overflow: unset !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important;
+}
+
 // Nav trigger — set CSS variables scoped to this element so they cascade into
 // pagefind's var() calls (icon mask color, key badge text/border/bg).
 // !important only on layout properties where pagefind uses :is(*, #\#)×3 specificity.
