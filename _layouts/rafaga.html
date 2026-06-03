@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="post" data-pagefind-meta="date:{{ page.date | date: '%Y-%m-%d' }}"><span data-pagefind-meta="rid" style="display:none">{{ page.rid }}</span>
+<article class="post" data-pagefind-meta="date:{{ page.date | date: '%Y-%m-%d' }}" data-pagefind-sort="date:{{ page.date | date: '%s' }}"><span data-pagefind-meta="rid" style="display:none">{{ page.rid }}</span>
   <h1 class="post-title">
     #{{ page.rid}}:
     {% for rafaga in page.rafagas %}
