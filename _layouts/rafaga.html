@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="post">
+<article class="post" data-pagefind-meta="date:{{ page.date | date: '%Y-%m-%d' }}, rid:{{ page.rid }}">
   <h1 class="post-title">
     #{{ page.rid}}:
     {% for rafaga in page.rafagas %}
@@ -19,16 +19,17 @@ layout: default
     </p>
   </div>
 
-  <div class="rafaga-links">
+  <div class="rafaga-links" data-pagefind-body>
     <ul>
       {% for rafaga in page.rafagas %}
+        {% capture keyw %}{{rafaga.keyw}}{% endcapture %}
         {% capture desc %}{{rafaga.desc}}{% endcapture %}
         {% capture link %}{{rafaga.link}}{% endcapture %}
         {% capture via %}{{rafaga.via}}{% endcapture %}
-        {% capture desc %}{{rafaga.desc}}{% endcapture %}
         {% capture invalid %}{{rafaga.invalid | default: false}}{% endcapture %}
         {% capture lang %}{{rafaga.lang}}{% endcapture %}
-        {% include link.html 
+        {% include link.html
+          keyw=keyw
           desc=desc
           link=link
           via=via

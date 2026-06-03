@@ -42,10 +42,13 @@
             <li><a href="https://geoinquiets.github.io/linksgeo/">
               Raf
               </a></li>
-              
+            {% if site.search %}
+            <li id="search-nav-item"><pagefind-modal-trigger compact></pagefind-modal-trigger></li>
+            {% endif %}
           </ul>
         </span>
       </header>
+      {% include search.html %}
 
       <main>
         {{ content }}

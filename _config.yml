@@ -59,6 +59,11 @@ defaults:
       author: Raf
       twitter: LinksGeo
 
+search: true
+
+keep_files:
+  - pagefind
+
 highlighter: null
 
 theme: minima
