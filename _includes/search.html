@@ -2,27 +2,73 @@
 <pagefind-config bundle-path="{{ site.baseurl }}/pagefind/" highlight-param="highlight"></pagefind-config>
 <pagefind-modal>
   <pagefind-modal-header>
-    <pagefind-input></pagefind-input>
+    <div class="pf-input-wrapper">
+      <input type="search" id="pf-input" class="pf-input"
+             placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Search this site">
+    </div>
   </pagefind-modal-header>
   <pagefind-modal-body>
-    <pagefind-summary></pagefind-summary>
-    <pagefind-results sort='{"date": "desc"}'>
-      <script type="text/pagefind-template">
-        {% raw %}<li>
-          <div class="pf-result-card">
-            <div class="pf-result-content">
-              <p class="pf-result-title">
-                <a class="pf-result-link" href="{{ url }}">{{#if meta.date}}{{ meta.date }} - {{/if}}{{#if meta.rid}}#{{ meta.rid }}{{/if}}</a>
-              </p>
-              <p class="pf-result-excerpt">{{+ excerpt +}}</p>
-            </div>
-          </div>
-        </li>{% endraw %}
-      </script>
-    </pagefind-results>
+    <p id="pf-summary" role="status"></p>
+    <ul id="pf-results"></ul>
   </pagefind-modal-body>
   <pagefind-modal-footer>
     <pagefind-keyboard-hints></pagefind-keyboard-hints>
   </pagefind-modal-footer>
 </pagefind-modal>
+<script type="module">
+(async () => {
+  const pfModule = await import('{{ site.baseurl }}/pagefind/pagefind.js');
+  const pf = await pfModule.createInstance({ highlightParam: 'highlight', excerptLength: 30 });
+  await pf.init();
+
+  const input   = document.getElementById('pf-input');
+  const list    = document.getElementById('pf-results');
+  const summary = document.getElementById('pf-summary');
+  const modal   = document.querySelector('pagefind-modal');
+  let timer;
+
+  // Focus the input whenever the modal opens
+  if (modal) {
+    new MutationObserver(() => {
+      if (modal.hasAttribute('open')) input.focus();
+    }).observe(modal, { attributes: true, attributeFilter: ['open'] });
+  }
+
+  // Clear results when the input is emptied (e.g. pressing × in type=search)
+  input.addEventListener('search', e => {
+    if (!e.target.value) { list.innerHTML = ''; summary.textContent = ''; }
+  });
+
+  input.addEventListener('input', e => {
+    clearTimeout(timer);
+    timer = setTimeout(() => search(e.target.value), 300);
+  });
+
+  function render(data, query) {
+    list.innerHTML = '';
+    summary.textContent = data.length
+      ? `${data.length} results for "${query}"`
+      : `No results for "${query}"`;
+    for (const d of data) {
+      const date  = d.meta?.date ?? '';
+      const rid   = d.meta?.rid  ? '#' + d.meta.rid : '';
+      const label = [date, rid].filter(Boolean).join(' - ');
+      const li    = document.createElement('li');
+      li.innerHTML =
+        `<a class="pf-result-link" href="${d.url}">${label}</a>` +
+        `<p class="pf-result-excerpt">${d.excerpt}</p>`;
+      list.appendChild(li);
+    }
+  }
+
+  async function search(query) {
+    list.innerHTML      = '';
+    summary.textContent = '';
+    if (!query.trim()) return;
+    const res  = await pf.search(query, { sort: { date: 'desc' } });
+    const data = await Promise.all(res.results.map(r => r.data()));
+    render(data, query);
+  }
+})();
+</script>
 {% endif %}

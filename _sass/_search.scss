@@ -24,15 +24,82 @@
   --pf-border-radius: 2px;
 }
 
-// Excerpt: default is single-line ellipsis (white-space:nowrap + overflow:hidden).
-// Allow up to 4 lines so the matched term is actually visible in results.
-pagefind-modal .pf-result-excerpt {
-  white-space: normal !important;
-  overflow: hidden !important;
-  text-overflow: unset !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 4 !important;
-  -webkit-box-orient: vertical !important;
+// Custom search input — replaces <pagefind-input> component (closed shadow DOM).
+.pf-input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.pf-input {
+  width: 100%;
+  border: 1px solid var(--pf-border);
+  border-radius: var(--pf-border-radius);
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--pf-text);
+  background: transparent;
+  outline: none;
+
+  &:focus {
+    border-color: var(--pf-border-focus);
+    box-shadow: 0 0 0 2px var(--pf-outline-focus);
+  }
+}
+
+// Custom results list — replaces <pagefind-results> component.
+// Styles .pf-result-* classes that were previously inside the component shadow DOM.
+#pf-summary {
+  font-size: 0.75rem;
+  color: var(--pf-text-secondary);
+  padding: 0.25rem 1rem;
+  margin: 0;
+}
+
+#pf-results {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    border: 1px solid var(--pf-border);
+    border-radius: var(--pf-border-radius);
+    padding: 0.75rem 1rem;
+  }
+
+  .pf-result-link {
+    font-weight: 600;
+    color: var(--pf-text);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.4rem;
+
+    &:hover { color: var(--pf-outline-focus); }
+  }
+
+  .pf-result-excerpt {
+    font-size: 0.85rem;
+    color: var(--pf-text-secondary);
+    margin: 0;
+    // pagefind-component-ui.css uses :is(*, #\#)×3 specificity — !important needed.
+    white-space: normal !important;
+    overflow: hidden !important;
+    text-overflow: unset !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+
+    mark {
+      background: transparent;
+      font-weight: bold !important;
+      color: var(--pf-text);
+    }
+  }
 }
 
 // Nav trigger — set CSS variables scoped to this element so they cascade into
