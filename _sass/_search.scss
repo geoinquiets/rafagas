@@ -1,0 +1,68 @@
+// Visually hidden but present in DOM — Pagefind indexes raw HTML so this text
+// is searchable without being visible to users
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Component UI theme — Poole/minima palette
+:root {
+  --pf-text: #515151;
+  --pf-text-secondary: #9a9a9a;
+  --pf-text-muted: #9a9a9a;
+  --pf-border: #e5e5e5;
+  --pf-border-focus: #aaa;
+  --pf-outline-focus: #268bd2;
+  --pf-font: inherit;
+  --pf-border-radius: 2px;
+}
+
+// Excerpt: default is single-line ellipsis (white-space:nowrap + overflow:hidden).
+// Allow up to 4 lines so the matched term is actually visible in results.
+pagefind-modal .pf-result-excerpt {
+  white-space: normal !important;
+  overflow: hidden !important;
+  text-overflow: unset !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+// Nav trigger — set CSS variables scoped to this element so they cascade into
+// pagefind's var() calls (icon mask color, key badge text/border/bg).
+// !important only on layout properties where pagefind uses :is(*, #\#)×3 specificity.
+#search-nav-item {
+  font-size: 75%;
+
+  pagefind-modal-trigger {
+    padding-top: 4px;
+  }
+
+  --pf-text-muted: #c0c0c0;       // icon mask color
+  --pf-text-secondary: #c0c0c0;   // key badge text
+  --pf-hover: transparent;        // key badge background — remove the fill
+  --pf-border: #ddd;              // key badge border — subtle
+
+  .pf-trigger-btn {
+    height: auto !important;
+    width: auto !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+
+    &:hover {
+      border: none !important;
+      box-shadow: none !important;
+      --pf-text-muted: #268bd2;
+      --pf-text-secondary: #268bd2;
+      --pf-border: #268bd2;
+    }
+  }
+}
