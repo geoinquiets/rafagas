@@ -1,4 +1,4 @@
-FROM ruby:3.3-alpine
+FROM ruby:3.2-alpine
 RUN apk add --no-cache build-base git nodejs tzdata libffi-dev
 RUN mkdir -p /usr/local/bundle && chmod 777 /usr/local/bundle
 WORKDIR /srv/jekyll
