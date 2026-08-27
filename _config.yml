@@ -59,7 +59,7 @@ defaults:
       author: Raf
       twitter: LinksGeo
 
-search: true
+search: false
 
 keep_files:
   - pagefind

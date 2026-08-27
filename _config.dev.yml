@@ -1,6 +1,4 @@
 baseurl:
-search: true
-
 
 # Development optimizations for frontpage-only work
 limit_posts: 30
