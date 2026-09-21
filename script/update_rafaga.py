@@ -26,8 +26,9 @@ import argparse
 import logging
 import os
 from datetime import date, timedelta
+from difflib import SequenceMatcher
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlunparse, parse_qsl, urlencode
 
 import deepl
 import feedparser
@@ -35,6 +36,61 @@ import frontmatter
 import requests
 import yaml
 from bs4 import BeautifulSoup
+
+# ---------------------------------------------------------------------------
+# URL normalization for fuzzy deduplication
+# ---------------------------------------------------------------------------
+
+_TRACKING_PARAMS = frozenset(
+    "utm_source utm_medium utm_campaign utm_term utm_content "
+    "fbclid gclid ref source".split()
+)
+
+_INDEX_SUFFIXES = ("/index.html", "/index.htm", "/index.php")
+
+# Minimum similarity ratio (0–1) to treat two normalized URLs as duplicates.
+_FUZZY_THRESHOLD = 0.92
+
+
+def _normalize_url(url: str) -> str:
+    """Return a canonical form of *url* for deduplication comparisons.
+
+    Strips: scheme differences (http→https), www. prefix, index.* path suffixes,
+    trailing path slash, tracking query params, and URL fragments.
+    """
+    try:
+        p = urlparse(url)
+        scheme = "https"
+        netloc = p.netloc.lower()
+        if netloc.startswith("www."):
+            netloc = netloc[4:]
+        path = p.path
+        for suffix in _INDEX_SUFFIXES:
+            if path.endswith(suffix):
+                path = path[: -len(suffix)]
+                break
+        path = path.rstrip("/") or "/"
+        kept = [(k, v) for k, v in parse_qsl(p.query) if k.lower() not in _TRACKING_PARAMS]
+        query = urlencode(sorted(kept))
+        return urlunparse((scheme, netloc, path, p.params, query, ""))
+    except Exception:
+        return url.lower().rstrip("/")
+
+
+def _is_fuzzy_duplicate(url: str, candidates: set[str]) -> str | None:
+    """Return the matching candidate if *url* is similar enough to any of them.
+
+    Compares only against candidates sharing the same netloc to avoid
+    false positives across different domains.
+    """
+    p = urlparse(url)
+    same_host = {c for c in candidates if urlparse(c).netloc == p.netloc}
+    for candidate in same_host:
+        ratio = SequenceMatcher(None, url, candidate).ratio()
+        if ratio >= _FUZZY_THRESHOLD:
+            return candidate
+    return None
+
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -51,16 +107,24 @@ PENDING_FILE = Path("pending_rafagas.yaml")
 REQUEST_TIMEOUT = 10  # seconds
 USER_AGENT = "Mozilla/5.0 (compatible; RafagasBot/1.0)"
 
+# Only deduplicate against posts published within this window.
+PUBLISHED_LINKS_LOOKBACK_DAYS = 180
+
 # ---------------------------------------------------------------------------
 # Step 1 – Gather existing data
 # ---------------------------------------------------------------------------
 
 
 def gather_existing_data():
-    """Scan all posts to collect published links, max rid, and empty-post dates."""
+    """Scan all posts to collect published links, max rid, and empty-post dates.
+
+    Only links from posts within PUBLISHED_LINKS_LOOKBACK_DAYS are collected
+    for deduplication; older posts are ignored so long-ago URLs can recur.
+    """
     published_links: set[str] = set()
     max_rid = 0
     empty_post_dates: set[date] = set()
+    lookback_cutoff = date.today() - timedelta(days=PUBLISHED_LINKS_LOOKBACK_DAYS)
 
     for md in POSTS_DIR.glob("**/*.md"):
         if "template" in str(md):
@@ -78,17 +142,21 @@ def gather_existing_data():
 
         layout = post.get("layout")
         rafagas = post.get("rafagas")
+        post_date = post.get("date")
 
         # Track dates of empty rafaga posts for date-aware idempotency.
         if layout == "rafaga" and isinstance(rafagas, list) and len(rafagas) == 0:
-            post_date = post.get("date")
             if isinstance(post_date, date):
                 empty_post_dates.add(post_date)
+
+        # Skip link collection for posts outside the lookback window.
+        if not isinstance(post_date, date) or post_date < lookback_cutoff:
+            continue
 
         if isinstance(rafagas, list):
             for r in rafagas:
                 if isinstance(r, dict) and "link" in r:
-                    published_links.add(r["link"])
+                    published_links.add(_normalize_url(r["link"]))
 
     return published_links, max_rid, empty_post_dates
 
@@ -223,9 +291,9 @@ def _load_pending_entries() -> list[dict]:
 
 
 def _load_pending_links() -> set[str]:
-    """Return the set of links already present in the pending translations file."""
+    """Return normalized URLs already present in the pending translations file."""
     entries = _load_pending_entries()
-    return {r["link"] for r in entries if "link" in r}
+    return {_normalize_url(r["link"]) for r in entries if "link" in r}
 
 
 def filter_published(
@@ -235,10 +303,18 @@ def filter_published(
     filtered: list[dict] = []
     for e in entries:
         link = e["link"]
-        if link in published_links:
+        norm = _normalize_url(link)
+        if norm in published_links:
+            logging.info("  Skipping published link: %s", link)
             continue
-        if link in pending_links:
-            logging.info("  Skipping already-translated link: %s", link)
+        if match := _is_fuzzy_duplicate(norm, published_links):
+            logging.info("  Skipping fuzzy-published link: %s (~= %s)", link, match)
+            continue
+        if norm in pending_links:
+            logging.info("  Skipping already-pending link: %s", link)
+            continue
+        if match := _is_fuzzy_duplicate(norm, pending_links):
+            logging.info("  Skipping fuzzy-pending link: %s (~= %s)", link, match)
             continue
         filtered.append(e)
     return filtered
@@ -385,7 +461,11 @@ def _render_entry(r: dict) -> str:
 
 
 def write_pending_file(entries: list[dict]) -> None:
-    """Append translated entries to the pending YAML file for human review."""
+    """Append translated entries to the pending YAML file for human review.
+
+    New entries are reversed before appending so the file stays oldest-first
+    (the feed delivers entries newest-first).
+    """
     today = date.today().isoformat()
 
     # Load existing pending entries (with comments preserved as _original).
@@ -393,6 +473,7 @@ def write_pending_file(entries: list[dict]) -> None:
     if PENDING_FILE.exists():
         existing = _load_pending_entries()
 
+    new_entries: list[dict] = []
     for entry in entries:
         r: dict = {
             "_original": entry.get("desc_ca", ""),
@@ -402,7 +483,10 @@ def write_pending_file(entries: list[dict]) -> None:
         }
         if "lang" in entry:
             r["lang"] = entry["lang"]
-        existing.append(r)
+        new_entries.append(r)
+
+    # Feed is newest-first; reverse so appended entries are oldest-first.
+    existing = existing + new_entries[::-1]
 
     header = (
         f"# Pending rafagas from Mastodon feed\n"
