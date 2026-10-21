@@ -199,7 +199,7 @@ def _parse_toot(html_content: str) -> tuple[str, list[str]]:
 
 
 def fetch_mastodon_feed(feed_url: str) -> list[dict]:
-    """Fetch the RSS feed and return a list of {desc_ca, link} dicts."""
+    """Fetch the RSS feed and return a list of {desc_ca, link, published} dicts."""
     feed = feedparser.parse(feed_url)
     if feed.bozo and not feed.entries:
         logging.error("Feed parsing error: %s", feed.bozo_exception)
@@ -209,6 +209,7 @@ def fetch_mastodon_feed(feed_url: str) -> list[dict]:
     entries: list[dict] = []
     for item in feed.entries:
         published = item.get("published_parsed") or item.get("updated_parsed")
+        entry_date = None
         if published:
             entry_date = date(*published[:3])
             if entry_date < cutoff:
@@ -219,7 +220,11 @@ def fetch_mastodon_feed(feed_url: str) -> list[dict]:
             continue
         text, urls = _parse_toot(html)
         for url in urls:
-            entries.append({"desc_ca": text, "link": url})
+            entries.append({
+                "desc_ca": text,
+                "link": url,
+                "published": entry_date.isoformat() if entry_date else "",
+            })
 
     return entries
 
@@ -475,8 +480,11 @@ def write_pending_file(entries: list[dict]) -> None:
 
     new_entries: list[dict] = []
     for entry in entries:
+        original = entry.get("desc_ca", "")
+        if entry.get("published"):
+            original = f"[{entry['published']}] {original}"
         r: dict = {
-            "_original": entry.get("desc_ca", ""),
+            "_original": original,
             "desc": entry.get("desc_en", ""),
             "keyw": "",
             "link": entry["link"],
