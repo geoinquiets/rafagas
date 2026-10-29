@@ -1,0 +1,42 @@
+name: Validate posts
+
+on:
+  pull_request:
+    branches: ["gh-pages"]
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-posts-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    # Draft PRs are work in progress (e.g. entries still waiting for a keyword):
+    # the check runs when the PR is opened ready, or marked as ready for review.
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the validator needs the base branch to tell new problems from legacy ones
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install "python-frontmatter>=0.4.5" "PyYAML>=5.4"
+
+      - name: Validate the posts changed in this PR
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: python script/validate_posts.py --base "origin/$BASE_REF"
+
+      - name: Report on all posts (never fails)
+        if: github.event_name == 'workflow_dispatch'
+        run: python script/validate_posts.py --all

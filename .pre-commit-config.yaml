@@ -1,0 +1,13 @@
+# Optional local hook, see CONTRIBUTING.md ("Validate your post").
+#   uv tool install pre-commit && pre-commit install
+# It needs `uv` (https://docs.astral.sh/uv/) so the script can install its own dependencies.
+repos:
+  - repo: local
+    hooks:
+      - id: validate-posts
+        name: Validate Rafagas posts
+        entry: uv run script/validate_posts.py
+        language: system
+        files: ^_posts/.*\.md$
+        exclude: template
+        require_serial: true

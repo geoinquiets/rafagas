@@ -4,7 +4,7 @@ export DOCKER_UID := $(shell id -u)
 export DOCKER_GID := $(shell id -g)
 export DOCKER_SOCKET_GID := $(shell stat -c '%g' /var/run/docker.sock 2>/dev/null)
 
-.PHONY: serve index microlink update build download-websites crawl clean check-links check-last-job
+.PHONY: serve index microlink update build download-websites crawl clean check-links check-last-job validate validate-all
 
 serve:
 	docker compose up
@@ -37,3 +37,9 @@ check-last-job:
 
 check-links:
 	docker compose run --rm scripts uv run script/check-links/__main__.py
+
+validate:
+	docker compose run --rm scripts uv run script/validate_posts.py $(ARGS)
+
+validate-all:
+	docker compose run --rm scripts uv run script/validate_posts.py --all
