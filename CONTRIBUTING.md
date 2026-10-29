@@ -90,6 +90,30 @@ Run the script with `make microlink`. No local Python installation is needed; it
 $ make microlink
 ```
 
+## Validate your post
+
+A validator checks that posts follow the rules above. Run it before contributing:
+
+```bash
+$ make validate       # posts you added or changed compared to origin/gh-pages
+$ make validate-all   # report on every post, it never fails
+```
+
+It checks the `date`, `rid` and file name (`date-rid.md` in the year folder), that `rid` and `date` are not used by another post, and that there is at least one link. For every link it checks that `link` is a valid URL and `desc` is not empty, that `keyw` is lowercase (letters, digits and hyphens, no spaces), that `lang` is a two-letter uppercase ISO 639-1 code, that `via` starts with `@`, and that `invalid` and `nocheck` are `true` or `false`. It also warns about unknown keys and links already published in the last 180 days.
+
+Older posts have legacy problems (multi-word keywords, lowercase `lang`...). Those are only reported as warnings, so maintenance changes on old posts are never blocked: a problem is an error only in new posts and in links that you add or edit.
+
+The same check runs on pull requests to `gh-pages` once they are ready for review (draft PRs are skipped).
+
+### Optional: run it as a git pre-commit hook
+
+If you have [uv](https://docs.astral.sh/uv/) installed, you can validate the posts you commit automatically with [pre-commit](https://pre-commit.com):
+
+```bash
+$ pip install pre-commit
+$ pre-commit install
+```
+
 ## Contribute your post
 
 Depending if you are a project maitainer or a contributor you may push your changes to the `gh-pages` branch of the main repository or create a Pull Request for the maintainers to review and approve.
